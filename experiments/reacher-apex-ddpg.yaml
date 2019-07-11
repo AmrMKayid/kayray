@@ -2,16 +2,18 @@ gym-reacher-apex-ddpg:
     env: RoboschoolReacher-v1
     run: APEX_DDPG
     local_dir: ~/kayray_results
-    checkpoint_freq: 1000
+    checkpoint_freq: 100
     checkpoint_at_end: True
     stop:
-        time_total_s: 25200 # 7 hours
-        training_iteration: 10000000
-        episode_reward_mean: 30
+        time_total_s: 10800 # 3 hours
+        training_iteration: 1000
+        episode_reward_mean: 21.5
     config:
         use_huber: True
         clip_rewards: False
-        num_workers: 3 # 16
+#        num_workers: 3 # 16
+        num_workers:
+            grid_search: [4, 8, 10, 11]
         n_step: 1
         target_network_update_freq: 50000
         tau: 1.0

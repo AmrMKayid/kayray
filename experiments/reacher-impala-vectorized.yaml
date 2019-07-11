@@ -4,9 +4,17 @@
 gym-reacher-impala-vectorized:
     env: RoboschoolReacher-v1
     run: IMPALA
+    local_dir: ~/kayray_results
+    checkpoint_freq: 100
+    checkpoint_at_end: True
+    stop:
+        time_total_s: 10800 # 3 hours
+        training_iteration: 1000
+        episode_reward_mean: 21.5
     config:
         sample_batch_size: 50
         train_batch_size: 500
-        num_workers: 3 # 32
-        num_envs_per_worker: 2 #10
-        num_gpus: 0 # TODO: Remove this
+#        num_workers: 3 # 32
+        num_workers:
+            grid_search: [4, 8, 10, 11]
+        num_envs_per_worker: 10 #2
