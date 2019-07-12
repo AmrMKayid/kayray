@@ -14,7 +14,8 @@ gym-reacher-apex-ddpg:
 #        num_workers: 3 # 16
         num_workers:
             grid_search: [64, 32, 16, 8]
-        n_step: 1
+        n_step: 3 # 1
+        exploration_ou_noise_scale: 1.0
         target_network_update_freq: 50000
         tau: 1.0
         evaluation_interval: 5
