@@ -7,17 +7,18 @@ gym-reacher-a2c:
     checkpoint_freq: 100
     checkpoint_at_end: True
     stop:
-        time_total_s: 10800 # 3 hours
-        training_iteration: 1000
-        episode_reward_mean: 21.5
+      time_total_s: 7200 # 2 hours
+      training_iteration: 1000
+      episode_reward_mean: 21.5
     config:
         sample_batch_size: 20
         clip_rewards: True
 #        num_workers: 3 # 5
-        num_workers:
-            grid_search: [4, 8, 10, 11]
-        num_envs_per_worker: 5
         num_gpus: 1 # 0
+        num_workers:
+            grid_search: [64, 32, 16, 8]
+        num_envs_per_worker:
+            grid_search: [32, 16, 8, 4]
         lr_schedule: [
             [0, 0.0007],
             [20000000, 0.000000000001],

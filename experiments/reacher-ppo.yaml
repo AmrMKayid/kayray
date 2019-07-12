@@ -1,24 +1,25 @@
-gym-reacher-ppo: # Experiment name
+gym-reacher-ppo: 
   env: RoboschoolReacher-v1
-  run: PPO # The RL Algorithm or Model to train
+  run: PPO 
   local_dir: ~/kayray_results
   checkpoint_freq: 100
   checkpoint_at_end: True
   stop:
-    time_total_s: 10800 # 3 hours
-    training_iteration: 1000
-    episode_reward_mean: 21.5
+      time_total_s: 7200 # 2 hours
+      training_iteration: 1000
+      episode_reward_mean: 21.5
   config: # Algorithm-specific configuration (e.g. env, hyperparams)
+    gamma: 0.995
     kl_coeff: 1.0
     num_sgd_iter: 20
-    lr: .0001
+    lr: 0.0001
     sgd_minibatch_size: 32768
     train_batch_size: 320000
-    num_workers:
-      grid_search: [4, 8, 10, 11]
     num_gpus: 1 #0
+    num_workers:
+      grid_search: [64, 32, 16, 8]
     num_envs_per_worker:
-      grid_search: [4, 8, 16, 32]
+      grid_search: [32, 16, 8, 4]
     # monitor: True  # Record videos.
     batch_mode: complete_episodes
     observation_filter: MeanStdFilter

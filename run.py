@@ -4,10 +4,11 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import argparse
+
+import time
 import yaml
 import json
-
+import argparse
 
 import ray
 from ray.tests.cluster_utils import Cluster
@@ -170,9 +171,14 @@ def run(args, parser, dot_dict=None):
 
 
 if __name__ == "__main__":
+    start = time.time()
+
     parser = create_parser()
     args = parser.parse_args()
     # print(args)
     dot_dict = DotDict(vars(args))
     # print(dot_dict)
     run(args, parser, dot_dict)
+
+    total_time = time.time() - start
+    glogger.info(f'Experiment took {(total_time):.5f} seconds | {(total_time / 60):.5f} minutes | {(total_time / 3600):.5f} hours')
