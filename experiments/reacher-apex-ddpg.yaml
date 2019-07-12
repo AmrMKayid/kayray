@@ -13,7 +13,7 @@ gym-reacher-apex-ddpg:
         clip_rewards: False
 #        num_workers: 3 # 16
         num_workers:
-          grid_search: [6, 4]
+          grid_search: [11, 9, 7, 5, 3]
         num_envs_per_worker:
           grid_search: [8, 6, 4, 2]
         n_step: 3 # 1
