@@ -30,8 +30,9 @@ gym-reahcer-apex:
         # APEX
 #        num_workers: 3 #8
         num_workers:
-            grid_search: [64, 32, 16, 8]
-        num_envs_per_worker: 8
+          grid_search: [6, 4]
+        num_envs_per_worker:
+          grid_search: [8, 6, 4, 2]
         sample_batch_size: 20
         train_batch_size: 512
         target_network_update_freq: 50000

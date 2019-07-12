@@ -16,5 +16,6 @@ gym-reacher-impala-vectorized:
         train_batch_size: 500
 #        num_workers: 3 # 32
         num_workers:
-             grid_search: [64, 32, 16, 8]
-        num_envs_per_worker: 10 #2
+          grid_search: [6, 4]
+        num_envs_per_worker:
+          grid_search: [8, 6, 4, 2]

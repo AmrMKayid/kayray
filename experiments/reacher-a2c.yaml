@@ -16,9 +16,9 @@ gym-reacher-a2c:
 #        num_workers: 3 # 5
         num_gpus: 1 # 0
         num_workers:
-            grid_search: [64, 32, 16, 8]
+            grid_search: [6, 4]
         num_envs_per_worker:
-            grid_search: [32, 16, 8, 4]
+            grid_search: [8, 6, 4, 2]
         lr_schedule: [
             [0, 0.0007],
             [20000000, 0.000000000001],
