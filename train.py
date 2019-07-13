@@ -142,7 +142,7 @@ def run(args, parser, dot_dict=None):
     env_name = experiments[experiment_name].get("env") or experiments[experiment_name]['config'].get("env") #dot_dict.env
     glogger.info('Registering env: ', env_name)
     register_env(env_name,
-             lambda config: make_unity_env(env_name=env_name))
+             lambda config: make_env(env_name=env_name))
 
     glogger.info('Experiment configs: \n', json.dumps(experiments, indent=2))
 
