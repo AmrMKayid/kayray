@@ -8,14 +8,14 @@ gym-reacher-impala-vectorized:
     checkpoint_freq: 100
     checkpoint_at_end: True
     stop:
-      time_total_s: 7200 # 2 hours
+      time_total_s: 3600 # 1 hours
       training_iteration: 1000
-      episode_reward_mean: 21.5
+      episode_reward_mean: 21
     config:
         sample_batch_size: 50
         train_batch_size: 500
 #        num_workers: 3 # 32
         num_workers:
-          grid_search: [11, 9, 7, 5, 3]
+          grid_search: [64, 32, 16] # grid_search: [11, 9, 7, 5, 3]
         num_envs_per_worker:
-          grid_search: [8, 6, 4, 2]
+          grid_search: [32, 16, 8] # grid_search: [8, 6, 4, 2]

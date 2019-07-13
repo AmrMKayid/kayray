@@ -1,0 +1,32 @@
+[32m [     0.06289s,  INFO] Registering env:  RoboschoolReacher-v1 [0m
+[32m [     0.06348s,  INFO] Experiment configs: 
+ {
+  "gym-reacher-ppo-baseline": {
+    "env": "RoboschoolReacher-v1",
+    "run": "PPO",
+    "local_dir": "~/kayray_results",
+    "checkpoint_freq": 100,
+    "checkpoint_at_end": true,
+    "stop": {
+      "time_total_s": 7200,
+      "training_iteration": 1000,
+      "episode_reward_mean": 21.5
+    },
+    "config": {
+      "gamma": 0.995,
+      "kl_coeff": 1.0,
+      "num_sgd_iter": 20,
+      "lr": 0.0001,
+      "sgd_minibatch_size": 1000,
+      "train_batch_size": 25000,
+      "model": {
+        "free_log_std": true
+      },
+      "num_gpus": 0,
+      "num_workers": 1,
+      "batch_mode": "complete_episodes",
+      "observation_filter": "MeanStdFilter"
+    }
+  }
+} [0m
+[32m [     0.06351s,  INFO] Experiment took 0.00755 seconds | 0.00013 minutes | 0.00000 hours [0m
