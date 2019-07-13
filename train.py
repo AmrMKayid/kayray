@@ -19,14 +19,14 @@ from ray.tune.registry import register_env
 from ray.tune.tune import _make_scheduler, run_experiments
 
 from kayray import DEFAULT_RESULTS_DIR
-from kayray.envs import make_env
+from kayray.envs import make_env, make_unity_env
 from kayray.utils import make_parser, DotDict, glogger
 
 EXAMPLE_USAGE = """
 Training example via RLlib CLI:
-    python run.py --run PPO --env RoboschoolReacher-v1
+    python train.py --run PPO --env RoboschoolReacher-v1
 Grid search example via executable:
-    python run.py -f experiments/reacher.yaml
+    python train.py -f experiments/reacher.yaml
 Note that -f overrides all other trial-specific command-line options.
 """
 
@@ -142,7 +142,7 @@ def run(args, parser, dot_dict=None):
     env_name = experiments[experiment_name].get("env") or experiments[experiment_name]['config'].get("env") #dot_dict.env
     glogger.info('Registering env: ', env_name)
     register_env(env_name,
-             lambda config: make_env(env_name=env_name))
+             lambda config: make_unity_env(env_name=env_name))
 
     glogger.info('Experiment configs: \n', json.dumps(experiments, indent=2))
 

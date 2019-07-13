@@ -1,0 +1,392 @@
+2019-07-13 02:27:40,552	WARNING worker.py:1337 -- WARNING: Not updating worker name since `setproctitle` is not installed. Install this with `pip install setproctitle` (or ray[debug]) to enable monitoring of worker processes.
+2019-07-13 02:27:40,557	INFO node.py:498 -- Process STDOUT and STDERR is being redirected to /tmp/ray/session_2019-07-13_02-27-40_553673_94333/logs.
+2019-07-13 02:27:40,671	INFO services.py:409 -- Waiting for redis server at 127.0.0.1:43924 to respond...
+2019-07-13 02:27:40,823	INFO services.py:409 -- Waiting for redis server at 127.0.0.1:41264 to respond...
+2019-07-13 02:27:40,826	INFO services.py:806 -- Starting Redis shard with 1.72 GB max memory.
+2019-07-13 02:27:40,861	INFO node.py:512 -- Process STDOUT and STDERR is being redirected to /tmp/ray/session_2019-07-13_02-27-40_553673_94333/logs.
+2019-07-13 02:27:40,863	INFO services.py:1446 -- Starting the Plasma object store with 2.58 GB memory using /tmp.
+2019-07-13 02:27:41,092	INFO tune.py:65 -- Did not find checkpoint file in /Users/amrmkayid/kayray_results/gym-reacher-apex-ddpg.
+2019-07-13 02:27:41,092	INFO tune.py:233 -- Starting a new experiment.
+WARNING: Logging before flag parsing goes to stderr.
+W0713 02:27:41.473134 4678718912 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2019-07-13 02:27:45,304	WARNING signature.py:108 -- The function with_updates has a **kwargs argument, which is currently not supported.
+W0713 02:27:45.324995 4678718912 deprecation_wrapper.py:119] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/logger.py:136: The name tf.VERSION is deprecated. Please use tf.version.VERSION instead.
+
+W0713 02:27:45.326373 4678718912 deprecation_wrapper.py:119] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/logger.py:141: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+[32m [     0.01603s,  INFO] Registering env:  RoboschoolReacher-v1 [0m
+[32m [     0.01749s,  INFO] Experiment configs: 
+ {
+  "gym-reacher-apex-ddpg": {
+    "env": "RoboschoolReacher-v1",
+    "run": "APEX_DDPG",
+    "local_dir": "~/kayray_results",
+    "checkpoint_freq": 100,
+    "checkpoint_at_end": true,
+    "stop": {
+      "time_total_s": 7200,
+      "training_iteration": 1000,
+      "episode_reward_mean": 21.5
+    },
+    "config": {
+      "use_huber": true,
+      "clip_rewards": false,
+      "num_gpus": 0,
+      "num_workers": 3,
+      "n_step": 3,
+      "exploration_ou_noise_scale": 1.0,
+      "target_network_update_freq": 50000,
+      "tau": 1.0,
+      "evaluation_interval": 5,
+      "evaluation_num_episodes": 10
+    }
+  }
+} [0m
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 0/4 CPUs, 0/0 GPUs
+Memory usage on this node: 6.6/8.6 GB
+
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 4/4 CPUs, 0/0 GPUs
+Memory usage on this node: 6.5/8.6 GB
+Result logdir: /Users/amrmkayid/kayray_results/gym-reacher-apex-ddpg
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - APEX_DDPG_RoboschoolReacher-v1_0:	RUNNING
+
+[2m[36m(pid=94350)[0m WARNING: Logging before flag parsing goes to stderr.
+[2m[36m(pid=94350)[0m W0713 02:27:52.016968 4662179264 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=94350)[0m Instructions for updating:
+[2m[36m(pid=94350)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=94350)[0m 2019-07-13 02:27:53,498	INFO rollout_worker.py:301 -- Creating policy evaluation worker 0 on CPU (please ignore any CUDA init errors)
+[2m[36m(pid=94350)[0m 2019-07-13 02:27:53.499254: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+[2m[36m(pid=94350)[0m W0713 02:27:53.520436 4662179264 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/ddpg/ddpg_policy.py:441: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+[2m[36m(pid=94350)[0m Instructions for updating:
+[2m[36m(pid=94350)[0m Use keras.layers.dense instead.
+[2m[36m(pid=94350)[0m W0713 02:27:53.526811 4662179264 deprecation.py:506] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+[2m[36m(pid=94350)[0m Instructions for updating:
+[2m[36m(pid=94350)[0m Call initializer instance with the dtype argument instead of passing it to the constructor
+[2m[36m(pid=94350)[0m [32m [     0.06689s,  INFO] TimeLimit:
+[2m[36m(pid=94350)[0m - env = <RoboschoolReacher<RoboschoolReacher-v1>>
+[2m[36m(pid=94350)[0m - action_space = Box(2,)
+[2m[36m(pid=94350)[0m - observation_space = Box(9,)
+[2m[36m(pid=94350)[0m - reward_range = (-inf, inf)
+[2m[36m(pid=94350)[0m - metadata = {'render.modes': ['human', 'rgb_array'], 'video.frames_per_second': 60}
+[2m[36m(pid=94350)[0m - _max_episode_steps = 150
+[2m[36m(pid=94350)[0m - _elapsed_steps = None [0m
+[2m[36m(pid=94350)[0m W0713 02:27:54.428991 4662179264 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/util/decorator_utils.py:145: GraphKeys.VARIABLES (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+[2m[36m(pid=94350)[0m Instructions for updating:
+[2m[36m(pid=94350)[0m Use `tf.GraphKeys.GLOBAL_VARIABLES` instead.
+[2m[36m(pid=94350)[0m W0713 02:27:55.107479 4662179264 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/dqn/dqn_policy.py:649: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+[2m[36m(pid=94350)[0m Instructions for updating:
+[2m[36m(pid=94350)[0m Use tf.where in 2.0, which has the same broadcast rule as np.where
+[2m[36m(pid=94350)[0m 2019-07-13 02:27:57,369	INFO rollout_worker.py:719 -- Built policy map: {'default_policy': <ray.rllib.agents.ddpg.ddpg_policy.DDPGTFPolicy object at 0x1e2924080>}
+[2m[36m(pid=94350)[0m 2019-07-13 02:27:57,369	INFO rollout_worker.py:720 -- Built preprocessor map: {'default_policy': <ray.rllib.models.preprocessors.NoPreprocessor object at 0x1e2914f60>}
+[2m[36m(pid=94350)[0m 2019-07-13 02:27:57,369	INFO rollout_worker.py:333 -- Built filter map: {'default_policy': <ray.rllib.utils.filter.NoFilter object at 0x1e28f2518>}
+[2m[36m(pid=94350)[0m 2019-07-13 02:27:57,378	INFO actors.py:108 -- Trying to create 4 colocated actors
+[2m[36m(pid=94352)[0m WARNING: Logging before flag parsing goes to stderr.
+[2m[36m(pid=94352)[0m W0713 02:28:06.215341 4666459584 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=94352)[0m Instructions for updating:
+[2m[36m(pid=94352)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=94349)[0m WARNING: Logging before flag parsing goes to stderr.
+[2m[36m(pid=94349)[0m W0713 02:28:06.623126 4528616896 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=94349)[0m Instructions for updating:
+[2m[36m(pid=94349)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=94351)[0m WARNING: Logging before flag parsing goes to stderr.
+[2m[36m(pid=94351)[0m W0713 02:28:06.661187 4624020928 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=94351)[0m Instructions for updating:
+[2m[36m(pid=94351)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=94361)[0m WARNING: Logging before flag parsing goes to stderr.
+[2m[36m(pid=94361)[0m W0713 02:28:08.648953 4569667008 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=94361)[0m Instructions for updating:
+[2m[36m(pid=94361)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:09,751	INFO actors.py:101 -- Got 4 colocated actors of 4
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:11,122	INFO rollout_worker.py:301 -- Creating policy evaluation worker 0 on CPU (please ignore any CUDA init errors)
+[2m[36m(pid=94350)[0m [32m [    17.69094s,  INFO] TimeLimit:
+[2m[36m(pid=94350)[0m - env = <RoboschoolReacher<RoboschoolReacher-v1>>
+[2m[36m(pid=94350)[0m - action_space = Box(2,)
+[2m[36m(pid=94350)[0m - observation_space = Box(9,)
+[2m[36m(pid=94350)[0m - reward_range = (-inf, inf)
+[2m[36m(pid=94350)[0m - metadata = {'render.modes': ['human', 'rgb_array'], 'video.frames_per_second': 60}
+[2m[36m(pid=94350)[0m - _max_episode_steps = 150
+[2m[36m(pid=94350)[0m - _elapsed_steps = None [0m
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:18,439	INFO rollout_worker.py:719 -- Built policy map: {'default_policy': <ray.rllib.agents.ddpg.ddpg_policy.DDPGTFPolicy object at 0x1e3144400>}
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:18,439	INFO rollout_worker.py:720 -- Built preprocessor map: {'default_policy': <ray.rllib.models.preprocessors.NoPreprocessor object at 0x1e3144320>}2019-07-13 02:28:30,974	ERROR worker.py:1672 -- WARNING: 12 workers have been started. This could be a result of using a large number of actors, or it could be a consequence of using nested tasks (see https://github.com/ray-project/ray/issues/3644) for some a discussion of workarounds.
+
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:18,439	INFO rollout_worker.py:333 -- Built filter map: {'default_policy': <ray.rllib.utils.filter.NoFilter object at 0x1e31441d0>}
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:18,443	INFO trainer.py:507 -- Evaluating current policy for 10 episodes
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:18,685	INFO rollout_worker.py:428 -- Generating sample batch of size 50
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:18,706	INFO sampler.py:308 -- Raw obs from env: { 0: { 'agent0': np.ndarray((9,), dtype=float64, min=-0.158, max=0.997, mean=0.156)}}
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:18,707	INFO sampler.py:309 -- Info return from env: {0: {'agent0': None}}
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:18,708	INFO sampler.py:407 -- Preprocessed obs: np.ndarray((9,), dtype=float64, min=-0.158, max=0.997, mean=0.156)
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:18,708	INFO sampler.py:411 -- Filtered obs: np.ndarray((9,), dtype=float64, min=-0.158, max=0.997, mean=0.156)
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:18,711	INFO sampler.py:525 -- Inputs to compute_actions():
+[2m[36m(pid=94350)[0m 
+[2m[36m(pid=94350)[0m { 'default_policy': [ { 'data': { 'agent_id': 'agent0',
+[2m[36m(pid=94350)[0m                                   'env_id': 0,
+[2m[36m(pid=94350)[0m                                   'info': None,
+[2m[36m(pid=94350)[0m                                   'obs': np.ndarray((9,), dtype=float64, min=-0.158, max=0.997, mean=0.156),
+[2m[36m(pid=94350)[0m                                   'prev_action': np.ndarray((2,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=94350)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=94350)[0m                                   'rnn_state': []},
+[2m[36m(pid=94350)[0m                         'type': 'PolicyEvalData'}]}
+[2m[36m(pid=94350)[0m 
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:18,711	INFO tf_run_builder.py:92 -- Executing TF run without tracing. To dump TF timeline traces to disk, set the TF_TIMELINE_DIR environment variable.
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:18,933	INFO sampler.py:552 -- Outputs of compute_actions():
+[2m[36m(pid=94350)[0m 
+[2m[36m(pid=94350)[0m { 'default_policy': ( np.ndarray((1, 2), dtype=float32, min=-0.529, max=-0.416, mean=-0.472),
+[2m[36m(pid=94350)[0m                       [],
+[2m[36m(pid=94350)[0m                       {})}
+[2m[36m(pid=94350)[0m 
+[2m[36m(pid=94362)[0m WARNING: Logging before flag parsing goes to stderr.
+[2m[36m(pid=94362)[0m W0713 02:28:19.436702 4639876544 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=94362)[0m Instructions for updating:
+[2m[36m(pid=94362)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=94364)[0m WARNING: Logging before flag parsing goes to stderr.
+[2m[36m(pid=94364)[0m W0713 02:28:19.454578 4370539968 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=94364)[0m Instructions for updating:
+[2m[36m(pid=94364)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:19,697	INFO sample_batch_builder.py:161 -- Trajectory fragment after postprocess_trajectory():
+[2m[36m(pid=94350)[0m 
+[2m[36m(pid=94350)[0m { 'agent0': { 'data': { 'actions': np.ndarray((150, 2), dtype=float32, min=-1.0, max=1.0, mean=-0.047),
+[2m[36m(pid=94350)[0m                         'agent_index': np.ndarray((150,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=94350)[0m                         'dones': np.ndarray((150,), dtype=bool, min=0.0, max=1.0, mean=0.02),
+[2m[36m(pid=94350)[0m                         'eps_id': np.ndarray((150,), dtype=int64, min=503148858.0, max=503148858.0, mean=503148858.0),
+[2m[36m(pid=94350)[0m                         'infos': np.ndarray((150,), dtype=object, head={}),
+[2m[36m(pid=94350)[0m                         'new_obs': np.ndarray((150, 9), dtype=float32, min=-5.872, max=2.682, mean=-0.062),
+[2m[36m(pid=94350)[0m                         'obs': np.ndarray((150, 9), dtype=float32, min=-5.872, max=2.682, mean=-0.06),
+[2m[36m(pid=94350)[0m                         'prev_actions': np.ndarray((150, 2), dtype=float32, min=-1.0, max=1.0, mean=-0.05),
+[2m[36m(pid=94350)[0m                         'prev_rewards': np.ndarray((150,), dtype=float32, min=-6.762, max=5.014, mean=-0.087),
+[2m[36m(pid=94350)[0m                         'rewards': np.ndarray((150,), dtype=float32, min=-11.319, max=10.921, mean=-0.257),
+[2m[36m(pid=94350)[0m                         't': np.ndarray((150,), dtype=int64, min=0.0, max=149.0, mean=74.5),
+[2m[36m(pid=94350)[0m                         'unroll_id': np.ndarray((150,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=94350)[0m                         'weights': np.ndarray((150,), dtype=float32, min=0.001, max=11.231, mean=2.329)},
+[2m[36m(pid=94350)[0m               'type': 'SampleBatch'}}
+[2m[36m(pid=94350)[0m 
+[2m[36m(pid=94350)[0m 2019-07-13 02:28:19,708	INFO rollout_worker.py:462 -- Completed sample batch:
+[2m[36m(pid=94350)[0m 
+[2m[36m(pid=94350)[0m { 'data': { 'actions': np.ndarray((150, 2), dtype=float32, min=-1.0, max=1.0, mean=-0.047),
+[2m[36m(pid=94350)[0m             'agent_index': np.ndarray((150,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=94350)[0m             'dones': np.ndarray((150,), dtype=bool, min=0.0, max=1.0, mean=0.02),
+[2m[36m(pid=94350)[0m             'eps_id': np.ndarray((150,), dtype=int64, min=503148858.0, max=503148858.0, mean=503148858.0),
+[2m[36m(pid=94350)[0m             'infos': np.ndarray((150,), dtype=object, head={}),
+[2m[36m(pid=94350)[0m             'new_obs': np.ndarray((150, 9), dtype=float32, min=-5.872, max=2.682, mean=-0.062),
+[2m[36m(pid=94350)[0m             'obs': np.ndarray((150, 9), dtype=float32, min=-5.872, max=2.682, mean=-0.06),
+[2m[36m(pid=94350)[0m             'prev_actions': np.ndarray((150, 2), dtype=float32, min=-1.0, max=1.0, mean=-0.05),
+[2m[36m(pid=94350)[0m             'prev_rewards': np.ndarray((150,), dtype=float32, min=-6.762, max=5.014, mean=-0.087),
+[2m[36m(pid=94350)[0m             'rewards': np.ndarray((150,), dtype=float32, min=-11.319, max=10.921, mean=-0.257),
+[2m[36m(pid=94350)[0m             't': np.ndarray((150,), dtype=int64, min=0.0, max=149.0, mean=74.5),
+[2m[36m(pid=94350)[0m             'unroll_id': np.ndarray((150,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=94350)[0m             'weights': np.ndarray((150,), dtype=float32, min=0.001, max=11.231, mean=2.329)},
+[2m[36m(pid=94350)[0m   'type': 'SampleBatch'}
+[2m[36m(pid=94350)[0m 
+[2m[36m(pid=94362)[0m [32m [     0.02344s,  INFO] TimeLimit:
+[2m[36m(pid=94362)[0m - env = <RoboschoolReacher<RoboschoolReacher-v1>>
+[2m[36m(pid=94362)[0m - action_space = Box(2,)
+[2m[36m(pid=94362)[0m - observation_space = Box(9,)
+[2m[36m(pid=94362)[0m - reward_range = (-inf, inf)
+[2m[36m(pid=94362)[0m - metadata = {'render.modes': ['human', 'rgb_array'], 'video.frames_per_second': 60}
+[2m[36m(pid=94362)[0m - _max_episode_steps = 150
+[2m[36m(pid=94362)[0m - _elapsed_steps = None [0m
+[2m[36m(pid=94362)[0m 2019-07-13 02:28:22,521	INFO rollout_worker.py:301 -- Creating policy evaluation worker 2 on CPU (please ignore any CUDA init errors)
+[2m[36m(pid=94362)[0m 2019-07-13 02:28:22.692124: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+[2m[36m(pid=94364)[0m [32m [     0.11994s,  INFO] TimeLimit:
+[2m[36m(pid=94364)[0m - env = <RoboschoolReacher<RoboschoolReacher-v1>>
+[2m[36m(pid=94364)[0m - action_space = Box(2,)
+[2m[36m(pid=94364)[0m - observation_space = Box(9,)
+[2m[36m(pid=94364)[0m - reward_range = (-inf, inf)
+[2m[36m(pid=94364)[0m - metadata = {'render.modes': ['human', 'rgb_array'], 'video.frames_per_second': 60}
+[2m[36m(pid=94364)[0m - _max_episode_steps = 150
+[2m[36m(pid=94364)[0m - _elapsed_steps = None [0m
+[2m[36m(pid=94364)[0m 2019-07-13 02:28:22,693	INFO rollout_worker.py:301 -- Creating policy evaluation worker 1 on CPU (please ignore any CUDA init errors)
+[2m[36m(pid=94362)[0m W0713 02:28:22.725613 4639876544 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/ddpg/ddpg_policy.py:441: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+[2m[36m(pid=94362)[0m Instructions for updating:
+[2m[36m(pid=94362)[0m Use keras.layers.dense instead.
+[2m[36m(pid=94362)[0m W0713 02:28:22.736525 4639876544 deprecation.py:506] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+[2m[36m(pid=94362)[0m Instructions for updating:
+[2m[36m(pid=94362)[0m Call initializer instance with the dtype argument instead of passing it to the constructor
+[2m[36m(pid=94364)[0m 2019-07-13 02:28:22.757183: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+[2m[36m(pid=94364)[0m W0713 02:28:22.786421 4370539968 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/ddpg/ddpg_policy.py:441: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+[2m[36m(pid=94364)[0m Instructions for updating:
+[2m[36m(pid=94364)[0m Use keras.layers.dense instead.
+[2m[36m(pid=94364)[0m W0713 02:28:22.867833 4370539968 deprecation.py:506] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+[2m[36m(pid=94364)[0m Instructions for updating:
+[2m[36m(pid=94364)[0m Call initializer instance with the dtype argument instead of passing it to the constructor
+[2m[36m(pid=94362)[0m W0713 02:28:25.728791 4639876544 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/util/decorator_utils.py:145: GraphKeys.VARIABLES (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+[2m[36m(pid=94362)[0m Instructions for updating:
+[2m[36m(pid=94362)[0m Use `tf.GraphKeys.GLOBAL_VARIABLES` instead.
+[2m[36m(pid=94364)[0m W0713 02:28:25.839514 4370539968 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/util/decorator_utils.py:145: GraphKeys.VARIABLES (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+[2m[36m(pid=94364)[0m Instructions for updating:
+[2m[36m(pid=94364)[0m Use `tf.GraphKeys.GLOBAL_VARIABLES` instead.
+[2m[36m(pid=94362)[0m W0713 02:28:28.721851 4639876544 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/dqn/dqn_policy.py:649: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+[2m[36m(pid=94362)[0m Instructions for updating:
+[2m[36m(pid=94362)[0m Use tf.where in 2.0, which has the same broadcast rule as np.where
+[2m[36m(pid=94364)[0m W0713 02:28:28.825158 4370539968 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/dqn/dqn_policy.py:649: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+[2m[36m(pid=94364)[0m Instructions for updating:
+[2m[36m(pid=94364)[0m Use tf.where in 2.0, which has the same broadcast rule as np.where
+[2m[36m(pid=94364)[0m 2019-07-13 02:28:39,722	INFO rollout_worker.py:428 -- Generating sample batch of size 50
+[2m[36m(pid=94364)[0m 2019-07-13 02:28:39,830	INFO sampler.py:308 -- Raw obs from env: { 0: { 'agent0': np.ndarray((9,), dtype=float64, min=-0.937, max=0.055, mean=-0.229)}}
+[2m[36m(pid=94364)[0m 2019-07-13 02:28:39,830	INFO sampler.py:309 -- Info return from env: {0: {'agent0': None}}
+[2m[36m(pid=94364)[0m 2019-07-13 02:28:39,831	INFO sampler.py:407 -- Preprocessed obs: np.ndarray((9,), dtype=float64, min=-0.937, max=0.055, mean=-0.229)
+[2m[36m(pid=94364)[0m 2019-07-13 02:28:39,831	INFO sampler.py:411 -- Filtered obs: np.ndarray((9,), dtype=float64, min=-0.937, max=0.055, mean=-0.229)
+[2m[36m(pid=94364)[0m 2019-07-13 02:28:39,833	INFO sampler.py:525 -- Inputs to compute_actions():
+[2m[36m(pid=94364)[0m 
+[2m[36m(pid=94364)[0m { 'default_policy': [ { 'data': { 'agent_id': 'agent0',
+[2m[36m(pid=94364)[0m                                   'env_id': 0,
+[2m[36m(pid=94364)[0m                                   'info': None,
+[2m[36m(pid=94364)[0m                                   'obs': np.ndarray((9,), dtype=float64, min=-0.937, max=0.055, mean=-0.229),
+[2m[36m(pid=94364)[0m                                   'prev_action': np.ndarray((2,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=94364)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=94364)[0m                                   'rnn_state': []},
+[2m[36m(pid=94364)[0m                         'type': 'PolicyEvalData'}]}
+[2m[36m(pid=94364)[0m 
+[2m[36m(pid=94364)[0m 2019-07-13 02:28:39,833	INFO tf_run_builder.py:92 -- Executing TF run without tracing. To dump TF timeline traces to disk, set the TF_TIMELINE_DIR environment variable.
+[2m[36m(pid=94364)[0m 2019-07-13 02:28:40,097	INFO sampler.py:552 -- Outputs of compute_actions():
+[2m[36m(pid=94364)[0m 
+[2m[36m(pid=94364)[0m { 'default_policy': ( np.ndarray((1, 2), dtype=float32, min=-0.15, max=0.225, mean=0.037),
+[2m[36m(pid=94364)[0m                       [],
+[2m[36m(pid=94364)[0m                       {})}
+[2m[36m(pid=94364)[0m 
+[2m[36m(pid=94364)[0m 2019-07-13 02:28:41,172	INFO sample_batch_builder.py:161 -- Trajectory fragment after postprocess_trajectory():
+[2m[36m(pid=94364)[0m 
+[2m[36m(pid=94364)[0m { 'agent0': { 'data': { 'actions': np.ndarray((50, 2), dtype=float32, min=-0.855, max=1.0, mean=0.318),
+[2m[36m(pid=94364)[0m                         'agent_index': np.ndarray((50,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=94364)[0m                         'dones': np.ndarray((50,), dtype=bool, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=94364)[0m                         'eps_id': np.ndarray((50,), dtype=int64, min=82799629.0, max=82799629.0, mean=82799629.0),
+[2m[36m(pid=94364)[0m                         'infos': np.ndarray((50,), dtype=object, head={}),
+[2m[36m(pid=94364)[0m                         'new_obs': np.ndarray((50, 9), dtype=float32, min=-2.185, max=2.44, mean=0.091),
+[2m[36m(pid=94364)[0m                         'obs': np.ndarray((50, 9), dtype=float32, min=-1.211, max=2.137, mean=0.085),
+[2m[36m(pid=94364)[0m                         'prev_actions': np.ndarray((50, 2), dtype=float32, min=-0.855, max=1.0, mean=0.311),
+[2m[36m(pid=94364)[0m                         'prev_rewards': np.ndarray((50,), dtype=float32, min=-4.613, max=4.832, mean=-0.18),
+[2m[36m(pid=94364)[0m                         'rewards': np.ndarray((50,), dtype=float32, min=-13.497, max=13.292, mean=-0.801),
+[2m[36m(pid=94364)[0m                         't': np.ndarray((50,), dtype=int64, min=0.0, max=49.0, mean=24.5),
+[2m[36m(pid=94364)[0m                         'unroll_id': np.ndarray((50,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=94364)[0m                         'weights': np.ndarray((50,), dtype=float32, min=0.03, max=13.455, mean=4.359)},
+[2m[36m(pid=94364)[0m               'type': 'SampleBatch'}}W0713 02:30:30.442128 4678718912 deprecation_wrapper.py:119] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/logger.py:119: The name tf.Summary is deprecated. Please use tf.compat.v1.Summary instead.
+
+
+[2m[36m(pid=94364)[0m 
+[2m[36m(pid=94364)[0m 2019-07-13 02:28:41,177	INFO rollout_worker.py:462 -- Completed sample batch:
+[2m[36m(pid=94364)[0m 
+[2m[36m(pid=94364)[0m { 'data': { 'actions': np.ndarray((50, 2), dtype=float32, min=-0.855, max=1.0, mean=0.318),
+[2m[36m(pid=94364)[0m             'agent_index': np.ndarray((50,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=94364)[0m             'dones': np.ndarray((50,), dtype=bool, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=94364)[0m             'eps_id': np.ndarray((50,), dtype=int64, min=82799629.0, max=82799629.0, mean=82799629.0),
+[2m[36m(pid=94364)[0m             'infos': np.ndarray((50,), dtype=object, head={}),
+[2m[36m(pid=94364)[0m             'new_obs': np.ndarray((50, 9), dtype=float32, min=-2.185, max=2.44, mean=0.091),
+[2m[36m(pid=94364)[0m             'obs': np.ndarray((50, 9), dtype=float32, min=-1.211, max=2.137, mean=0.085),
+[2m[36m(pid=94364)[0m             'prev_actions': np.ndarray((50, 2), dtype=float32, min=-0.855, max=1.0, mean=0.311),
+[2m[36m(pid=94364)[0m             'prev_rewards': np.ndarray((50,), dtype=float32, min=-4.613, max=4.832, mean=-0.18),
+[2m[36m(pid=94364)[0m             'rewards': np.ndarray((50,), dtype=float32, min=-13.497, max=13.292, mean=-0.801),
+[2m[36m(pid=94364)[0m             't': np.ndarray((50,), dtype=int64, min=0.0, max=49.0, mean=24.5),
+[2m[36m(pid=94364)[0m             'unroll_id': np.ndarray((50,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=94364)[0m             'weights': np.ndarray((50,), dtype=float32, min=0.03, max=13.455, mean=4.359)},
+[2m[36m(pid=94364)[0m   'type': 'SampleBatch'}
+[2m[36m(pid=94364)[0m 
+[2m[36m(pid=94416)[0m WARNING: Logging before flag parsing goes to stderr.
+[2m[36m(pid=94416)[0m W0713 02:28:53.184319 4430251456 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=94416)[0m Instructions for updating:
+[2m[36m(pid=94416)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=94416)[0m 2019-07-13 02:28:58,676	INFO rollout_worker.py:301 -- Creating policy evaluation worker 3 on CPU (please ignore any CUDA init errors)
+[2m[36m(pid=94416)[0m [32m [     0.02681s,  INFO] TimeLimit:
+[2m[36m(pid=94416)[0m - env = <RoboschoolReacher<RoboschoolReacher-v1>>
+[2m[36m(pid=94416)[0m - action_space = Box(2,)
+[2m[36m(pid=94416)[0m - observation_space = Box(9,)
+[2m[36m(pid=94416)[0m - reward_range = (-inf, inf)
+[2m[36m(pid=94416)[0m - metadata = {'render.modes': ['human', 'rgb_array'], 'video.frames_per_second': 60}
+[2m[36m(pid=94416)[0m - _max_episode_steps = 150
+[2m[36m(pid=94416)[0m - _elapsed_steps = None [0m
+[2m[36m(pid=94416)[0m 2019-07-13 02:28:58.983953: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+[2m[36m(pid=94416)[0m W0713 02:28:59.119322 4430251456 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/ddpg/ddpg_policy.py:441: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+[2m[36m(pid=94416)[0m Instructions for updating:
+[2m[36m(pid=94416)[0m Use keras.layers.dense instead.
+[2m[36m(pid=94416)[0m W0713 02:28:59.155589 4430251456 deprecation.py:506] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+[2m[36m(pid=94416)[0m Instructions for updating:
+[2m[36m(pid=94416)[0m Call initializer instance with the dtype argument instead of passing it to the constructor
+[2m[36m(pid=94497)[0m WARNING: Logging before flag parsing goes to stderr.
+[2m[36m(pid=94497)[0m W0713 02:29:02.163635 123145560334336 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=94497)[0m Instructions for updating:
+[2m[36m(pid=94497)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=94416)[0m W0713 02:29:04.122340 4430251456 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/util/decorator_utils.py:145: GraphKeys.VARIABLES (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+[2m[36m(pid=94416)[0m Instructions for updating:
+[2m[36m(pid=94416)[0m Use `tf.GraphKeys.GLOBAL_VARIABLES` instead.
+[2m[36m(pid=94418)[0m WARNING: Logging before flag parsing goes to stderr.
+[2m[36m(pid=94418)[0m W0713 02:29:05.740278 123145350348800 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=94418)[0m Instructions for updating:
+[2m[36m(pid=94418)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=94419)[0m WARNING: Logging before flag parsing goes to stderr.
+[2m[36m(pid=94419)[0m W0713 02:29:06.116718 123145498587136 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=94419)[0m Instructions for updating:
+[2m[36m(pid=94419)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=94417)[0m WARNING: Logging before flag parsing goes to stderr.
+[2m[36m(pid=94417)[0m W0713 02:29:06.285089 123145522270208 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=94417)[0m Instructions for updating:
+[2m[36m(pid=94417)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=94416)[0m W0713 02:29:08.625219 4430251456 deprecation.py:323] From /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/dqn/dqn_policy.py:649: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+[2m[36m(pid=94416)[0m Instructions for updating:
+[2m[36m(pid=94416)[0m Use tf.where in 2.0, which has the same broadcast rule as np.where
+Result for APEX_DDPG_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-13_02-30-30
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 14.501353661850224
+  episode_reward_mean: -11.582338923855124
+  episode_reward_min: -36.28800945960577
+  episodes_this_iter: 35
+  episodes_total: 35
+  experiment_id: cb0427bef32d4bdda0e8af0a46b08e59
+  hostname: KayidmacOS
+  info:
+    learner_queue:
+      size_count: 27862
+      size_mean: 0.0
+      size_quantiles:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      size_std: 0.0
+    max_exploration: 0.4
+    min_exploration: 0.0
+    num_samples_dropped: 0
+    num_steps_sampled: 25050
+    num_steps_trained: 0
+    num_target_updates: 0
+    num_weight_syncs: 61
+    replay_shard_0:
+      add_batch_time_ms: 6.062
+      policy_default_policy:
+        added_count: 6450
+        est_size_bytes: 2199450
+        num_entries: 6450
+        sampled_count: 0
+      replay_time_ms: .nan
+      update_priorities_time_ms: .nan
+    sample_throughput: 532.905
+    train_throughput: 0.0
+  iterations_since_restore: 1
+  node_ip: 192.168.0.3
+  num_healthy_workers: 3
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 94350
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 2.0714472689144587
+    mean_inference_ms: 8.254081947284526
+    mean_processing_ms: 1.7238815179031886
+  time_since_restore: 123.85919284820557
+  time_this_iter_s: 123.85919284820557
+  time_total_s: 123.85919284820557
+  timestamp: 1562977830
+  timesteps_since_restore: 25050
+  timesteps_this_iter: 25050
+  timesteps_total: 25050
+  training_iteration: 1
+  

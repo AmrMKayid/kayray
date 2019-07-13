@@ -11,11 +11,12 @@ gym-reacher-apex-ddpg:
     config:
         use_huber: True
         clip_rewards: False
-#        num_workers: 3 # 16
-        num_workers:
-          grid_search: [11, 9, 7, 5, 3]
-        num_envs_per_worker:
-          grid_search: [8, 6, 4, 2]
+        num_gpus: 0 #1 
+        num_workers: 3 # 16
+        # num_workers:
+        #   grid_search: [11, 9, 7, 5, 3]
+        # num_envs_per_worker:
+        #   grid_search: [8, 6, 4, 2]
         n_step: 3 # 1
         exploration_ou_noise_scale: 1.0
         target_network_update_freq: 50000
