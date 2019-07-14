@@ -5,18 +5,18 @@ gym-reacher-apex-ddpg:
     checkpoint_freq: 100
     checkpoint_at_end: True
     stop:
-      time_total_s: 3600 # 1 hours
+      timesteps_total: 2000000 # 2M steps
       episode_reward_mean: 21
-      training_iteration: 1000
+      training_iteration: 500
     config:
         use_huber: True
         clip_rewards: False
         num_gpus: 1 #1 
         num_workers: 3 # 16
         # num_workers:
-        #   grid_search: [63, 31, 15] # grid_search: [11, 9, 7, 5, 3]
+        #   grid_search: [63, 31, 15] # grid_search: [11, 9, 7, 5, 3] # grid_search: [63, 31, 15]
         # num_envs_per_worker:
-        #   grid_search: [32, 16, 8] # grid_search: [8, 6, 4, 2]
+        #   grid_search: [32, 16, 8] # grid_search: [16, 8, 4] # grid_search: [32, 16, 8] 
         n_step: 3 # 1
         exploration_ou_noise_scale: 1.0
         target_network_update_freq: 50000

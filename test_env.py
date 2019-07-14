@@ -1,4 +1,4 @@
-from kayray.envs.unity import make_unity_env
+from kayray.envs.unity import make_unity_env, 
 
 env1 = make_unity_env('Reacher20', worker_id=0, no_graphics=False)
 env2 = make_unity_env('Reacher20', worker_id=1, no_graphics=False)

@@ -20,7 +20,7 @@ from ray.tune.tune import _make_scheduler, run_experiments
 
 from kayray import DEFAULT_RESULTS_DIR
 from kayray.envs import make_env, make_unity_env
-from kayray.utils import make_parser, DotDict, glogger
+from kayray.utils import set_global_seeds, make_parser, DotDict, glogger
 
 EXAMPLE_USAGE = """
 Training example via RLlib CLI:
@@ -172,7 +172,7 @@ def run(args, parser, dot_dict=None):
 
 if __name__ == "__main__":
     start = time.time()
-
+    set_global_seeds(0)
     parser = create_parser()
     args = parser.parse_args()
     # print(args)
