@@ -6,19 +6,17 @@ gym-reacher-a2c:
     local_dir: ~/kayray_results
     checkpoint_freq: 100
     checkpoint_at_end: True
-    stop:
-        timesteps_total: 2000000 # 2M steps
+    stop:     
         episode_reward_mean: 21
         training_iteration: 500
     config:
         sample_batch_size: 20
         clip_rewards: True
-    #        num_workers: 3 # 5
-        num_gpus: 1 # 0
-        num_workers:
-            grid_search: [63, 31, 15] # grid_search: [11, 9, 7, 5, 3] # grid_search: [63, 31, 15]
+        num_gpus: 1 
+        num_workers: 
+            grid_search: [11, 7, 3]
         num_envs_per_worker:
-            grid_search: [32, 16, 8] # grid_search: [16, 8, 4] # grid_search: [32, 16, 8] 
+            grid_search: [16, 8, 4]
         lr_schedule: [
             [0, 0.0007],
             [20000000, 0.000000000001],

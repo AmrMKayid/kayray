@@ -1,0 +1,22 @@
+# Runs on a g3.16xl node with 3 m4.16xl workers
+gym-reacher-impala:
+    env: RoboschoolReacher-v1
+    run: IMPALA
+    local_dir: ~/kayray_results
+    checkpoint_freq: 100
+    checkpoint_at_end: True
+    stop:
+      episode_reward_mean: 21
+      training_iteration: 500
+    config:
+        sample_batch_size: 1000
+        train_batch_size: 25000
+        num_gpus: 1
+        num_workers: 
+            grid_search: [11, 7, 3]
+        num_envs_per_worker: 
+            grid_search: [16, 8, 4]
+        lr_schedule: [
+            [0, 0.0001],
+            [20000000, 0.000000000001],
+        ]

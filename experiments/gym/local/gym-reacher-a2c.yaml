@@ -1,0 +1,20 @@
+# Runs on a single g3.16xl node
+
+gym-reacher-a2c:
+    env: RoboschoolReacher-v1
+    run: A2C
+    local_dir: ~/kayray_results
+    checkpoint_freq: 100
+    checkpoint_at_end: True
+    stop:     
+        episode_reward_mean: 21
+        training_iteration: 500
+    config:
+        sample_batch_size: 20
+        clip_rewards: False
+        num_gpus: 0
+        num_workers: 0
+        lr_schedule: [
+            [0, 0.0007],
+            [20000000, 0.000000000001],
+        ]

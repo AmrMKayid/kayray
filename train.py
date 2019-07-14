@@ -144,6 +144,7 @@ def run(args, parser, dot_dict=None):
     register_env(env_name,
              lambda config: make_env(env_name=env_name))
 
+    glogger.info('Args configs: \n', json.dumps(args, indent=2))
     glogger.info('Experiment configs: \n', json.dumps(experiments, indent=2))
 
     if args.ray_num_nodes:
