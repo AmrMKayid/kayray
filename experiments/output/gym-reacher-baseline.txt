@@ -1,181 +1,15 @@
-2019-07-14 01:29:53,571	WARNING worker.py:1337 -- WARNING: Not updating worker name since `setproctitle` is not installed. Install this with `pip install setproctitle` (or ray[debug]) to enable monitoring of worker processes.
-2019-07-14 01:29:53,573	INFO node.py:498 -- Process STDOUT and STDERR is being redirected to /tmp/ray/session_2019-07-14_01-29-53_571454_20331/logs.
-2019-07-14 01:29:53,680	INFO services.py:409 -- Waiting for redis server at 127.0.0.1:31161 to respond...
-2019-07-14 01:29:53,797	INFO services.py:409 -- Waiting for redis server at 127.0.0.1:18695 to respond...
-2019-07-14 01:29:53,800	INFO services.py:806 -- Starting Redis shard with 1.72 GB max memory.
-2019-07-14 01:29:53,836	INFO node.py:512 -- Process STDOUT and STDERR is being redirected to /tmp/ray/session_2019-07-14_01-29-53_571454_20331/logs.
-2019-07-14 01:29:53,843	INFO services.py:1446 -- Starting the Plasma object store with 2.58 GB memory using /tmp.
-2019-07-14 01:29:54,038	INFO tune.py:65 -- Did not find checkpoint file in /Users/amrmkayid/kayray_results/gym-reacher-ppo-baseline.
-2019-07-14 01:29:54,039	INFO tune.py:233 -- Starting a new experiment.
-2019-07-14 01:29:55,813	WARNING signature.py:108 -- The function with_updates has a **kwargs argument, which is currently not supported.
-2019-07-14 01:29:58,147	ERROR trial_runner.py:487 -- Error processing event.
-Traceback (most recent call last):
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trial_runner.py", line 436, in _process_trial
-    result = self.trial_executor.fetch_result(trial)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/ray_trial_executor.py", line 323, in fetch_result
-    result = ray.get(trial_future[0])
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/worker.py", line 2195, in get
-    raise value
-ray.exceptions.RayTaskError: [36mray_worker[39m (pid=20353, host=KayidmacOS)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer_template.py", line 87, in __init__
-    Trainer.__init__(self, config, env, logger_creator)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 323, in __init__
-    Trainable.__init__(self, config, logger_creator)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trainable.py", line 87, in __init__
-    self._setup(copy.deepcopy(self.config))
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 438, in _setup
-    self._init(self.config, self.env_creator)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer_template.py", line 106, in _init
-    self.config["num_workers"])
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 483, in _make_workers
-    logdir=self.logdir)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/worker_set.py", line 64, in __init__
-    RolloutWorker, env_creator, policy, 0, self._local_config)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/worker_set.py", line 214, in _make_worker
-    _fake_sampler=config.get("_fake_sampler", False))
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/rollout_worker.py", line 253, in __init__
-    self.env = _validate_env(env_creator(env_context))
-  File "train.py", line 145, in <lambda>
-    lambda config: make_unity_env(env_name=env_name))
-  File "/Users/amrmkayid/Desktop/kayray/kayray/envs/unity.py", line 14, in make_unity_env
-    env = UnityEnv(environment_filename=env_name, worker_id=worker_id, no_graphics=no_graphics, multiagent=multiagent) #, use_visual=True)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/gym_unity/envs/unity_env.py", line 51, in __init__
-    environment_filename, worker_id, no_graphics=no_graphics
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/mlagents/envs/environment.py", line 58, in __init__
-    self.executable_launcher(file_name, docker_training, no_graphics)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/mlagents/envs/environment.py", line 172, in executable_launcher
-    .format(true_filename))
-mlagents.envs.exception.UnityEnvironmentException: Couldn't launch the RoboschoolReacher-v1 environment. Provided filename does not match any environments.
-
-2019-07-14 01:29:58,150	INFO ray_trial_executor.py:187 -- Destroying actor for trial PPO_RoboschoolReacher-v1_0. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
-2019-07-14 01:29:58,153	INFO trial_runner.py:524 -- Attempting to recover trial state from last checkpoint.
-2019-07-14 01:29:58,159	WARNING signature.py:108 -- The function with_updates has a **kwargs argument, which is currently not supported.
-2019-07-14 01:30:00,470	ERROR trial_runner.py:487 -- Error processing event.
-Traceback (most recent call last):
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trial_runner.py", line 436, in _process_trial
-    result = self.trial_executor.fetch_result(trial)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/ray_trial_executor.py", line 323, in fetch_result
-    result = ray.get(trial_future[0])
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/worker.py", line 2195, in get
-    raise value
-ray.exceptions.RayTaskError: [36mray_worker[39m (pid=20352, host=KayidmacOS)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer_template.py", line 87, in __init__
-    Trainer.__init__(self, config, env, logger_creator)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 323, in __init__
-    Trainable.__init__(self, config, logger_creator)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trainable.py", line 87, in __init__
-    self._setup(copy.deepcopy(self.config))
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 438, in _setup
-    self._init(self.config, self.env_creator)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer_template.py", line 106, in _init
-    self.config["num_workers"])
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 483, in _make_workers
-    logdir=self.logdir)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/worker_set.py", line 64, in __init__
-    RolloutWorker, env_creator, policy, 0, self._local_config)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/worker_set.py", line 214, in _make_worker
-    _fake_sampler=config.get("_fake_sampler", False))
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/rollout_worker.py", line 253, in __init__
-    self.env = _validate_env(env_creator(env_context))
-  File "train.py", line 145, in <lambda>
-    lambda config: make_unity_env(env_name=env_name))
-  File "/Users/amrmkayid/Desktop/kayray/kayray/envs/unity.py", line 14, in make_unity_env
-    env = UnityEnv(environment_filename=env_name, worker_id=worker_id, no_graphics=no_graphics, multiagent=multiagent) #, use_visual=True)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/gym_unity/envs/unity_env.py", line 51, in __init__
-    environment_filename, worker_id, no_graphics=no_graphics
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/mlagents/envs/environment.py", line 58, in __init__
-    self.executable_launcher(file_name, docker_training, no_graphics)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/mlagents/envs/environment.py", line 172, in executable_launcher
-    .format(true_filename))
-mlagents.envs.exception.UnityEnvironmentException: Couldn't launch the RoboschoolReacher-v1 environment. Provided filename does not match any environments.
-
-2019-07-14 01:30:00,471	INFO ray_trial_executor.py:187 -- Destroying actor for trial PPO_RoboschoolReacher-v1_0. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
-2019-07-14 01:30:00,474	INFO trial_runner.py:524 -- Attempting to recover trial state from last checkpoint.
-2019-07-14 01:30:00,478	WARNING signature.py:108 -- The function with_updates has a **kwargs argument, which is currently not supported.
-2019-07-14 01:30:02,797	ERROR trial_runner.py:487 -- Error processing event.
-Traceback (most recent call last):
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trial_runner.py", line 436, in _process_trial
-    result = self.trial_executor.fetch_result(trial)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/ray_trial_executor.py", line 323, in fetch_result
-    result = ray.get(trial_future[0])
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/worker.py", line 2195, in get
-    raise value
-ray.exceptions.RayTaskError: [36mray_worker[39m (pid=20354, host=KayidmacOS)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer_template.py", line 87, in __init__
-    Trainer.__init__(self, config, env, logger_creator)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 323, in __init__
-    Trainable.__init__(self, config, logger_creator)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trainable.py", line 87, in __init__
-    self._setup(copy.deepcopy(self.config))
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 438, in _setup
-    self._init(self.config, self.env_creator)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer_template.py", line 106, in _init
-    self.config["num_workers"])
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 483, in _make_workers
-    logdir=self.logdir)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/worker_set.py", line 64, in __init__
-    RolloutWorker, env_creator, policy, 0, self._local_config)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/worker_set.py", line 214, in _make_worker
-    _fake_sampler=config.get("_fake_sampler", False))
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/rollout_worker.py", line 253, in __init__
-    self.env = _validate_env(env_creator(env_context))
-  File "train.py", line 145, in <lambda>
-    lambda config: make_unity_env(env_name=env_name))
-  File "/Users/amrmkayid/Desktop/kayray/kayray/envs/unity.py", line 14, in make_unity_env
-    env = UnityEnv(environment_filename=env_name, worker_id=worker_id, no_graphics=no_graphics, multiagent=multiagent) #, use_visual=True)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/gym_unity/envs/unity_env.py", line 51, in __init__
-    environment_filename, worker_id, no_graphics=no_graphics
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/mlagents/envs/environment.py", line 58, in __init__
-    self.executable_launcher(file_name, docker_training, no_graphics)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/mlagents/envs/environment.py", line 172, in executable_launcher
-    .format(true_filename))
-mlagents.envs.exception.UnityEnvironmentException: Couldn't launch the RoboschoolReacher-v1 environment. Provided filename does not match any environments.
-
-2019-07-14 01:30:02,798	INFO ray_trial_executor.py:187 -- Destroying actor for trial PPO_RoboschoolReacher-v1_0. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
-2019-07-14 01:30:02,801	INFO trial_runner.py:524 -- Attempting to recover trial state from last checkpoint.
-2019-07-14 01:30:02,805	WARNING signature.py:108 -- The function with_updates has a **kwargs argument, which is currently not supported.
-2019-07-14 01:30:05,111	ERROR trial_runner.py:487 -- Error processing event.
-Traceback (most recent call last):
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trial_runner.py", line 436, in _process_trial
-    result = self.trial_executor.fetch_result(trial)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/ray_trial_executor.py", line 323, in fetch_result
-    result = ray.get(trial_future[0])
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/worker.py", line 2195, in get
-    raise value
-ray.exceptions.RayTaskError: [36mray_worker[39m (pid=20351, host=KayidmacOS)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer_template.py", line 87, in __init__
-    Trainer.__init__(self, config, env, logger_creator)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 323, in __init__
-    Trainable.__init__(self, config, logger_creator)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trainable.py", line 87, in __init__
-    self._setup(copy.deepcopy(self.config))
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 438, in _setup
-    self._init(self.config, self.env_creator)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer_template.py", line 106, in _init
-    self.config["num_workers"])
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 483, in _make_workers
-    logdir=self.logdir)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/worker_set.py", line 64, in __init__
-    RolloutWorker, env_creator, policy, 0, self._local_config)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/worker_set.py", line 214, in _make_worker
-    _fake_sampler=config.get("_fake_sampler", False))
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/rollout_worker.py", line 253, in __init__
-    self.env = _validate_env(env_creator(env_context))
-  File "train.py", line 145, in <lambda>
-    lambda config: make_unity_env(env_name=env_name))
-  File "/Users/amrmkayid/Desktop/kayray/kayray/envs/unity.py", line 14, in make_unity_env
-    env = UnityEnv(environment_filename=env_name, worker_id=worker_id, no_graphics=no_graphics, multiagent=multiagent) #, use_visual=True)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/gym_unity/envs/unity_env.py", line 51, in __init__
-    environment_filename, worker_id, no_graphics=no_graphics
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/mlagents/envs/environment.py", line 58, in __init__
-    self.executable_launcher(file_name, docker_training, no_graphics)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/mlagents/envs/environment.py", line 172, in executable_launcher
-    .format(true_filename))
-mlagents.envs.exception.UnityEnvironmentException: Couldn't launch the RoboschoolReacher-v1 environment. Provided filename does not match any environments.
-
-2019-07-14 01:30:05,113	INFO ray_trial_executor.py:187 -- Destroying actor for trial PPO_RoboschoolReacher-v1_0. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
-[32m [     0.03789s,  INFO] Registering env:  RoboschoolReacher-v1 [0m
-[32m [     0.03848s,  INFO] Experiment configs: 
+2019-07-14 01:51:54,504	INFO node.py:498 -- Process STDOUT and STDERR is being redirected to /tmp/ray/session_2019-07-14_01-51-54_502598_25304/logs.
+2019-07-14 01:51:54,617	INFO services.py:409 -- Waiting for redis server at 127.0.0.1:13720 to respond...
+2019-07-14 01:51:54,742	INFO services.py:409 -- Waiting for redis server at 127.0.0.1:15910 to respond...
+2019-07-14 01:51:54,746	INFO services.py:806 -- Starting Redis shard with 1.72 GB max memory.
+2019-07-14 01:51:54,793	INFO node.py:512 -- Process STDOUT and STDERR is being redirected to /tmp/ray/session_2019-07-14_01-51-54_502598_25304/logs.
+2019-07-14 01:51:54,795	INFO services.py:1446 -- Starting the Plasma object store with 2.58 GB memory using /tmp.
+2019-07-14 01:51:55,461	INFO tune.py:61 -- Tip: to resume incomplete experiments, pass resume='prompt' or resume=True to run()
+2019-07-14 01:51:55,461	INFO tune.py:233 -- Starting a new experiment.
+2019-07-14 01:51:56,997	WARNING signature.py:108 -- The function with_updates has a **kwargs argument, which is currently not supported.
+2019-07-14 01:51:57,139	WARNING util.py:64 -- The `start_trial` operation took 0.153764009475708 seconds to complete, which may be a performance bottleneck.
+[32m [     0.05509s,  INFO] Registering env:  RoboschoolReacher-v1 [0m
+[32m [     0.05572s,  INFO] Experiment configs: 
  {
   "gym-reacher-ppo-baseline": {
     "env": "RoboschoolReacher-v1",
@@ -198,6 +32,8 @@ mlagents.envs.exception.UnityEnvironmentException: Couldn't launch the Roboschoo
       "model": {
         "free_log_std": true
       },
+      "num_gpus": 0,
+      "num_workers": 0,
       "batch_mode": "complete_episodes",
       "observation_filter": "MeanStdFilter"
     }
@@ -206,50 +42,241 @@ mlagents.envs.exception.UnityEnvironmentException: Couldn't launch the Roboschoo
 == Status ==
 Using FIFO scheduling algorithm.
 Resources requested: 0/4 CPUs, 0/0 GPUs
-Memory usage on this node: 6.7/8.6 GB
+Memory usage on this node: 6.4/8.6 GB
 
 == Status ==
 Using FIFO scheduling algorithm.
-Resources requested: 3/4 CPUs, 0/0 GPUs
-Memory usage on this node: 6.6/8.6 GB
+Resources requested: 1/4 CPUs, 0/0 GPUs
+Memory usage on this node: 6.4/8.6 GB
 Result logdir: /Users/amrmkayid/kayray_results/gym-reacher-ppo-baseline
 Number of trials: 1 ({'RUNNING': 1})
 RUNNING trials:
  - PPO_RoboschoolReacher-v1_0:	RUNNING
 
-[2m[36m(pid=20353)[0m [32m [     0.02975s,  INFO] Starting env: RoboschoolReacher-v1 [0m
-[2m[36m(pid=20353)[0m 2019-07-14 01:29:58,110	WARNING ppo.py:151 -- FYI: By default, the value function will not share layers with the policy model ('vf_share_layers': False).
-[2m[36m(pid=20352)[0m 2019-07-14 01:30:00,451	WARNING ppo.py:151 -- FYI: By default, the value function will not share layers with the policy model ('vf_share_layers': False).
-[2m[36m(pid=20352)[0m [32m [     0.03163s,  INFO] Starting env: RoboschoolReacher-v1 [0m
-[2m[36m(pid=20354)[0m [32m [     0.02680s,  INFO] Starting env: RoboschoolReacher-v1 [0m
-[2m[36m(pid=20354)[0m 2019-07-14 01:30:02,782	WARNING ppo.py:151 -- FYI: By default, the value function will not share layers with the policy model ('vf_share_layers': False).
+[2m[36m(pid=25330)[0m 2019-07-14 01:51:59,526	WARNING ppo.py:151 -- FYI: By default, the value function will not share layers with the policy model ('vf_share_layers': False).
+[2m[36m(pid=25330)[0m [32m [     0.04761s,  INFO] TimeLimit:
+[2m[36m(pid=25330)[0m - env = <RoboschoolReacher<RoboschoolReacher-v1>>
+[2m[36m(pid=25330)[0m - action_space = Box(2,)
+[2m[36m(pid=25330)[0m - observation_space = Box(9,)
+[2m[36m(pid=25330)[0m - reward_range = (-inf, inf)
+[2m[36m(pid=25330)[0m - metadata = {'render.modes': ['human', 'rgb_array'], 'video.frames_per_second': 60}
+[2m[36m(pid=25330)[0m - _max_episode_steps = 150
+[2m[36m(pid=25330)[0m - _elapsed_steps = None [0m
+[2m[36m(pid=25330)[0m 2019-07-14 01:51:59,545	INFO rollout_worker.py:301 -- Creating policy evaluation worker 0 on CPU (please ignore any CUDA init errors)
+[2m[36m(pid=25330)[0m 2019-07-14 01:51:59.551495: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+[2m[36m(pid=25330)[0m 2019-07-14 01:51:59,756	INFO dynamic_tf_policy.py:313 -- Initializing loss function with dummy input:
+[2m[36m(pid=25330)[0m 
+[2m[36m(pid=25330)[0m { 'action_prob': <tf.Tensor 'default_policy/action_prob:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=25330)[0m   'actions': <tf.Tensor 'default_policy/actions:0' shape=(?, 2) dtype=float32>,
+[2m[36m(pid=25330)[0m   'advantages': <tf.Tensor 'default_policy/advantages:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=25330)[0m   'behaviour_logits': <tf.Tensor 'default_policy/behaviour_logits:0' shape=(?, 4) dtype=float32>,
+[2m[36m(pid=25330)[0m   'dones': <tf.Tensor 'default_policy/dones:0' shape=(?,) dtype=bool>,
+[2m[36m(pid=25330)[0m   'new_obs': <tf.Tensor 'default_policy/new_obs:0' shape=(?, 9) dtype=float32>,
+[2m[36m(pid=25330)[0m   'obs': <tf.Tensor 'default_policy/observation:0' shape=(?, 9) dtype=float32>,
+[2m[36m(pid=25330)[0m   'prev_actions': <tf.Tensor 'default_policy/action:0' shape=(?, 2) dtype=float32>,
+[2m[36m(pid=25330)[0m   'prev_rewards': <tf.Tensor 'default_policy/prev_reward:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=25330)[0m   'rewards': <tf.Tensor 'default_policy/rewards:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=25330)[0m   'value_targets': <tf.Tensor 'default_policy/value_targets:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=25330)[0m   'vf_preds': <tf.Tensor 'default_policy/vf_preds:0' shape=(?,) dtype=float32>}
+[2m[36m(pid=25330)[0m 
+[2m[36m(pid=25330)[0m /Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py:100: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+[2m[36m(pid=25330)[0m   "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:00,749	INFO rollout_worker.py:719 -- Built policy map: {'default_policy': <ray.rllib.policy.tf_policy_template.PPOTFPolicy object at 0x1d0baa278>}
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:00,749	INFO rollout_worker.py:720 -- Built preprocessor map: {'default_policy': <ray.rllib.models.preprocessors.NoPreprocessor object at 0x1d06d4470>}
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:00,750	INFO rollout_worker.py:333 -- Built filter map: {'default_policy': MeanStdFilter((9,), True, True, None, (n=0, mean_mean=0.0, mean_std=0.0), (n=0, mean_mean=0.0, mean_std=0.0))}
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:00,754	INFO multi_gpu_optimizer.py:79 -- LocalMultiGPUOptimizer devices ['/cpu:0']
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:04,909	INFO rollout_worker.py:428 -- Generating sample batch of size 200
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:04,935	INFO sampler.py:308 -- Raw obs from env: { 0: { 'agent0': np.ndarray((9,), dtype=float64, min=-0.993, max=0.406, mean=-0.052)}}
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:04,935	INFO sampler.py:309 -- Info return from env: {0: {'agent0': None}}
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:04,935	INFO sampler.py:407 -- Preprocessed obs: np.ndarray((9,), dtype=float64, min=-0.993, max=0.406, mean=-0.052)
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:04,936	INFO sampler.py:411 -- Filtered obs: np.ndarray((9,), dtype=float64, min=0.0, max=0.0, mean=0.0)
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:04,937	INFO sampler.py:525 -- Inputs to compute_actions():
+[2m[36m(pid=25330)[0m 
+[2m[36m(pid=25330)[0m { 'default_policy': [ { 'data': { 'agent_id': 'agent0',
+[2m[36m(pid=25330)[0m                                   'env_id': 0,
+[2m[36m(pid=25330)[0m                                   'info': None,
+[2m[36m(pid=25330)[0m                                   'obs': np.ndarray((9,), dtype=float64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=25330)[0m                                   'prev_action': np.ndarray((2,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=25330)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=25330)[0m                                   'rnn_state': []},
+[2m[36m(pid=25330)[0m                         'type': 'PolicyEvalData'}]}
+[2m[36m(pid=25330)[0m 
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:04,937	INFO tf_run_builder.py:92 -- Executing TF run without tracing. To dump TF timeline traces to disk, set the TF_TIMELINE_DIR environment variable.
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:04,993	INFO sampler.py:552 -- Outputs of compute_actions():
+[2m[36m(pid=25330)[0m 
+[2m[36m(pid=25330)[0m { 'default_policy': ( np.ndarray((1, 2), dtype=float32, min=1.155, max=1.251, mean=1.203),
+[2m[36m(pid=25330)[0m                       [],
+[2m[36m(pid=25330)[0m                       { 'action_prob': np.ndarray((1,), dtype=float32, min=0.037, max=0.037, mean=0.037),
+[2m[36m(pid=25330)[0m                         'behaviour_logits': np.ndarray((1, 4), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=25330)[0m                         'vf_preds': np.ndarray((1,), dtype=float32, min=0.0, max=0.0, mean=0.0)})}
+[2m[36m(pid=25330)[0m 
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:05,189	INFO sample_batch_builder.py:161 -- Trajectory fragment after postprocess_trajectory():
+[2m[36m(pid=25330)[0m 
+[2m[36m(pid=25330)[0m { 'agent0': { 'data': { 'action_prob': np.ndarray((150,), dtype=float32, min=0.001, max=0.159, mean=0.078),
+[2m[36m(pid=25330)[0m                         'actions': np.ndarray((150, 2), dtype=float32, min=-2.217, max=2.586, mean=0.009),
+[2m[36m(pid=25330)[0m                         'advantages': np.ndarray((150,), dtype=float32, min=-13.187, max=15.37, mean=-0.281),
+[2m[36m(pid=25330)[0m                         'agent_index': np.ndarray((150,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=25330)[0m                         'behaviour_logits': np.ndarray((150, 4), dtype=float32, min=-0.015, max=0.012, mean=-0.0),
+[2m[36m(pid=25330)[0m                         'dones': np.ndarray((150,), dtype=bool, min=0.0, max=1.0, mean=0.007),
+[2m[36m(pid=25330)[0m                         'eps_id': np.ndarray((150,), dtype=int64, min=726746572.0, max=726746572.0, mean=726746572.0),
+[2m[36m(pid=25330)[0m                         'infos': np.ndarray((150,), dtype=object, head={}),
+[2m[36m(pid=25330)[0m                         'new_obs': np.ndarray((150, 9), dtype=float32, min=-3.238, max=3.622, mean=-0.037),
+[2m[36m(pid=25330)[0m                         'obs': np.ndarray((150, 9), dtype=float32, min=-3.238, max=3.622, mean=-0.035),
+[2m[36m(pid=25330)[0m                         'prev_actions': np.ndarray((150, 2), dtype=float32, min=-2.217, max=2.586, mean=0.007),
+[2m[36m(pid=25330)[0m                         'prev_rewards': np.ndarray((150,), dtype=float32, min=-3.003, max=3.8, mean=0.019),
+[2m[36m(pid=25330)[0m                         'rewards': np.ndarray((150,), dtype=float32, min=-3.003, max=3.8, mean=0.012),
+[2m[36m(pid=25330)[0m                         't': np.ndarray((150,), dtype=int64, min=0.0, max=149.0, mean=74.5),
+[2m[36m(pid=25330)[0m                         'unroll_id': np.ndarray((150,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=25330)[0m                         'value_targets': np.ndarray((150,), dtype=float32, min=-13.19, max=15.374, mean=-0.282),
+[2m[36m(pid=25330)[0m                         'vf_preds': np.ndarray((150,), dtype=float32, min=-0.011, max=0.009, mean=-0.001)},
+[2m[36m(pid=25330)[0m               'type': 'SampleBatch'}}
+[2m[36m(pid=25330)[0m 
+[2m[36m(pid=25330)[0m 2019-07-14 01:52:05,414	INFO rollout_worker.py:462 -- Completed sample batch:
+[2m[36m(pid=25330)[0m 
+[2m[36m(pid=25330)[0m { 'data': { 'action_prob': np.ndarray((300,), dtype=float32, min=0.0, max=0.159, mean=0.079),
+[2m[36m(pid=25330)[0m             'actions': np.ndarray((300, 2), dtype=float32, min=-3.392, max=3.395, mean=-0.018),
+[2m[36m(pid=25330)[0m             'advantages': np.ndarray((300,), dtype=float32, min=-20.057, max=15.37, mean=-2.277),
+[2m[36m(pid=25330)[0m             'agent_index': np.ndarray((300,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=25330)[0m             'behaviour_logits': np.ndarray((300, 4), dtype=float32, min=-0.015, max=0.012, mean=-0.001),
+[2m[36m(pid=25330)[0m             'dones': np.ndarray((300,), dtype=bool, min=0.0, max=1.0, mean=0.007),
+[2m[36m(pid=25330)[0m             'eps_id': np.ndarray((300,), dtype=int64, min=223307230.0, max=726746572.0, mean=475026901.0),
+[2m[36m(pid=25330)[0m             'infos': np.ndarray((300,), dtype=object, head={}),
+[2m[36m(pid=25330)[0m             'new_obs': np.ndarray((300, 9), dtype=float32, min=-8.661, max=8.661, mean=-0.076),
+[2m[36m(pid=25330)[0m             'obs': np.ndarray((300, 9), dtype=float32, min=-12.247, max=12.248, mean=-0.077),
+[2m[36m(pid=25330)[0m             'prev_actions': np.ndarray((300, 2), dtype=float32, min=-3.392, max=3.395, mean=-0.017),
+[2m[36m(pid=25330)[0m             'prev_rewards': np.ndarray((300,), dtype=float32, min=-4.967, max=3.8, mean=-0.009),
+[2m[36m(pid=25330)[0m             'rewards': np.ndarray((300,), dtype=float32, min=-4.967, max=3.8, mean=-0.011),
+[2m[36m(pid=25330)[0m             't': np.ndarray((300,), dtype=int64, min=0.0, max=149.0, mean=74.5),
+[2m[36m(pid=25330)[0m             'unroll_id': np.ndarray((300,), dtype=int64, min=0.0, max=1.0, mean=0.5),
+[2m[36m(pid=25330)[0m             'value_targets': np.ndarray((300,), dtype=float32, min=-20.054, max=15.374, mean=-2.276),
+[2m[36m(pid=25330)[0m             'vf_preds': np.ndarray((300,), dtype=float32, min=-0.011, max=0.011, mean=0.001)},
+[2m[36m(pid=25330)[0m   'type': 'SampleBatch'}
+[2m[36m(pid=25330)[0m 
+[2m[36m(pid=25330)[0m 2019-07-14 01:53:32,367	INFO multi_gpu_impl.py:146 -- Training on concatenated sample batches:
+[2m[36m(pid=25330)[0m 
+[2m[36m(pid=25330)[0m { 'inputs': [ np.ndarray((25200, 2), dtype=float32, min=-4.223, max=4.144, mean=-0.0),
+[2m[36m(pid=25330)[0m               np.ndarray((25200,), dtype=float32, min=-26.11, max=19.223, mean=-0.115),
+[2m[36m(pid=25330)[0m               np.ndarray((25200, 9), dtype=float32, min=-12.247, max=16.719, mean=0.007),
+[2m[36m(pid=25330)[0m               np.ndarray((25200, 2), dtype=float32, min=-4.223, max=4.144, mean=0.0),
+[2m[36m(pid=25330)[0m               np.ndarray((25200,), dtype=float32, min=-3.668, max=3.885, mean=0.0),
+[2m[36m(pid=25330)[0m               np.ndarray((25200, 4), dtype=float32, min=-0.016, max=0.015, mean=0.0),
+[2m[36m(pid=25330)[0m               np.ndarray((25200,), dtype=float32, min=-46.908, max=33.568, mean=-7.821),
+[2m[36m(pid=25330)[0m               np.ndarray((25200,), dtype=float32, min=-0.012, max=0.011, mean=-0.0)],
+[2m[36m(pid=25330)[0m   'placeholders': [ <tf.Tensor 'default_policy/action:0' shape=(?, 2) dtype=float32>,
+[2m[36m(pid=25330)[0m                     <tf.Tensor 'default_policy/prev_reward:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=25330)[0m                     <tf.Tensor 'default_policy/observation:0' shape=(?, 9) dtype=float32>,
+[2m[36m(pid=25330)[0m                     <tf.Tensor 'default_policy/actions:0' shape=(?, 2) dtype=float32>,
+[2m[36m(pid=25330)[0m                     <tf.Tensor 'default_policy/advantages:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=25330)[0m                     <tf.Tensor 'default_policy/behaviour_logits:0' shape=(?, 4) dtype=float32>,
+[2m[36m(pid=25330)[0m                     <tf.Tensor 'default_policy/value_targets:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=25330)[0m                     <tf.Tensor 'default_policy/vf_preds:0' shape=(?,) dtype=float32>],
+[2m[36m(pid=25330)[0m   'state_inputs': []}
+[2m[36m(pid=25330)[0m 
+[2m[36m(pid=25330)[0m 2019-07-14 01:53:32,367	INFO multi_gpu_impl.py:191 -- Divided 25200 rollout sequences, each of length 1, among 1 devices.
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-14_01-53-51
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 13.493009750249607
+  episode_reward_mean: -17.51949763701858
+  episode_reward_min: -46.77889396047554
+  episodes_this_iter: 168
+  episodes_total: 168
+  experiment_id: 8d9db9ae40154762ba43bc126d6f4127
+  hostname: KayidmacOS
+  info:
+    grad_time_ms: 19339.896
+    learner:
+      default_policy:
+        cur_kl_coeff: 1.0
+        cur_lr: 9.999999747378752e-05
+        entropy: 2.831726312637329
+        kl: 0.001016069669276476
+        policy_loss: -0.003005024278536439
+        total_loss: 99.36962890625
+        vf_explained_var: 0.14543092250823975
+        vf_loss: 99.37162017822266
+    load_time_ms: 100.026
+    num_steps_sampled: 25200
+    num_steps_trained: 25000
+    sample_time_ms: 87425.612
+    update_time_ms: 0.002
+  iterations_since_restore: 1
+  node_ip: 192.168.0.3
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25330
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.7011127975231969
+    mean_inference_ms: 2.0965528054860063
+    mean_processing_ms: 0.6454289326104498
+  time_since_restore: 106.98875212669373
+  time_this_iter_s: 106.98875212669373
+  time_total_s: 106.98875212669373
+  timestamp: 1563062031
+  timesteps_since_restore: 25200
+  timesteps_this_iter: 25200
+  timesteps_total: 25200
+  training_iteration: 1
+  
 == Status ==
 Using FIFO scheduling algorithm.
-Resources requested: 3/4 CPUs, 0/0 GPUs
+Resources requested: 1/4 CPUs, 0/0 GPUs
 Memory usage on this node: 6.6/8.6 GB
 Result logdir: /Users/amrmkayid/kayray_results/gym-reacher-ppo-baseline
 Number of trials: 1 ({'RUNNING': 1})
 RUNNING trials:
- - PPO_RoboschoolReacher-v1_0:	RUNNING, 3 failures: /Users/amrmkayid/kayray_results/gym-reacher-ppo-baseline/PPO_RoboschoolReacher-v1_0_2019-07-14_01-29-55an1j1fx5/error_2019-07-14_01-30-02.txt
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25330], 106 s, 1 iter, 25200 ts, -17.5 rew
 
-== Status ==
-Using FIFO scheduling algorithm.
-Resources requested: 0/4 CPUs, 0/0 GPUs
-Memory usage on this node: 6.6/8.6 GB
-Result logdir: /Users/amrmkayid/kayray_results/gym-reacher-ppo-baseline
-Number of trials: 1 ({'ERROR': 1})
-ERROR trials:
- - PPO_RoboschoolReacher-v1_0:	ERROR, 4 failures: /Users/amrmkayid/kayray_results/gym-reacher-ppo-baseline/PPO_RoboschoolReacher-v1_0_2019-07-14_01-29-55an1j1fx5/error_2019-07-14_01-30-05.txt
-
-Traceback (most recent call last):
-  File "train.py", line 181, in <module>
-    run(args, parser, dot_dict)
-  File "train.py", line 170, in run
-    resume=args.resume)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/tune.py", line 333, in run_experiments
-    raise_on_failed_trial=raise_on_failed_trial)
-  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/tune.py", line 273, in run
-    raise TuneError("Trials did not complete", errored_trials)
-ray.tune.error.TuneError: ('Trials did not complete', [PPO_RoboschoolReacher-v1_0])
-[2m[36m(pid=20351)[0m [32m [     0.03134s,  INFO] Starting env: RoboschoolReacher-v1 [0m
-[2m[36m(pid=20351)[0m 2019-07-14 01:30:05,090	WARNING ppo.py:151 -- FYI: By default, the value function will not share layers with the policy model ('vf_share_layers': False).
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-14_01-55-57
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 17.268597352357965
+  episode_reward_mean: -14.296505252566915
+  episode_reward_min: -51.21108008342258
+  episodes_this_iter: 168
+  episodes_total: 336
+  experiment_id: 8d9db9ae40154762ba43bc126d6f4127
+  hostname: KayidmacOS
+  info:
+    grad_time_ms: 15123.615
+    learner:
+      default_policy:
+        cur_kl_coeff: 0.5
+        cur_lr: 9.999999747378752e-05
+        entropy: 2.819984197616577
+        kl: 0.0025004458148032427
+        policy_loss: -0.004427710082381964
+        total_loss: 70.94821166992188
+        vf_explained_var: 0.31881973147392273
+        vf_loss: 70.9513931274414
+    load_time_ms: 50.547
+    num_steps_sampled: 50400
+    num_steps_trained: 50000
+    sample_time_ms: 100917.05
+    update_time_ms: 0.002
+  iterations_since_restore: 2
+  node_ip: 192.168.0.3
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25330
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.7966145246582974
+    mean_inference_ms: 2.412755201597095
+    mean_processing_ms: 0.7690504068836439
+  time_since_restore: 232.32558822631836
+  time_this_iter_s: 125.33683609962463
+  time_total_s: 232.32558822631836
+  timestamp: 1563062157
+  timesteps_since_restore: 50400
+  timesteps_this_iter: 25200
+  timesteps_total: 50400
+  training_iteration: 2
+  
