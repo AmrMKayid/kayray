@@ -4,8 +4,9 @@ setup(
 	name='KayRay',
 	packages=[package for package in find_packages() if package.startswith('kayray')],
  	install_requires=[
-		 'ray', 'mlagents', 'gym_unity', 'gym', 'roboschool', 
-   		'pandas', 'pydash', 'psutil', 'torch', 'opencv-python', 'requests'
+		'ray', 'mlagents', 'gym_unity', 'gym', 'roboschool', 
+		'pandas', 'pydash', 'psutil', 'setproctitle', 'lz4',
+  		'torch', 'opencv-python', 'requests'
 	 ],
 	description='Kayray experiments',
 	author='Amr Kayid',
