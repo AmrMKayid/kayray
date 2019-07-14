@@ -3,7 +3,7 @@
 gym-reacher-a2c:
     env: RoboschoolReacher-v1
     run: A2C
-    local_dir: ~/kayray_results
+    local_dir: ~/kayray_results/parallel
     checkpoint_freq: 100
     checkpoint_at_end: True
     stop:     
