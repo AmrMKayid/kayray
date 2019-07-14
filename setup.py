@@ -1,8 +1,12 @@
 from setuptools import setup, find_packages
 
 setup(
-	name='sonic_on_ray',
+	name='KayRay',
 	packages=[package for package in find_packages() if package.startswith('kayray')],
+ 	install_requires=[
+		 'ray', 'mlagents', 'gym_unity', 'gym', 'roboschool', 
+   		'pandas', 'pydash', 'psutil', 'torch', 'opencv-python', 'requests'
+	 ],
 	description='Kayray experiments',
 	author='Amr Kayid',
 	url='https://github.com/AmrMKayid/kayray',
