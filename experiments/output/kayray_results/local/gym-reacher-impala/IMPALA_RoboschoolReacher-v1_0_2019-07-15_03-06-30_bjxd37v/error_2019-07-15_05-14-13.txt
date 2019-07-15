@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trial_runner.py", line 436, in _process_trial
+    result = self.trial_executor.fetch_result(trial)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/ray_trial_executor.py", line 323, in fetch_result
+    result = ray.get(trial_future[0])
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/worker.py", line 2195, in get
+    raise value
+ray.exceptions.RayTaskError: [36mray_IMPALA:train()[39m (pid=58839, host=KayidmacOS)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 367, in train
+    raise e
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 353, in train
+    result = Trainable.train(self)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trainable.py", line 150, in train
+    result = self._train()
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer_template.py", line 137, in _train
+    res = self.collect_metrics()
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 674, in collect_metrics
+    selected_workers=selected_workers)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/optimizers/policy_optimizer.py", line 106, in collect_metrics
+    timeout_seconds=timeout_seconds)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/metrics.py", line 65, in collect_episodes
+    "Timed out waiting for metrics from workers. You can "
+ValueError: Timed out waiting for metrics from workers. You can configure this timeout with `collect_metrics_timeout`.
+

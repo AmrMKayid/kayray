@@ -1,0 +1,91 @@
+{
+  "checkpoints": [
+    {
+      "trainable_name": "PPO",
+      "config": {
+        "gamma": 0.995,
+        "kl_coeff": 1.0,
+        "num_sgd_iter": 20,
+        "lr": 0.0001,
+        "sgd_minibatch_size": 1000,
+        "train_batch_size": 25000,
+        "model": {
+          "free_log_std": true
+        },
+        "num_gpus": 0,
+        "num_workers": 0,
+        "batch_mode": "complete_episodes",
+        "observation_filter": "MeanStdFilter",
+        "env": "RoboschoolReacher-v1"
+      },
+      "local_dir": "/Users/amrmkayid/kayray_results/local/gym-reacher-ppo",
+      "experiment_tag": "0",
+      "resources": {
+        "cpu": 1,
+        "gpu": 0,
+        "extra_cpu": 0,
+        "extra_gpu": 0,
+        "custom_resources": {},
+        "extra_custom_resources": {}
+      },
+      "stopping_criterion": {
+        "episode_reward_mean": 21,
+        "training_iteration": 500
+      },
+      "upload_dir": "",
+      "loggers": "80049502000000000000004e2e",
+      "sync_function": "80049502000000000000004e2e",
+      "verbose": true,
+      "max_failures": 3,
+      "last_result": {},
+      "last_update_time": -Infinity,
+      "checkpoint_freq": 100,
+      "checkpoint_at_end": true,
+      "history": [],
+      "keep_checkpoints_num": null,
+      "_cmp_greater": true,
+      "best_checkpoint_attr_value": -Infinity,
+      "checkpoint_score_attr": "training_iteration",
+      "_checkpoint": "80049553000000000000008c0e7261792e74756e652e747269616c948c0a436865636b706f696e749493942981947d94288c0773746f72616765948c046469736b948c0576616c7565944e8c0b6c6173745f726573756c74947d9475622e",
+      "export_formats": [],
+      "status": "RUNNING",
+      "logdir": "/Users/amrmkayid/kayray_results/local/gym-reacher-ppo/PPO_RoboschoolReacher-v1_0_2019-07-15_03-06-54xen_vrf3",
+      "runner": null,
+      "result_logger": null,
+      "last_debug": 0,
+      "trial_id": "d61a6b7a",
+      "error_file": null,
+      "num_failures": 0,
+      "custom_trial_name": null,
+      "results": "80049502000000000000004e2e",
+      "best_result": "80049502000000000000004e2e",
+      "param_config": "80049502000000000000004e2e",
+      "extra_arg": "80049502000000000000004e2e",
+      "_nonjson_fields": [
+        "_checkpoint",
+        "loggers",
+        "sync_function",
+        "results",
+        "best_result",
+        "param_config",
+        "extra_arg"
+      ],
+      "__logger_started__": true
+    }
+  ],
+  "runner_data": {
+    "_global_time_limit": Infinity,
+    "_total_time": 37281.7701985836,
+    "_iteration": 30,
+    "_verbose": true,
+    "_server_port": 4321,
+    "_metadata_checkpoint_dir": "/Users/amrmkayid/kayray_results/local/gym-reacher-ppo",
+    "_start_time": 1563152809.150671,
+    "_session_str": "2019-07-15_03-06-49",
+    "launch_web_server": false
+  },
+  "stats": {
+    "start_time": 1563152809.150671,
+    "timestamp": 1563190147.6791208
+  }
+}

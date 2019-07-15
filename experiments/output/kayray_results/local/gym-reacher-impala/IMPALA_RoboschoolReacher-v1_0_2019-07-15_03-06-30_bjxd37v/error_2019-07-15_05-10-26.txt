@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trial_runner.py", line 436, in _process_trial
+    result = self.trial_executor.fetch_result(trial)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/ray_trial_executor.py", line 323, in fetch_result
+    result = ray.get(trial_future[0])
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/worker.py", line 2195, in get
+    raise value
+ray.exceptions.RayTaskError: [36mray_IMPALA:train()[39m (pid=58840, host=KayidmacOS)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 367, in train
+    raise e
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 353, in train
+    result = Trainable.train(self)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trainable.py", line 150, in train
+    result = self._train()
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer_template.py", line 126, in _train
+    fetches = self.optimizer.step()
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/optimizers/async_samples_optimizer.py", line 129, in step
+    assert self.learner.is_alive()
+AssertionError
+

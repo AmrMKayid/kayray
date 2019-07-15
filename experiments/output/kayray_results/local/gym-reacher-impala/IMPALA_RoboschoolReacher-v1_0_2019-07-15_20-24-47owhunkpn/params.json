@@ -1,0 +1,17 @@
+{
+  "env": "RoboschoolReacher-v1",
+  "lr_schedule": [
+    [
+      0,
+      0.0001
+    ],
+    [
+      20000000,
+      1e-12
+    ]
+  ],
+  "num_gpus": 0,
+  "num_workers": 3,
+  "sample_batch_size": 50,
+  "train_batch_size": 500
+}

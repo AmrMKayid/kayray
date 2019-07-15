@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trial_runner.py", line 436, in _process_trial
+    result = self.trial_executor.fetch_result(trial)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/ray_trial_executor.py", line 323, in fetch_result
+    result = ray.get(trial_future[0])
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/worker.py", line 2195, in get
+    raise value
+ray.exceptions.RayTaskError: [36mray_DDPG:train()[39m (pid=48741, host=KayidmacOS)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer_template.py", line 87, in __init__
+    Trainer.__init__(self, config, env, logger_creator)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 323, in __init__
+    Trainable.__init__(self, config, logger_creator)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/tune/trainable.py", line 87, in __init__
+    self._setup(copy.deepcopy(self.config))
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 438, in _setup
+    self._init(self.config, self.env_creator)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer_template.py", line 106, in _init
+    self.config["num_workers"])
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/agents/trainer.py", line 483, in _make_workers
+    logdir=self.logdir)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/worker_set.py", line 64, in __init__
+    RolloutWorker, env_creator, policy, 0, self._local_config)
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/worker_set.py", line 214, in _make_worker
+    _fake_sampler=config.get("_fake_sampler", False))
+  File "/Users/amrmkayid/anaconda3/envs/kayddrl/lib/python3.6/site-packages/ray/rllib/evaluation/rollout_worker.py", line 253, in __init__
+    self.env = _validate_env(env_creator(env_context))
+  File "test_env.py", line 146, in <lambda>
+    lambda config: make_unity_env(config, env_name=env_name))
+  File "/Users/amrmkayid/Desktop/kayray/kayray/envs/unity.py", line 38, in make_unity_env
+    env = UnityEnv(environment_filename=env_name, worker_id=env_config.worker_index, no_graphics=no_graphics, multiagent=multiagent) #,
+NameError: name 'multiagent' is not defined
+

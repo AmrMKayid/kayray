@@ -17,7 +17,7 @@ gym-reacher-ppo-baseline: # Experiment name
     model:
       free_log_std: True
     num_gpus: 0 
-    num_workers: 0
+    num_workers: 3 
     # monitor: True  # Record videos.
     batch_mode: complete_episodes
     observation_filter: MeanStdFilter

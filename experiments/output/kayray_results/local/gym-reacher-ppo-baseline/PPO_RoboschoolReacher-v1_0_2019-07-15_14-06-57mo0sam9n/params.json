@@ -1,0 +1,20 @@
+{
+  "batch_mode": "complete_episodes",
+  "env": "RoboschoolReacher-v1",
+  "gamma": 0.995,
+  "kl_coeff": 1.0,
+  "lr": 0.0001,
+  "model": {
+    "free_log_std": true
+  },
+  "num_gpus": 0,
+  "num_sgd_iter": 20,
+  "num_workers": 3,
+  "observation_filter": "MeanStdFilter",
+  "on_episode_end": "tune.function(<function on_episode_end at 0x13b4229d8>)",
+  "on_episode_start": "tune.function(<function on_episode_start at 0x10f89cea0>)",
+  "on_episode_step": "tune.function(<function on_episode_step at 0x11091f6a8>)",
+  "on_train_result": "tune.function(<function on_train_result at 0x13b422a60>)",
+  "sgd_minibatch_size": 1000,
+  "train_batch_size": 25000
+}
