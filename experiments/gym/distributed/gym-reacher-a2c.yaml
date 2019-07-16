@@ -11,7 +11,7 @@ gym-reacher-a2c:
         training_iteration: 500
     config:
         sample_batch_size: 20
-        clip_rewards: True
+        clip_rewards: False #True
         num_gpus: 4
         num_workers:
             grid_search: [63, 31, 15]
