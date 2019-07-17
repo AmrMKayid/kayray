@@ -13,46 +13,47 @@ PATH = os.path.dirname(os.path.abspath(__file__))
 
 
 class UnityRayEnv(gym.Env):
-    def __init__(self, env_config, env_name, no_graphics=True, multiagent=False, use_visual=False):
+    def __init__(self, env_config, env_name='Reacher', no_graphics=True, multiagent=False, use_visual=False):
+        print(env_config)
         glogger.info(f'Starting env: {env_name} | worker_id: {env_config.worker_index}')
         env_name = f'{PATH}/build/{env_name}'
-        self._env = UnityEnv(environment_filename=env_name, worker_id=env_config.worker_index, no_graphics=no_graphics, multiagent=multiagent) 
-        self.observation_space = self._env.observation_space
-        self.action_space = self._env.action_space
-        glogger.info(describe(self._env))
+        self.env = UnityEnv(environment_filename=env_name, worker_id=env_config.worker_index, no_graphics=no_graphics, multiagent=multiagent) 
+        self.observation_space = self.env.observation_space
+        self.action_space = self.env.action_space
+        glogger.info(describe(self.env))
         glogger.info(describe(self))
         
     def reset(self):
-        return self._env.reset()
+        return self.env.reset()
     
     def step(self, actions):
-        obs, rewards, dones, infos = self._env.step(actions)
+        obs, rewards, dones, infos = self.env.step(actions)
         return obs, rewards, dones, infos
 
-class MultiAgentsUnityRayEnv(MultiAgentEnv):
-    def __init__(self, env_config, env_name, no_graphics=True, multiagent=True, use_visual=False):
-        glogger.info(f'Starting env: {env_name} | worker_id: {env_config.worker_index}')
-        env_name = f'{PATH}/build/{env_name}'
-        self._env = UnityEnv(environment_filename=env_name, worker_id=env_config.worker_index, no_graphics=no_graphics, multiagent=multiagent)
-        self.agents = self._env._n_agents
+class MultiAgentsUnityRayEnv(UnityRayEnv, MultiAgentEnv):
+    def __init__(self, env_config, env_name='Reacher20', no_graphics=True, multiagent=True, use_visual=False):
+        UnityRayEnv.__init__(self, env_config=env_config, env_name=env_name, no_graphics=no_graphics, multiagent=multiagent, use_visual=use_visual)
+        # glogger.info(f'Starting env: {env_name} | worker_id: {env_config.worker_index}')
+        # env_name = f'{PATH}/build/{env_name}'
+        # self.env = UnityEnv(environment_filename=env_name, worker_id=env_config.worker_index, no_graphics=no_graphics, multiagent=multiagent)
+        self.agents = self.env._n_agents
         self.dones = set()
-        self.observation_space = self._env.observation_space
-        self.action_space = self._env.action_space
+        self.observation_space = self.env.observation_space
+        self.action_space = self.env.action_space
         self.resetted = False
-        glogger.info(describe(self._env))
         glogger.info(describe(self))
         
     def reset(self):
         self.resetted = True
         self.dones = set()
-        last_obs = self._env.reset()
+        last_obs = self.env.reset()
         return {i: obs for i, obs in enumerate(last_obs)}
         
     def step(self, action_dict):
         actions = list(action_dict.values())
         # glogger.fatal(actions)
         obs, rew, done, info = {}, {}, {}, {}
-        obs_list, rew_list, done_list, info_list = self._env.step(actions)
+        obs_list, rew_list, done_list, info_list = self.env.step(actions)
         for i in range(self.agents):
             obs[i], rew[i], done[i], info[i] = obs_list[i], rew_list[i], done_list[i], info_list
             if done[i]:
@@ -64,8 +65,8 @@ class MultiAgentsUnityRayEnv(MultiAgentEnv):
         
     
     
-def make_unity_env(env_config, env_name, worker_id=0,  no_graphics=True):
+def make_unity_env(env_config, env_name, no_graphics=True):
     multiagent = env_name[-2:] == '20'
     if multiagent:
-        return MultiAgentsUnityRayEnv(env_config, env_name)
-    return UnityRayEnv(env_config, env_name)
+        return MultiAgentsUnityRayEnv(env_config, env_name, no_graphics=no_graphics)
+    return UnityRayEnv(env_config, env_name, no_graphics=no_graphics)
