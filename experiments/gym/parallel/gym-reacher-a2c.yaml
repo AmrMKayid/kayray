@@ -4,17 +4,18 @@ gym-reacher-a2c:
     env: RoboschoolReacher-v1
     run: A2C
     local_dir: ~/kayray_results/parallel
-    checkpoint_freq: 100
+    checkpoint_freq: 50
     checkpoint_at_end: True
     stop:     
-        episode_reward_mean: 21
-        training_iteration: 500
+        episode_reward_mean: 18
+        timesteps_total: 5000000
+        # training_iteration: 500
     config:
         sample_batch_size: 20
         clip_rewards: False #True
         num_gpus: 1 
         num_workers: 
-            grid_search: [11, 7, 3]
+            grid_search: [11, 7]
         num_envs_per_worker:
             grid_search: [16, 8, 4]
         lr_schedule: [

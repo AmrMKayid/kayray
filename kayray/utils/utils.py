@@ -26,7 +26,7 @@ from ray.tune.trial import Trial, json_to_resources
 def set_global_seeds(seed):
     random.seed(seed)
     np.random.seed(seed)
-    tf.set_random_seed(seed)
+    tf.compat.v1.set_random_seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
 
