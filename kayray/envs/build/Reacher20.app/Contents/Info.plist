@@ -10,9 +10,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>Reacher_macos</string>
+	<string>Reacher20</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Unity Player version 2018.3.5f1 (76b3e37670a4). (c) 2019 Unity Technologies ApS. All rights reserved.</string>
+	<string>Unity Player version 2019.1.10f1 (f007ed779b7a). (c) 2019 Unity Technologies ApS. All rights reserved.</string>
 	<key>CFBundleIconFile</key>
 	<string>PlayerIcon.icns</string>
 	<key>CFBundleIdentifier</key>
@@ -38,7 +38,7 @@
 	<key>NSPrincipalClass</key>
 	<string>PlayerApplication</string>
 	<key>UnityBuildNumber</key>
-	<string>76b3e37670a4</string>
+	<string>f007ed779b7a</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.9.0</string>
 </dict>
