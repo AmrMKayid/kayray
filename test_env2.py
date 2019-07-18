@@ -12,7 +12,7 @@ from kayray import DEFAULT_RESULTS_DIR
 from kayray.envs import make_env, make_unity_env
 from kayray.utils import set_global_seeds, make_parser, DotDict, glogger
 
-env = make_unity_env(DotDict({'worker_index': 1}), 'linux/Reacher', no_graphics=False)
+env = make_unity_env(DotDict({'worker_index': 1}), 'linux/Reacher20', no_graphics=True)
 obs = env.reset()
 print(obs)
 # rews = []
@@ -22,6 +22,7 @@ for i in range(1000):
     #     actions.update({f'Action_{a}': env.action_space.sample()})
     # glogger.info(actions)
     obs, rew, dones, info = env.step( env.action_space.sample())
+    glogger.info(obs, rew, dones, info)
     # rews.append(rew)
 # glogger.info(rews)
 
