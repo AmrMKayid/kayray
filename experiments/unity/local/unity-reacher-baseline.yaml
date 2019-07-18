@@ -1,0 +1,25 @@
+gym-reacher-ppo-baseline: # Experiment name
+  env: Reacher
+  run: PPO # The RL Algorithm or Model to train
+  local_dir: ~/kayray_results/local
+  checkpoint_freq: 100
+  checkpoint_at_end: True
+  stop:
+    # episode_reward_mean: 21
+    training_iteration: 500
+  config: # Algorithm-specific configuration (e.g. env, hyperparams)
+    env_config:
+      env_type: unity
+    gamma: 0.995
+    kl_coeff: 1.0
+    num_sgd_iter: 20
+    lr: 0.0001
+    sgd_minibatch_size: 1000
+    train_batch_size: 25000
+    model:
+      free_log_std: True
+    num_gpus: 0 
+    num_workers: 3 
+    # monitor: True  # Record videos.
+    batch_mode: complete_episodes
+    observation_filter: MeanStdFilter

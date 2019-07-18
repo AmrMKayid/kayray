@@ -1,0 +1,22 @@
+# Runs on a single g3.16xl node
+
+gym-reacher-a2c:
+    env: Reacher
+    run: A2C
+    local_dir: ~/kayray_results/local
+    checkpoint_freq: 100
+    checkpoint_at_end: True
+    stop:     
+        # episode_reward_mean: 21
+        training_iteration: 500
+    config:
+        env_config:
+            env_type: unity
+        sample_batch_size: 20
+        clip_rewards: False
+        num_gpus: 0
+        num_workers: 3 
+        lr_schedule: [
+            [0, 0.0007],
+            [20000000, 0.000000000001],
+        ]

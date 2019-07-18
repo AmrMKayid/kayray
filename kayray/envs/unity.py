@@ -1,5 +1,6 @@
 # from mlagents.envs import UnityEnvironment
 import os
+import platform
 import gym
 from gym import spaces
 from gym_unity.envs import UnityEnv
@@ -67,6 +68,7 @@ class MultiAgentsUnityRayEnv(UnityRayEnv, MultiAgentEnv):
     
 def make_unity_env(env_config, env_name, no_graphics=True):
     multiagent = env_name[-2:] == '20'
+    env_name = f'mac/{env_name}' if platform.system().lower() == 'darwin' else f'linux/{env_name}'
     if multiagent:
         return MultiAgentsUnityRayEnv(env_config, env_name, no_graphics=no_graphics)
     return UnityRayEnv(env_config, env_name, no_graphics=no_graphics)
