@@ -1,4 +1,4 @@
-gym-reacher-ppo: 
+unity-reacher-ppo: 
   env: Reacher20
   run: PPO 
   local_dir: ~/kayray_results/parallel

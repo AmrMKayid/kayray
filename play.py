@@ -103,9 +103,10 @@ def run(args, parser):
 
     # Env Registration
     env_name = args.env
+    # TODO: Remove this
     glogger.info('Registering env: ', env_name)
     register_env(env_name,
-             lambda config: make_env(env_name=env_name))
+             lambda env_config: make_env(env_config=env_config, env_name=env_name, no_graphics=False))
 
     glogger.info('Running Experiment configs: \n', json.dumps(config, indent=2))
 

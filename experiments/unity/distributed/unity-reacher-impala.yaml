@@ -1,5 +1,5 @@
 # Runs on a g3.16xl node with 3 m4.16xl workers
-gym-reacher-impala:
+unity-reacher-impala:
     env: Reacher20
     run: IMPALA
     local_dir: ~/kayray_results/distributed

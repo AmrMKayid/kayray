@@ -1,6 +1,6 @@
 # Runs on a single g3.16xl node
 
-gym-reacher-a2c:
+unity-reacher-a2c:
     env: Reacher
     run: A2C
     local_dir: ~/kayray_results/local

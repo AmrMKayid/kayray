@@ -15,7 +15,7 @@ PATH = os.path.dirname(os.path.abspath(__file__))
 
 class UnityRayEnv(gym.Env):
     def __init__(self, env_config, env_name='Reacher', no_graphics=True, multiagent=False, use_visual=False):
-        print(env_config)
+        # print(env_config)
         glogger.info(f'Starting env: {env_name} | worker_id: {env_config.worker_index}')
         env_name = f'{PATH}/build/{env_name}'
         self.env = UnityEnv(environment_filename=env_name, worker_id=env_config.worker_index, no_graphics=no_graphics, multiagent=multiagent) 
@@ -30,6 +30,9 @@ class UnityRayEnv(gym.Env):
     def step(self, actions):
         obs, rewards, dones, infos = self.env.step(actions)
         return obs, rewards, dones, infos
+    
+    def close(self):
+        self.env.close()
 
 class MultiAgentsUnityRayEnv(UnityRayEnv, MultiAgentEnv):
     def __init__(self, env_config, env_name='Reacher20', no_graphics=True, multiagent=True, use_visual=False):

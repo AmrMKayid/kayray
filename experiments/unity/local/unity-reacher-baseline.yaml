@@ -1,4 +1,4 @@
-gym-reacher-ppo-baseline: # Experiment name
+unity-reacher-ppo-baseline: # Experiment name
   env: Reacher
   run: PPO # The RL Algorithm or Model to train
   local_dir: ~/kayray_results/local
@@ -18,7 +18,7 @@ gym-reacher-ppo-baseline: # Experiment name
     train_batch_size: 25000
     model:
       free_log_std: True
-    num_gpus: 0 
+    num_gpus: 1
     num_workers: 3 
     # monitor: True  # Record videos.
     batch_mode: complete_episodes

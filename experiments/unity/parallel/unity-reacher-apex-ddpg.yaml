@@ -1,4 +1,4 @@
-gym-reacher-apex-ddpg:
+unity-reacher-apex-ddpg:
     env: Reacher20
     run: APEX_DDPG
     local_dir: ~/kayray_results/parallel

@@ -23,4 +23,5 @@ from kayray.envs import make_env
 from kayray.utils import set_global_seeds, make_parser, DotDict, glogger
 
 
-env = make_env(DotDict({'env_type': 'unity', 'worker_index': 1}), 'mac/Reacher')
+env = make_env(DotDict({'env_type': 'unity', 'worker_index': 0}), 'Reacher')
+env.close()
