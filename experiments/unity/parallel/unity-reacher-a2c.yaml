@@ -8,8 +8,8 @@ unity-reacher-a2c:
     checkpoint_at_end: True
     stop:     
         # episode_reward_mean: 18
-        timesteps_total: 5000000
-        # training_iteration: 500
+        # timesteps_total: 5000000
+        training_iteration: 500
     config:
         env_config:
             env_type: unity
