@@ -6,8 +6,10 @@ gym-reacher-ppo-baseline: # Experiment name
   checkpoint_at_end: True
   stop:
     episode_reward_mean: 21
-    training_iteration: 500
+    timesteps_total: 10000000
   config: # Algorithm-specific configuration (e.g. env, hyperparams)
+    env_config:
+      env_type: openai
     gamma: 0.995
     kl_coeff: 1.0
     num_sgd_iter: 20
@@ -17,7 +19,7 @@ gym-reacher-ppo-baseline: # Experiment name
     model:
       free_log_std: True
     num_gpus: 0 
-    num_workers: 3 
+    num_workers: 0
     # monitor: True  # Record videos.
     batch_mode: complete_episodes
     observation_filter: MeanStdFilter

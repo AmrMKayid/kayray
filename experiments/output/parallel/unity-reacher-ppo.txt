@@ -1,0 +1,1123 @@
+2019-07-19 03:16:42,887	WARNING worker.py:1337 -- WARNING: Not updating worker name since `setproctitle` is not installed. Install this with `pip install setproctitle` (or ray[debug]) to enable monitoring of worker processes.
+2019-07-19 03:16:42,888	INFO node.py:498 -- Process STDOUT and STDERR is being redirected to /tmp/ray/session_2019-07-19_03-16-42_888003_29114/logs.
+2019-07-19 03:16:43,000	INFO services.py:409 -- Waiting for redis server at 127.0.0.1:65340 to respond...
+2019-07-19 03:16:43,135	INFO services.py:409 -- Waiting for redis server at 127.0.0.1:35247 to respond...
+2019-07-19 03:16:43,138	INFO services.py:806 -- Starting Redis shard with 1.72 GB max memory.
+2019-07-19 03:16:43,206	INFO node.py:512 -- Process STDOUT and STDERR is being redirected to /tmp/ray/session_2019-07-19_03-16-42_888003_29114/logs.
+2019-07-19 03:16:43,209	INFO services.py:1446 -- Starting the Plasma object store with 2.58 GB memory using /tmp.
+2019-07-19 03:16:43,887	INFO tune.py:61 -- Tip: to resume incomplete experiments, pass resume='prompt' or resume=True to run()
+2019-07-19 03:16:43,887	INFO tune.py:233 -- Starting a new experiment.
+2019-07-19 03:16:43,977	WARNING signature.py:108 -- The function with_updates has a **kwargs argument, which is currently not supported.
+2019-07-19 03:16:44,088	WARNING util.py:64 -- The `start_trial` operation took 0.15224480628967285 seconds to complete, which may be a performance bottleneck.
+[32m [     0.74033s,  INFO] Registering env:  Reacher20 [0m
+[32m [     0.74097s,  INFO] Experiment configs: 
+ {
+  "unity-reacher-ppo": {
+    "env": "Reacher20",
+    "run": "PPO",
+    "local_dir": "~/kayray_results/parallel",
+    "checkpoint_freq": 50,
+    "checkpoint_at_end": true,
+    "stop": {
+      "training_iteration": 500
+    },
+    "config": {
+      "env_config": {
+        "env_type": "unity"
+      },
+      "gamma": 0.995,
+      "kl_coeff": 1.0,
+      "num_sgd_iter": 20,
+      "lr": 0.0001,
+      "sgd_minibatch_size": 1000,
+      "train_batch_size": 25000,
+      "model": {
+        "free_log_std": true
+      },
+      "num_gpus": 0,
+      "num_workers": 3,
+      "batch_mode": "complete_episodes",
+      "observation_filter": "MeanStdFilter"
+    }
+  }
+} [0m
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 0/4 CPUs, 0/0 GPUs
+Memory usage on this node: 6.3/8.6 GB
+
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 4/4 CPUs, 0/0 GPUs
+Memory usage on this node: 6.3/8.6 GB
+Result logdir: /Users/amrmkayid/kayray_results/parallel/unity-reacher-ppo
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_Reacher20_0:	RUNNING
+
+[2m[36m(pid=29136)[0m 2019-07-19 03:16:47,491	WARNING ppo.py:151 -- FYI: By default, the value function will not share layers with the policy model ('vf_share_layers': False).
+[2m[36m(pid=29136)[0m [32m [     0.03143s,  INFO] Starting env: mac/Reacher20 | worker_id: 0 [0m
+[2m[36m(pid=29136)[0m Mono path[0] = '/Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed'
+[2m[36m(pid=29136)[0m Mono config path = '/Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/MonoBleedingEdge/etc'
+[2m[36m(pid=29136)[0m PlayerConnection initialized from /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data (debug = 0)
+[2m[36m(pid=29136)[0m PlayerConnection initialized network socket : 0.0.0.0 55299
+[2m[36m(pid=29136)[0m Multi-casting "[IP] 192.168.0.3 [Port] 55299 [Flags] 2 [Guid] 2992737655 [EditorId] 3707127039 [Version] 1048832 [Id] OSXPlayer(KayidmacOS) [Debug] 0 [PackageName] OSXPlayer" to [225.0.0.222:54997]...
+[2m[36m(pid=29136)[0m Started listening to [0.0.0.0:55299]
+[2m[36m(pid=29136)[0m PlayerConnection already initialized - listening to [0.0.0.0:55299]
+[2m[36m(pid=29136)[0m Initialize engine version: 2019.1.10f1 (f007ed779b7a)
+[2m[36m(pid=29136)[0m Forcing GfxDevice: Null
+[2m[36m(pid=29136)[0m GfxDevice: creating device client; threaded=0
+[2m[36m(pid=29136)[0m NullGfxDevice:
+[2m[36m(pid=29136)[0m     Version:  NULL 1.0 [1.0]
+[2m[36m(pid=29136)[0m     Renderer: Null Device
+[2m[36m(pid=29136)[0m     Vendor:   Unity Technologies
+[2m[36m(pid=29136)[0m Begin MonoManager ReloadAssembly
+[2m[36m(pid=29136)[0m Symbol file LoadedFromMemory doesn't match image /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll
+[2m[36m(pid=29136)[0m Symbol file LoadedFromMemory doesn't match image /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed/UnityEngine.TextCoreModule.dll
+[2m[36m(pid=29136)[0m Symbol file LoadedFromMemory doesn't match image /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed/UnityEngine.UIElementsModule.dll
+[2m[36m(pid=29136)[0m - Completed reload, in  0.194 seconds
+[2m[36m(pid=29136)[0m UnloadTime: 2.250296 ms
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.dylib
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.bundle
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.dylib
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.bundle
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.dylib
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.bundle
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.dylib
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.bundle
+[2m[36m(pid=29136)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29136)[0m INFO:mlagents.envs:
+[2m[36m(pid=29136)[0m 'Academy' started successfully!
+[2m[36m(pid=29136)[0m Unity Academy name: Academy
+[2m[36m(pid=29136)[0m         Number of Brains: 1
+[2m[36m(pid=29136)[0m         Number of Training Brains : 1
+[2m[36m(pid=29136)[0m         Reset Parameters :
+[2m[36m(pid=29136)[0m 		goal_speed -> 1.0
+[2m[36m(pid=29136)[0m 		goal_size -> 5.0
+[2m[36m(pid=29136)[0m Unity brain name: ReacherLearning
+[2m[36m(pid=29136)[0m         Number of Visual Observations (per agent): 0
+[2m[36m(pid=29136)[0m         Vector Observation space size (per agent): 33
+[2m[36m(pid=29136)[0m         Number of stacked Vector Observation: 1
+[2m[36m(pid=29136)[0m         Vector Action space type: continuous
+[2m[36m(pid=29136)[0m         Vector Action space size (per agent): [4]
+[2m[36m(pid=29136)[0m         Vector Action descriptions: , , , 
+[2m[36m(pid=29136)[0m INFO:gym_unity:20 agents within environment.
+[2m[36m(pid=29136)[0m 2019-07-19 03:16:48,634	INFO rollout_worker.py:301 -- Creating policy evaluation worker 0 on CPU (please ignore any CUDA init errors)
+[2m[36m(pid=29136)[0m [32m [     1.17305s,  INFO] UnityEnv:
+[2m[36m(pid=29136)[0m - _env = Unity Academy name: Academy
+[2m[36m(pid=29136)[0m         Number of Brains: 1
+[2m[36m(pid=29136)[0m         Number of Training Brains : 1
+[2m[36m(pid=29136)[0m         Reset Parameters :
+[2m[36m(pid=29136)[0m 		goal_speed -> 1.0
+[2m[36m(pid=29136)[0m 		goal_size -> 5.0
+[2m[36m(pid=29136)[0m Unity brain name: ReacherLearning
+[2m[36m(pid=29136)[0m         Number of Visual Observations (per agent): 0
+[2m[36m(pid=29136)[0m         Vector Observation space size (per agent): 33
+[2m[36m(pid=29136)[0m         Number of stacked Vector Observation: 1
+[2m[36m(pid=29136)[0m         Vector Action space type: continuous
+[2m[36m(pid=29136)[0m         Vector Action space size (per agent): [4]
+[2m[36m(pid=29136)[0m         Vector Action descriptions: , , , 
+[2m[36m(pid=29136)[0m - name = Academy
+[2m[36m(pid=29136)[0m - visual_obs = None
+[2m[36m(pid=29136)[0m - _current_state = None
+[2m[36m(pid=29136)[0m - _n_agents = 20
+[2m[36m(pid=29136)[0m - _multiagent = True
+[2m[36m(pid=29136)[0m - _flattener = None
+[2m[36m(pid=29136)[0m - game_over = False
+[2m[36m(pid=29136)[0m - _allow_multiple_visual_obs = False
+[2m[36m(pid=29136)[0m - brain_name = ReacherLearning
+[2m[36m(pid=29136)[0m - use_visual = False
+[2m[36m(pid=29136)[0m - uint8_visual = False
+[2m[36m(pid=29136)[0m - _action_space = Box(4,)
+[2m[36m(pid=29136)[0m - action_meanings = ['', '', '', '']
+[2m[36m(pid=29136)[0m - _observation_space = Box(33,) [0m
+[2m[36m(pid=29136)[0m [32m [     1.17326s,  INFO] MultiAgentsUnityRayEnv:
+[2m[36m(pid=29136)[0m - env = <UnityEnv instance>
+[2m[36m(pid=29136)[0m - observation_space = Box(33,)
+[2m[36m(pid=29136)[0m - action_space = Box(4,) [0m
+[2m[36m(pid=29136)[0m [32m [     1.17334s,  INFO] MultiAgentsUnityRayEnv:
+[2m[36m(pid=29136)[0m - env = <UnityEnv instance>
+[2m[36m(pid=29136)[0m - observation_space = Box(33,)
+[2m[36m(pid=29136)[0m - action_space = Box(4,)
+[2m[36m(pid=29136)[0m - agents = 20
+[2m[36m(pid=29136)[0m - dones = set()
+[2m[36m(pid=29136)[0m - resetted = False [0m
+[2m[36m(pid=29136)[0m 2019-07-19 03:16:48.639432: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+[2m[36m(pid=29136)[0m 2019-07-19 03:16:48,897	INFO dynamic_tf_policy.py:313 -- Initializing loss function with dummy input:
+[2m[36m(pid=29136)[0m 
+[2m[36m(pid=29136)[0m { 'action_prob': <tf.Tensor 'default_policy/action_prob:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=29136)[0m   'actions': <tf.Tensor 'default_policy/actions:0' shape=(?, 4) dtype=float32>,
+[2m[36m(pid=29136)[0m   'advantages': <tf.Tensor 'default_policy/advantages:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=29136)[0m   'behaviour_logits': <tf.Tensor 'default_policy/behaviour_logits:0' shape=(?, 8) dtype=float32>,
+[2m[36m(pid=29136)[0m   'dones': <tf.Tensor 'default_policy/dones:0' shape=(?,) dtype=bool>,
+[2m[36m(pid=29136)[0m   'new_obs': <tf.Tensor 'default_policy/new_obs:0' shape=(?, 33) dtype=float32>,
+[2m[36m(pid=29136)[0m   'obs': <tf.Tensor 'default_policy/observation:0' shape=(?, 33) dtype=float32>,
+[2m[36m(pid=29136)[0m   'prev_actions': <tf.Tensor 'default_policy/action:0' shape=(?, 4) dtype=float32>,
+[2m[36m(pid=29136)[0m   'prev_rewards': <tf.Tensor 'default_policy/prev_reward:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=29136)[0m   'rewards': <tf.Tensor 'default_policy/rewards:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=29136)[0m   'value_targets': <tf.Tensor 'default_policy/value_targets:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=29136)[0m   'vf_preds': <tf.Tensor 'default_policy/vf_preds:0' shape=(?,) dtype=float32>}
+[2m[36m(pid=29136)[0m 
+[2m[36m(pid=29136)[0m /Users/amrmkayid/anaconda3/envs/kayray/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py:100: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+[2m[36m(pid=29136)[0m   "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+[2m[36m(pid=29136)[0m 2019-07-19 03:16:49,875	INFO rollout_worker.py:719 -- Built policy map: {'default_policy': <ray.rllib.policy.tf_policy_template.PPOTFPolicy object at 0x1d740f358>}
+[2m[36m(pid=29136)[0m 2019-07-19 03:16:49,875	INFO rollout_worker.py:720 -- Built preprocessor map: {'default_policy': <ray.rllib.models.preprocessors.NoPreprocessor object at 0x1d73ebf60>}
+[2m[36m(pid=29136)[0m 2019-07-19 03:16:49,877	INFO rollout_worker.py:333 -- Built filter map: {'default_policy': MeanStdFilter((33,), True, True, None, (n=0, mean_mean=0.0, mean_std=0.0), (n=0, mean_mean=0.0, mean_std=0.0))}
+[2m[36m(pid=29136)[0m 2019-07-19 03:16:49,934	INFO multi_gpu_optimizer.py:79 -- LocalMultiGPUOptimizer devices ['/cpu:0']
+[2m[36m(pid=29135)[0m [32m [     0.05447s,  INFO] Starting env: mac/Reacher20 | worker_id: 3 [0m
+[2m[36m(pid=29134)[0m [32m [     0.05546s,  INFO] Starting env: mac/Reacher20 | worker_id: 2 [0m
+[2m[36m(pid=29180)[0m [32m [     0.05229s,  INFO] Starting env: mac/Reacher20 | worker_id: 1 [0m
+[2m[36m(pid=29135)[0m Mono path[0] = '/Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed'
+[2m[36m(pid=29135)[0m Mono config path = '/Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/MonoBleedingEdge/etc'
+[2m[36m(pid=29135)[0m PlayerConnection initialized from /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data (debug = 0)
+[2m[36m(pid=29135)[0m PlayerConnection initialized network socket : 0.0.0.0 55228
+[2m[36m(pid=29135)[0m Multi-casting "[IP] 192.168.0.3 [Port] 55228 [Flags] 2 [Guid] 2395561486 [EditorId] 3707127039 [Version] 1048832 [Id] OSXPlayer(KayidmacOS) [Debug] 0 [PackageName] OSXPlayer" to [225.0.0.222:54997]...
+[2m[36m(pid=29135)[0m Started listening to [0.0.0.0:55228]
+[2m[36m(pid=29134)[0m Mono path[0] = '/Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed'
+[2m[36m(pid=29134)[0m Mono config path = '/Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/MonoBleedingEdge/etc'
+[2m[36m(pid=29134)[0m PlayerConnection initialized from /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data (debug = 0)
+[2m[36m(pid=29134)[0m PlayerConnection initialized network socket : 0.0.0.0 55236
+[2m[36m(pid=29134)[0m Multi-casting "[IP] 192.168.0.3 [Port] 55236 [Flags] 2 [Guid] 910232475 [EditorId] 3707127039 [Version] 1048832 [Id] OSXPlayer(KayidmacOS) [Debug] 0 [PackageName] OSXPlayer" to [225.0.0.222:54997]...
+[2m[36m(pid=29134)[0m Started listening to [0.0.0.0:55236]
+[2m[36m(pid=29180)[0m Mono path[0] = '/Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed'
+[2m[36m(pid=29180)[0m Mono config path = '/Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/MonoBleedingEdge/etc'
+[2m[36m(pid=29180)[0m PlayerConnection initialized from /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data (debug = 0)
+[2m[36m(pid=29180)[0m PlayerConnection initialized network socket : 0.0.0.0 55426
+[2m[36m(pid=29180)[0m Multi-casting "[IP] 192.168.0.3 [Port] 55426 [Flags] 2 [Guid] 4235565678 [EditorId] 3707127039 [Version] 1048832 [Id] OSXPlayer(KayidmacOS) [Debug] 0 [PackageName] OSXPlayer" to [225.0.0.222:54997]...
+[2m[36m(pid=29180)[0m Started listening to [0.0.0.0:55426]
+[2m[36m(pid=29135)[0m PlayerConnection already initialized - listening to [0.0.0.0:55228]
+[2m[36m(pid=29134)[0m PlayerConnection already initialized - listening to [0.0.0.0:55236]
+[2m[36m(pid=29180)[0m PlayerConnection already initialized - listening to [0.0.0.0:55426]
+[2m[36m(pid=29135)[0m Initialize engine version: 2019.1.10f1 (f007ed779b7a)
+[2m[36m(pid=29135)[0m Forcing GfxDevice: Null
+[2m[36m(pid=29135)[0m GfxDevice: creating device client; threaded=0
+[2m[36m(pid=29135)[0m NullGfxDevice:
+[2m[36m(pid=29135)[0m     Version:  NULL 1.0 [1.0]
+[2m[36m(pid=29135)[0m     Renderer: Null Device
+[2m[36m(pid=29135)[0m     Vendor:   Unity Technologies
+[2m[36m(pid=29135)[0m Begin MonoManager ReloadAssembly
+[2m[36m(pid=29134)[0m Initialize engine version: 2019.1.10f1 (f007ed779b7a)
+[2m[36m(pid=29134)[0m Forcing GfxDevice: Null
+[2m[36m(pid=29134)[0m GfxDevice: creating device client; threaded=0
+[2m[36m(pid=29134)[0m NullGfxDevice:
+[2m[36m(pid=29134)[0m     Version:  NULL 1.0 [1.0]
+[2m[36m(pid=29134)[0m     Renderer: Null Device
+[2m[36m(pid=29134)[0m     Vendor:   Unity Technologies
+[2m[36m(pid=29180)[0m Initialize engine version: 2019.1.10f1 (f007ed779b7a)
+[2m[36m(pid=29180)[0m Forcing GfxDevice: Null
+[2m[36m(pid=29180)[0m GfxDevice: creating device client; threaded=0
+[2m[36m(pid=29180)[0m NullGfxDevice:
+[2m[36m(pid=29180)[0m     Version:  NULL 1.0 [1.0]
+[2m[36m(pid=29180)[0m     Renderer: Null Device
+[2m[36m(pid=29180)[0m     Vendor:   Unity Technologies
+[2m[36m(pid=29135)[0m Symbol file LoadedFromMemory doesn't match image /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll
+[2m[36m(pid=29135)[0m Symbol file LoadedFromMemory doesn't match image /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed/UnityEngine.TextCoreModule.dll
+[2m[36m(pid=29135)[0m Symbol file LoadedFromMemory doesn't match image /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed/UnityEngine.UIElementsModule.dll
+[2m[36m(pid=29134)[0m Begin MonoManager ReloadAssembly
+[2m[36m(pid=29134)[0m Symbol file LoadedFromMemory doesn't match image /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll
+[2m[36m(pid=29180)[0m Begin MonoManager ReloadAssembly
+[2m[36m(pid=29180)[0m Symbol file LoadedFromMemory doesn't match image /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll
+[2m[36m(pid=29134)[0m Symbol file LoadedFromMemory doesn't match image /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed/UnityEngine.TextCoreModule.dll
+[2m[36m(pid=29134)[0m Symbol file LoadedFromMemory doesn't match image /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed/UnityEngine.UIElementsModule.dll
+[2m[36m(pid=29180)[0m Symbol file LoadedFromMemory doesn't match image /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed/UnityEngine.TextCoreModule.dll
+[2m[36m(pid=29180)[0m Symbol file LoadedFromMemory doesn't match image /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Resources/Data/Managed/UnityEngine.UIElementsModule.dll
+[2m[36m(pid=29135)[0m - Completed reload, in  0.256 seconds
+[2m[36m(pid=29134)[0m - Completed reload, in  0.204 seconds
+[2m[36m(pid=29180)[0m - Completed reload, in  0.214 seconds
+[2m[36m(pid=29135)[0m UnloadTime: 0.860579 ms
+[2m[36m(pid=29134)[0m UnloadTime: 0.993405 ms
+[2m[36m(pid=29180)[0m UnloadTime: 0.883765 ms
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.dylib
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.dylib
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.bundle
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.dylib
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.bundle
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.dylib
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.bundle
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.dylib
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.bundle
+[2m[36m(pid=29135)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.bundle
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.dylib
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.bundle
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.dylib
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.bundle
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.dylib
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.bundle
+[2m[36m(pid=29134)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.dylib
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.bundle
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.dylib
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.bundle
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.dylib
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so.bundle
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libcoreclr.so
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.dylib
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so.bundle
+[2m[36m(pid=29180)[0m Fallback handler could not load library /Users/amrmkayid/Desktop/kayray/kayray/envs/build/mac/Reacher20.app/Contents/Frameworks/MonoEmbedRuntime/osx/libdl.so
+[2m[36m(pid=29134)[0m INFO:mlagents.envs:
+[2m[36m(pid=29134)[0m 'Academy' started successfully!
+[2m[36m(pid=29134)[0m Unity Academy name: Academy
+[2m[36m(pid=29134)[0m         Number of Brains: 1
+[2m[36m(pid=29134)[0m         Number of Training Brains : 1
+[2m[36m(pid=29134)[0m         Reset Parameters :
+[2m[36m(pid=29134)[0m 		goal_speed -> 1.0
+[2m[36m(pid=29134)[0m 		goal_size -> 5.0
+[2m[36m(pid=29134)[0m Unity brain name: ReacherLearning
+[2m[36m(pid=29134)[0m         Number of Visual Observations (per agent): 0
+[2m[36m(pid=29134)[0m         Vector Observation space size (per agent): 33
+[2m[36m(pid=29134)[0m         Number of stacked Vector Observation: 1
+[2m[36m(pid=29134)[0m         Vector Action space type: continuous
+[2m[36m(pid=29134)[0m         Vector Action space size (per agent): [4]
+[2m[36m(pid=29134)[0m         Vector Action descriptions: , , , 
+[2m[36m(pid=29135)[0m INFO:mlagents.envs:
+[2m[36m(pid=29135)[0m 'Academy' started successfully!
+[2m[36m(pid=29135)[0m Unity Academy name: Academy
+[2m[36m(pid=29135)[0m         Number of Brains: 1
+[2m[36m(pid=29135)[0m         Number of Training Brains : 1
+[2m[36m(pid=29135)[0m         Reset Parameters :
+[2m[36m(pid=29135)[0m 		goal_size -> 5.0
+[2m[36m(pid=29135)[0m 		goal_speed -> 1.0
+[2m[36m(pid=29135)[0m Unity brain name: ReacherLearning
+[2m[36m(pid=29135)[0m         Number of Visual Observations (per agent): 0
+[2m[36m(pid=29135)[0m         Vector Observation space size (per agent): 33
+[2m[36m(pid=29135)[0m         Number of stacked Vector Observation: 1
+[2m[36m(pid=29135)[0m         Vector Action space type: continuous
+[2m[36m(pid=29135)[0m         Vector Action space size (per agent): [4]
+[2m[36m(pid=29135)[0m         Vector Action descriptions: , , , 
+[2m[36m(pid=29180)[0m INFO:mlagents.envs:
+[2m[36m(pid=29180)[0m 'Academy' started successfully!
+[2m[36m(pid=29180)[0m Unity Academy name: Academy
+[2m[36m(pid=29180)[0m         Number of Brains: 1
+[2m[36m(pid=29180)[0m         Number of Training Brains : 1
+[2m[36m(pid=29180)[0m         Reset Parameters :
+[2m[36m(pid=29180)[0m 		goal_speed -> 1.0
+[2m[36m(pid=29180)[0m 		goal_size -> 5.0
+[2m[36m(pid=29180)[0m Unity brain name: ReacherLearning
+[2m[36m(pid=29180)[0m         Number of Visual Observations (per agent): 0
+[2m[36m(pid=29180)[0m         Vector Observation space size (per agent): 33
+[2m[36m(pid=29180)[0m         Number of stacked Vector Observation: 1
+[2m[36m(pid=29180)[0m         Vector Action space type: continuous
+[2m[36m(pid=29180)[0m         Vector Action space size (per agent): [4]
+[2m[36m(pid=29180)[0m         Vector Action descriptions: , , , 
+[2m[36m(pid=29134)[0m [32m [     2.34751s,  INFO] UnityEnv:
+[2m[36m(pid=29134)[0m - _env = Unity Academy name: Academy
+[2m[36m(pid=29134)[0m         Number of Brains: 1
+[2m[36m(pid=29134)[0m         Number of Training Brains : 1
+[2m[36m(pid=29134)[0m         Reset Parameters :
+[2m[36m(pid=29134)[0m 		goal_speed -> 1.0
+[2m[36m(pid=29134)[0m 		goal_size -> 5.0
+[2m[36m(pid=29134)[0m Unity brain name: ReacherLearning
+[2m[36m(pid=29134)[0m         Number of Visual Observations (per agent): 0
+[2m[36m(pid=29134)[0m         Vector Observation space size (per agent): 33
+[2m[36m(pid=29134)[0m         Number of stacked Vector Observation: 1
+[2m[36m(pid=29134)[0m         Vector Action space type: continuous
+[2m[36m(pid=29134)[0m         Vector Action space size (per agent): [4]
+[2m[36m(pid=29134)[0m         Vector Action descriptions: , , , 
+[2m[36m(pid=29134)[0m - name = Academy
+[2m[36m(pid=29134)[0m - visual_obs = None
+[2m[36m(pid=29134)[0m - _current_state = None
+[2m[36m(pid=29134)[0m - _n_agents = 20
+[2m[36m(pid=29134)[0m - _multiagent = True
+[2m[36m(pid=29134)[0m - _flattener = None
+[2m[36m(pid=29134)[0m - game_over = False
+[2m[36m(pid=29134)[0m - _allow_multiple_visual_obs = False
+[2m[36m(pid=29134)[0m - brain_name = ReacherLearning
+[2m[36m(pid=29134)[0m - use_visual = False
+[2m[36m(pid=29134)[0m - uint8_visual = False
+[2m[36m(pid=29134)[0m - _action_space = Box(4,)
+[2m[36m(pid=29134)[0m - action_meanings = ['', '', '', '']
+[2m[36m(pid=29134)[0m - _observation_space = Box(33,) [0m
+[2m[36m(pid=29134)[0m [32m [     2.34770s,  INFO] MultiAgentsUnityRayEnv:
+[2m[36m(pid=29134)[0m - env = <UnityEnv instance>
+[2m[36m(pid=29134)[0m - observation_space = Box(33,)
+[2m[36m(pid=29134)[0m - action_space = Box(4,) [0m
+[2m[36m(pid=29134)[0m [32m [     2.34784s,  INFO] MultiAgentsUnityRayEnv:
+[2m[36m(pid=29134)[0m - env = <UnityEnv instance>
+[2m[36m(pid=29134)[0m - observation_space = Box(33,)
+[2m[36m(pid=29134)[0m - action_space = Box(4,)
+[2m[36m(pid=29134)[0m - agents = 20
+[2m[36m(pid=29134)[0m - dones = set()
+[2m[36m(pid=29134)[0m - resetted = False [0m
+[2m[36m(pid=29134)[0m INFO:gym_unity:20 agents within environment.
+[2m[36m(pid=29134)[0m 2019-07-19 03:16:56,172	INFO rollout_worker.py:301 -- Creating policy evaluation worker 2 on CPU (please ignore any CUDA init errors)
+[2m[36m(pid=29134)[0m 2019-07-19 03:16:56.173878: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+[2m[36m(pid=29135)[0m [32m [     2.39312s,  INFO] UnityEnv:
+[2m[36m(pid=29135)[0m - _env = Unity Academy name: Academy
+[2m[36m(pid=29135)[0m         Number of Brains: 1
+[2m[36m(pid=29135)[0m         Number of Training Brains : 1
+[2m[36m(pid=29135)[0m         Reset Parameters :
+[2m[36m(pid=29135)[0m 		goal_size -> 5.0
+[2m[36m(pid=29135)[0m 		goal_speed -> 1.0
+[2m[36m(pid=29135)[0m Unity brain name: ReacherLearning
+[2m[36m(pid=29135)[0m         Number of Visual Observations (per agent): 0
+[2m[36m(pid=29135)[0m         Vector Observation space size (per agent): 33
+[2m[36m(pid=29135)[0m         Number of stacked Vector Observation: 1
+[2m[36m(pid=29135)[0m         Vector Action space type: continuous
+[2m[36m(pid=29135)[0m         Vector Action space size (per agent): [4]
+[2m[36m(pid=29135)[0m         Vector Action descriptions: , , , 
+[2m[36m(pid=29135)[0m - name = Academy
+[2m[36m(pid=29135)[0m - visual_obs = None
+[2m[36m(pid=29135)[0m - _current_state = None
+[2m[36m(pid=29135)[0m - _n_agents = 20
+[2m[36m(pid=29135)[0m - _multiagent = True
+[2m[36m(pid=29135)[0m - _flattener = None
+[2m[36m(pid=29135)[0m - game_over = False
+[2m[36m(pid=29135)[0m - _allow_multiple_visual_obs = False
+[2m[36m(pid=29135)[0m - brain_name = ReacherLearning
+[2m[36m(pid=29135)[0m - use_visual = False
+[2m[36m(pid=29135)[0m - uint8_visual = False
+[2m[36m(pid=29135)[0m - _action_space = Box(4,)
+[2m[36m(pid=29135)[0m - action_meanings = ['', '', '', '']
+[2m[36m(pid=29135)[0m - _observation_space = Box(33,) [0m
+[2m[36m(pid=29135)[0m [32m [     2.39478s,  INFO] MultiAgentsUnityRayEnv:
+[2m[36m(pid=29135)[0m - env = <UnityEnv instance>
+[2m[36m(pid=29135)[0m - observation_space = Box(33,)
+[2m[36m(pid=29135)[0m - action_space = Box(4,) [0m
+[2m[36m(pid=29135)[0m [32m [     2.39569s,  INFO] MultiAgentsUnityRayEnv:
+[2m[36m(pid=29135)[0m - env = <UnityEnv instance>
+[2m[36m(pid=29135)[0m - observation_space = Box(33,)
+[2m[36m(pid=29135)[0m - action_space = Box(4,)
+[2m[36m(pid=29135)[0m - agents = 20
+[2m[36m(pid=29135)[0m - dones = set()
+[2m[36m(pid=29135)[0m - resetted = False [0m
+[2m[36m(pid=29135)[0m INFO:gym_unity:20 agents within environment.
+[2m[36m(pid=29135)[0m 2019-07-19 03:16:56,208	INFO rollout_worker.py:301 -- Creating policy evaluation worker 3 on CPU (please ignore any CUDA init errors)
+[2m[36m(pid=29135)[0m 2019-07-19 03:16:56.211177: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+[2m[36m(pid=29180)[0m INFO:gym_unity:20 agents within environment.
+[2m[36m(pid=29180)[0m [32m [     2.43151s,  INFO] UnityEnv:
+[2m[36m(pid=29180)[0m - _env = Unity Academy name: Academy
+[2m[36m(pid=29180)[0m         Number of Brains: 1
+[2m[36m(pid=29180)[0m         Number of Training Brains : 1
+[2m[36m(pid=29180)[0m         Reset Parameters :
+[2m[36m(pid=29180)[0m 		goal_speed -> 1.0
+[2m[36m(pid=29180)[0m 		goal_size -> 5.0
+[2m[36m(pid=29180)[0m Unity brain name: ReacherLearning
+[2m[36m(pid=29180)[0m         Number of Visual Observations (per agent): 0
+[2m[36m(pid=29180)[0m         Vector Observation space size (per agent): 33
+[2m[36m(pid=29180)[0m         Number of stacked Vector Observation: 1
+[2m[36m(pid=29180)[0m         Vector Action space type: continuous
+[2m[36m(pid=29180)[0m         Vector Action space size (per agent): [4]
+[2m[36m(pid=29180)[0m         Vector Action descriptions: , , , 
+[2m[36m(pid=29180)[0m - name = Academy
+[2m[36m(pid=29180)[0m - visual_obs = None
+[2m[36m(pid=29180)[0m - _current_state = None
+[2m[36m(pid=29180)[0m - _n_agents = 20
+[2m[36m(pid=29180)[0m - _multiagent = True
+[2m[36m(pid=29180)[0m - _flattener = None
+[2m[36m(pid=29180)[0m - game_over = False
+[2m[36m(pid=29180)[0m - _allow_multiple_visual_obs = False
+[2m[36m(pid=29180)[0m - brain_name = ReacherLearning
+[2m[36m(pid=29180)[0m - use_visual = False
+[2m[36m(pid=29180)[0m - uint8_visual = False
+[2m[36m(pid=29180)[0m - _action_space = Box(4,)
+[2m[36m(pid=29180)[0m - action_meanings = ['', '', '', '']
+[2m[36m(pid=29180)[0m - _observation_space = Box(33,) [0m
+[2m[36m(pid=29180)[0m [32m [     2.43218s,  INFO] MultiAgentsUnityRayEnv:
+[2m[36m(pid=29180)[0m - env = <UnityEnv instance>
+[2m[36m(pid=29180)[0m - observation_space = Box(33,)
+[2m[36m(pid=29180)[0m - action_space = Box(4,) [0m
+[2m[36m(pid=29180)[0m 2019-07-19 03:16:56,244	INFO rollout_worker.py:301 -- Creating policy evaluation worker 1 on CPU (please ignore any CUDA init errors)
+[2m[36m(pid=29180)[0m [32m [     2.43280s,  INFO] MultiAgentsUnityRayEnv:
+[2m[36m(pid=29180)[0m - env = <UnityEnv instance>
+[2m[36m(pid=29180)[0m - observation_space = Box(33,)
+[2m[36m(pid=29180)[0m - action_space = Box(4,)
+[2m[36m(pid=29180)[0m - agents = 20
+[2m[36m(pid=29180)[0m - dones = set()
+[2m[36m(pid=29180)[0m - resetted = False [0m
+[2m[36m(pid=29180)[0m 2019-07-19 03:16:56.248827: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+[2m[36m(pid=29180)[0m 2019-07-19 03:16:56,730	INFO dynamic_tf_policy.py:313 -- Initializing loss function with dummy input:
+[2m[36m(pid=29180)[0m 
+[2m[36m(pid=29180)[0m { 'action_prob': <tf.Tensor 'default_policy/action_prob:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=29180)[0m   'actions': <tf.Tensor 'default_policy/actions:0' shape=(?, 4) dtype=float32>,
+[2m[36m(pid=29180)[0m   'advantages': <tf.Tensor 'default_policy/advantages:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=29180)[0m   'behaviour_logits': <tf.Tensor 'default_policy/behaviour_logits:0' shape=(?, 8) dtype=float32>,
+[2m[36m(pid=29180)[0m   'dones': <tf.Tensor 'default_policy/dones:0' shape=(?,) dtype=bool>,
+[2m[36m(pid=29180)[0m   'new_obs': <tf.Tensor 'default_policy/new_obs:0' shape=(?, 33) dtype=float32>,
+[2m[36m(pid=29180)[0m   'obs': <tf.Tensor 'default_policy/observation:0' shape=(?, 33) dtype=float32>,
+[2m[36m(pid=29180)[0m   'prev_actions': <tf.Tensor 'default_policy/action:0' shape=(?, 4) dtype=float32>,
+[2m[36m(pid=29180)[0m   'prev_rewards': <tf.Tensor 'default_policy/prev_reward:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=29180)[0m   'rewards': <tf.Tensor 'default_policy/rewards:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=29180)[0m   'value_targets': <tf.Tensor 'default_policy/value_targets:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=29180)[0m   'vf_preds': <tf.Tensor 'default_policy/vf_preds:0' shape=(?,) dtype=float32>}
+[2m[36m(pid=29180)[0m 
+[2m[36m(pid=29134)[0m /Users/amrmkayid/anaconda3/envs/kayray/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py:100: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+[2m[36m(pid=29134)[0m   "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+[2m[36m(pid=29135)[0m /Users/amrmkayid/anaconda3/envs/kayray/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py:100: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+[2m[36m(pid=29135)[0m   "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+[2m[36m(pid=29180)[0m /Users/amrmkayid/anaconda3/envs/kayray/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py:100: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+[2m[36m(pid=29180)[0m   "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+[2m[36m(pid=29180)[0m 2019-07-19 03:16:58,625	INFO rollout_worker.py:428 -- Generating sample batch of size 200
+[2m[36m(pid=29180)[0m 2019-07-19 03:16:58,643	INFO sampler.py:308 -- Raw obs from env: { 0: { 0: np.ndarray((33,), dtype=float64, min=-10.0, max=7.902, mean=-0.102),
+[2m[36m(pid=29180)[0m        1: np.ndarray((33,), dtype=float64, min=-10.0, max=7.956, mean=-0.17),
+[2m[36m(pid=29180)[0m        2: np.ndarray((33,), dtype=float64, min=-10.0, max=1.0, mean=-0.586),
+[2m[36m(pid=29180)[0m        3: np.ndarray((33,), dtype=float64, min=-10.0, max=7.128, mean=-0.259),
+[2m[36m(pid=29180)[0m        4: np.ndarray((33,), dtype=float64, min=-10.0, max=7.981, mean=-0.076),
+[2m[36m(pid=29180)[0m        5: np.ndarray((33,), dtype=float64, min=-10.0, max=1.0, mean=-0.626),
+[2m[36m(pid=29180)[0m        6: np.ndarray((33,), dtype=float64, min=-10.0, max=2.605, mean=-0.509),
+[2m[36m(pid=29180)[0m        7: np.ndarray((33,), dtype=float64, min=-10.0, max=7.564, mean=-0.239),
+[2m[36m(pid=29180)[0m        8: np.ndarray((33,), dtype=float64, min=-10.0, max=7.064, mean=-0.057),
+[2m[36m(pid=29180)[0m        9: np.ndarray((33,), dtype=float64, min=-10.0, max=1.0, mean=-0.679),
+[2m[36m(pid=29180)[0m        10: np.ndarray((33,), dtype=float64, min=-10.0, max=1.0, mean=-0.598),
+[2m[36m(pid=29180)[0m        11: np.ndarray((33,), dtype=float64, min=-10.0, max=1.0, mean=-0.595),
+[2m[36m(pid=29180)[0m        12: np.ndarray((33,), dtype=float64, min=-10.0, max=7.762, mean=-0.062),
+[2m[36m(pid=29180)[0m        13: np.ndarray((33,), dtype=float64, min=-10.0, max=7.518, mean=-0.235),
+[2m[36m(pid=29180)[0m        14: np.ndarray((33,), dtype=float64, min=-10.0, max=6.553, mean=-0.052),
+[2m[36m(pid=29180)[0m        15: np.ndarray((33,), dtype=float64, min=-10.0, max=1.0, mean=-0.727),
+[2m[36m(pid=29180)[0m        16: np.ndarray((33,), dtype=float64, min=-10.0, max=7.518, mean=-0.072),
+[2m[36m(pid=29180)[0m        17: np.ndarray((33,), dtype=float64, min=-10.0, max=6.997, mean=-0.259),
+[2m[36m(pid=29180)[0m        18: np.ndarray((33,), dtype=float64, min=-10.0, max=5.353, mean=-0.383),
+[2m[36m(pid=29180)[0m        19: np.ndarray((33,), dtype=float64, min=-10.0, max=7.564, mean=-0.062)}}
+[2m[36m(pid=29180)[0m 2019-07-19 03:16:58,644	INFO sampler.py:309 -- Info return from env: { 0: { 0: {},
+[2m[36m(pid=29180)[0m        1: {},
+[2m[36m(pid=29180)[0m        2: {},
+[2m[36m(pid=29180)[0m        3: {},
+[2m[36m(pid=29180)[0m        4: {},
+[2m[36m(pid=29180)[0m        5: {},
+[2m[36m(pid=29180)[0m        6: {},
+[2m[36m(pid=29180)[0m        7: {},
+[2m[36m(pid=29180)[0m        8: {},
+[2m[36m(pid=29180)[0m        9: {},
+[2m[36m(pid=29180)[0m        10: {},
+[2m[36m(pid=29180)[0m        11: {},
+[2m[36m(pid=29180)[0m        12: {},
+[2m[36m(pid=29180)[0m        13: {},
+[2m[36m(pid=29180)[0m        14: {},
+[2m[36m(pid=29180)[0m        15: {},
+[2m[36m(pid=29180)[0m        16: {},
+[2m[36m(pid=29180)[0m        17: {},
+[2m[36m(pid=29180)[0m        18: {},
+[2m[36m(pid=29180)[0m        19: {}}}
+[2m[36m(pid=29180)[0m 2019-07-19 03:16:58,644	INFO sampler.py:407 -- Preprocessed obs: np.ndarray((33,), dtype=float64, min=-10.0, max=7.902, mean=-0.102)
+[2m[36m(pid=29180)[0m 2019-07-19 03:16:58,645	INFO sampler.py:411 -- Filtered obs: np.ndarray((33,), dtype=float64, min=0.0, max=0.0, mean=0.0)
+[2m[36m(pid=29180)[0m 2019-07-19 03:16:58,656	INFO sampler.py:525 -- Inputs to compute_actions():
+[2m[36m(pid=29180)[0m 
+[2m[36m(pid=29180)[0m { 'default_policy': [ { 'data': { 'agent_id': 0,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 1,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-0.707, max=0.707, mean=-0.021),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 2,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-1.155, max=1.145, mean=-0.004),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 3,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-0.576, max=1.457, mean=0.032),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 4,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-0.335, max=1.217, mean=0.049),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 5,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-1.073, max=0.0, mean=-0.055),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 6,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-1.753, max=0.219, mean=-0.042),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 7,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-1.244, max=1.382, mean=-0.009),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 8,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-0.92, max=1.105, mean=0.019),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 9,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-1.488, max=0.179, mean=-0.056),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 10,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-1.178, max=0.596, mean=-0.021),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 11,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-1.428, max=0.122, mean=-0.046),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 12,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=0.0, max=1.264, mean=0.065),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 13,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-0.849, max=1.145, mean=-0.007),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 14,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-1.309, max=1.042, mean=0.011),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 15,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-1.192, max=0.0, mean=-0.097),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 16,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-0.759, max=1.177, mean=0.024),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 17,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-0.736, max=1.024, mean=0.037),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 18,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-1.124, max=0.84, mean=-0.002),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'},
+[2m[36m(pid=29180)[0m                       { 'data': { 'agent_id': 19,
+[2m[36m(pid=29180)[0m                                   'env_id': 0,
+[2m[36m(pid=29180)[0m                                   'info': {},
+[2m[36m(pid=29180)[0m                                   'obs': np.ndarray((33,), dtype=float64, min=-0.079, max=1.156, mean=0.042),
+[2m[36m(pid=29180)[0m                                   'prev_action': np.ndarray((4,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                                   'prev_reward': 0.0,
+[2m[36m(pid=29180)[0m                                   'rnn_state': []},
+[2m[36m(pid=29180)[0m                         'type': 'PolicyEvalData'}]}
+[2m[36m(pid=29180)[0m 
+[2m[36m(pid=29180)[0m 2019-07-19 03:16:58,657	INFO tf_run_builder.py:92 -- Executing TF run without tracing. To dump TF timeline traces to disk, set the TF_TIMELINE_DIR environment variable.
+[2m[36m(pid=29180)[0m 2019-07-19 03:16:58,710	INFO sampler.py:552 -- Outputs of compute_actions():
+[2m[36m(pid=29180)[0m 
+[2m[36m(pid=29180)[0m { 'default_policy': ( np.ndarray((20, 4), dtype=float32, min=-2.454, max=2.276, mean=0.07),
+[2m[36m(pid=29180)[0m                       [],
+[2m[36m(pid=29180)[0m                       { 'action_prob': np.ndarray((20,), dtype=float32, min=0.0, max=0.017, mean=0.007),
+[2m[36m(pid=29180)[0m                         'behaviour_logits': np.ndarray((20, 8), dtype=float32, min=-0.004, max=0.004, mean=-0.0),
+[2m[36m(pid=29180)[0m                         'vf_preds': np.ndarray((20,), dtype=float32, min=-0.006, max=0.004, mean=-0.0)})}
+[2m[36m(pid=29180)[0m 
+[2m[36m(pid=29134)[0m Setting up 2 worker threads for Enlighten.
+[2m[36m(pid=29134)[0m   Thread -> id: 700010050000 -> priority: 1 
+[2m[36m(pid=29134)[0m   Thread -> id: 7000100d3000 -> priority: 1 
+[2m[36m(pid=29135)[0m Setting up 2 worker threads for Enlighten.
+[2m[36m(pid=29135)[0m   Thread -> id: 700011205000 -> priority: 1 
+[2m[36m(pid=29135)[0m   Thread -> id: 700011288000 -> priority: 1 
+[2m[36m(pid=29180)[0m Setting up 2 worker threads for Enlighten.
+[2m[36m(pid=29180)[0m   Thread -> id: 7000082d0000 -> priority: 1 
+[2m[36m(pid=29180)[0m   Thread -> id: 700008353000 -> priority: 1 
+[2m[36m(pid=29180)[0m 2019-07-19 03:17:19,748	INFO sample_batch_builder.py:161 -- Trajectory fragment after postprocess_trajectory():
+[2m[36m(pid=29180)[0m 
+[2m[36m(pid=29180)[0m { 0: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.025, mean=0.006),
+[2m[36m(pid=29180)[0m                  'actions': np.ndarray((1001, 4), dtype=float32, min=-3.684, max=3.592, mean=-0.019),
+[2m[36m(pid=29180)[0m                  'advantages': np.ndarray((1001,), dtype=float32, min=-0.011, max=0.009, mean=-0.001),
+[2m[36m(pid=29180)[0m                  'agent_index': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.015, max=0.015, mean=0.0),
+[2m[36m(pid=29180)[0m                  'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                  'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                  'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                  'new_obs': np.ndarray((1001, 33), dtype=float32, min=-6.931, max=5.312, mean=-0.057),
+[2m[36m(pid=29180)[0m                  'obs': np.ndarray((1001, 33), dtype=float32, min=-6.931, max=5.312, mean=-0.057),
+[2m[36m(pid=29180)[0m                  'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.684, max=3.592, mean=-0.018),
+[2m[36m(pid=29180)[0m                  'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                  'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.009, max=0.011, mean=0.001)},
+[2m[36m(pid=29180)[0m        'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   1: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.023, mean=0.006),
+[2m[36m(pid=29180)[0m                  'actions': np.ndarray((1001, 4), dtype=float32, min=-3.13, max=3.51, mean=-0.006),
+[2m[36m(pid=29180)[0m                  'advantages': np.ndarray((1001,), dtype=float32, min=-0.009, max=0.016, mean=0.002),
+[2m[36m(pid=29180)[0m                  'agent_index': np.ndarray((1001,), dtype=int64, min=1.0, max=1.0, mean=1.0),
+[2m[36m(pid=29180)[0m                  'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.013, max=0.014, mean=0.0),
+[2m[36m(pid=29180)[0m                  'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                  'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                  'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                  'new_obs': np.ndarray((1001, 33), dtype=float32, min=-6.584, max=6.085, mean=-0.018),
+[2m[36m(pid=29180)[0m                  'obs': np.ndarray((1001, 33), dtype=float32, min=-6.584, max=6.085, mean=-0.018),
+[2m[36m(pid=29180)[0m                  'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.13, max=3.51, mean=-0.006),
+[2m[36m(pid=29180)[0m                  'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                  'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.0, mean=-0.0),
+[2m[36m(pid=29180)[0m                  'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.016, max=0.009, mean=-0.002)},
+[2m[36m(pid=29180)[0m        'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   2: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.006),
+[2m[36m(pid=29180)[0m                  'actions': np.ndarray((1001, 4), dtype=float32, min=-3.775, max=3.911, mean=-0.032),
+[2m[36m(pid=29180)[0m                  'advantages': np.ndarray((1001,), dtype=float32, min=-0.01, max=0.012, mean=-0.001),
+[2m[36m(pid=29180)[0m                  'agent_index': np.ndarray((1001,), dtype=int64, min=2.0, max=2.0, mean=2.0),
+[2m[36m(pid=29180)[0m                  'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.019, max=0.015, mean=0.0),
+[2m[36m(pid=29180)[0m                  'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                  'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                  'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                  'new_obs': np.ndarray((1001, 33), dtype=float32, min=-5.688, max=5.268, mean=0.107),
+[2m[36m(pid=29180)[0m                  'obs': np.ndarray((1001, 33), dtype=float32, min=-5.688, max=5.268, mean=0.107),
+[2m[36m(pid=29180)[0m                  'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.775, max=3.911, mean=-0.033),
+[2m[36m(pid=29180)[0m                  'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                  'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.012, max=0.01, mean=0.001)},
+[2m[36m(pid=29180)[0m        'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   3: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.006),
+[2m[36m(pid=29180)[0m                  'actions': np.ndarray((1001, 4), dtype=float32, min=-3.637, max=3.443, mean=-0.012),
+[2m[36m(pid=29180)[0m                  'advantages': np.ndarray((1001,), dtype=float32, min=-0.01, max=0.012, mean=-0.001),
+[2m[36m(pid=29180)[0m                  'agent_index': np.ndarray((1001,), dtype=int64, min=3.0, max=3.0, mean=3.0),
+[2m[36m(pid=29180)[0m                  'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.014, max=0.016, mean=-0.0),
+[2m[36m(pid=29180)[0m                  'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                  'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                  'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                  'new_obs': np.ndarray((1001, 33), dtype=float32, min=-5.694, max=5.064, mean=-0.044),
+[2m[36m(pid=29180)[0m                  'obs': np.ndarray((1001, 33), dtype=float32, min=-5.694, max=5.064, mean=-0.044),
+[2m[36m(pid=29180)[0m                  'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.637, max=3.443, mean=-0.013),
+[2m[36m(pid=29180)[0m                  'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                  'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.012, max=0.01, mean=0.001)},
+[2m[36m(pid=29180)[0m        'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   4: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.006),
+[2m[36m(pid=29180)[0m                  'actions': np.ndarray((1001, 4), dtype=float32, min=-3.45, max=3.156, mean=0.005),
+[2m[36m(pid=29180)[0m                  'advantages': np.ndarray((1001,), dtype=float32, min=-0.013, max=0.225, mean=0.051),
+[2m[36m(pid=29180)[0m                  'agent_index': np.ndarray((1001,), dtype=int64, min=4.0, max=4.0, mean=4.0),
+[2m[36m(pid=29180)[0m                  'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.016, max=0.017, mean=0.0),
+[2m[36m(pid=29180)[0m                  'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                  'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                  'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                  'new_obs': np.ndarray((1001, 33), dtype=float32, min=-4.222, max=5.862, mean=0.073),
+[2m[36m(pid=29180)[0m                  'obs': np.ndarray((1001, 33), dtype=float32, min=-4.222, max=5.862, mean=0.073),
+[2m[36m(pid=29180)[0m                  'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.45, max=3.156, mean=0.005),
+[2m[36m(pid=29180)[0m                  'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m                  'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m                  't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                  'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.227, mean=0.054),
+[2m[36m(pid=29180)[0m                  'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.01, max=0.014, mean=0.003)},
+[2m[36m(pid=29180)[0m        'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   5: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.007),
+[2m[36m(pid=29180)[0m                  'actions': np.ndarray((1001, 4), dtype=float32, min=-3.804, max=3.669, mean=0.014),
+[2m[36m(pid=29180)[0m                  'advantages': np.ndarray((1001,), dtype=float32, min=-0.012, max=0.012, mean=-0.003),
+[2m[36m(pid=29180)[0m                  'agent_index': np.ndarray((1001,), dtype=int64, min=5.0, max=5.0, mean=5.0),
+[2m[36m(pid=29180)[0m                  'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.012, max=0.013, mean=-0.0),
+[2m[36m(pid=29180)[0m                  'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                  'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                  'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                  'new_obs': np.ndarray((1001, 33), dtype=float32, min=-9.35, max=7.379, mean=-0.069),
+[2m[36m(pid=29180)[0m                  'obs': np.ndarray((1001, 33), dtype=float32, min=-9.35, max=7.379, mean=-0.069),
+[2m[36m(pid=29180)[0m                  'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.804, max=3.669, mean=0.014),
+[2m[36m(pid=29180)[0m                  'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                  'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.0, mean=-0.0),
+[2m[36m(pid=29180)[0m                  'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.012, max=0.012, mean=0.003)},
+[2m[36m(pid=29180)[0m        'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   6: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.007),
+[2m[36m(pid=29180)[0m                  'actions': np.ndarray((1001, 4), dtype=float32, min=-3.494, max=3.791, mean=-0.002),
+[2m[36m(pid=29180)[0m                  'advantages': np.ndarray((1001,), dtype=float32, min=-0.013, max=0.247, mean=0.035),
+[2m[36m(pid=29180)[0m                  'agent_index': np.ndarray((1001,), dtype=int64, min=6.0, max=6.0, mean=6.0),
+[2m[36m(pid=29180)[0m                  'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.013, max=0.018, mean=0.0),
+[2m[36m(pid=29180)[0m                  'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                  'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                  'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                  'new_obs': np.ndarray((1001, 33), dtype=float32, min=-5.727, max=6.629, mean=0.046),
+[2m[36m(pid=29180)[0m                  'obs': np.ndarray((1001, 33), dtype=float32, min=-5.727, max=6.629, mean=0.046),
+[2m[36m(pid=29180)[0m                  'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.494, max=3.791, mean=-0.002),
+[2m[36m(pid=29180)[0m                  'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m                  'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m                  't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                  'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.246, mean=0.036),
+[2m[36m(pid=29180)[0m                  'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.011, max=0.013, mean=0.001)},
+[2m[36m(pid=29180)[0m        'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   7: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.006),
+[2m[36m(pid=29180)[0m                  'actions': np.ndarray((1001, 4), dtype=float32, min=-3.637, max=3.458, mean=-0.01),
+[2m[36m(pid=29180)[0m                  'advantages': np.ndarray((1001,), dtype=float32, min=-0.01, max=0.196, mean=0.01),
+[2m[36m(pid=29180)[0m                  'agent_index': np.ndarray((1001,), dtype=int64, min=7.0, max=7.0, mean=7.0),
+[2m[36m(pid=29180)[0m                  'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.012, max=0.013, mean=0.0),
+[2m[36m(pid=29180)[0m                  'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                  'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                  'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                  'new_obs': np.ndarray((1001, 33), dtype=float32, min=-6.144, max=5.377, mean=-0.115),
+[2m[36m(pid=29180)[0m                  'obs': np.ndarray((1001, 33), dtype=float32, min=-6.144, max=5.377, mean=-0.115),
+[2m[36m(pid=29180)[0m                  'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.637, max=3.458, mean=-0.011),
+[2m[36m(pid=29180)[0m                  'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m                  'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m                  't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                  'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.198, mean=0.009),
+[2m[36m(pid=29180)[0m                  'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.017, max=0.01, mean=-0.002)},
+[2m[36m(pid=29180)[0m        'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   8: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.025, mean=0.006),
+[2m[36m(pid=29180)[0m                  'actions': np.ndarray((1001, 4), dtype=float32, min=-3.682, max=3.746, mean=-0.013),
+[2m[36m(pid=29180)[0m                  'advantages': np.ndarray((1001,), dtype=float32, min=-0.011, max=0.013, mean=0.0),
+[2m[36m(pid=29180)[0m                  'agent_index': np.ndarray((1001,), dtype=int64, min=8.0, max=8.0, mean=8.0),
+[2m[36m(pid=29180)[0m                  'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.014, max=0.015, mean=0.0),
+[2m[36m(pid=29180)[0m                  'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                  'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                  'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                  'new_obs': np.ndarray((1001, 33), dtype=float32, min=-6.758, max=5.384, mean=0.009),
+[2m[36m(pid=29180)[0m                  'obs': np.ndarray((1001, 33), dtype=float32, min=-6.758, max=5.384, mean=0.009),
+[2m[36m(pid=29180)[0m                  'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.682, max=3.746, mean=-0.013),
+[2m[36m(pid=29180)[0m                  'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                  'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.0, mean=-0.0),
+[2m[36m(pid=29180)[0m                  'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.013, max=0.011, mean=-0.0)},
+[2m[36m(pid=29180)[0m        'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   9: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.006),
+[2m[36m(pid=29180)[0m                  'actions': np.ndarray((1001, 4), dtype=float32, min=-3.375, max=4.093, mean=0.023),
+[2m[36m(pid=29180)[0m                  'advantages': np.ndarray((1001,), dtype=float32, min=-0.013, max=0.007, mean=-0.004),
+[2m[36m(pid=29180)[0m                  'agent_index': np.ndarray((1001,), dtype=int64, min=9.0, max=9.0, mean=9.0),
+[2m[36m(pid=29180)[0m                  'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.014, max=0.015, mean=-0.0),
+[2m[36m(pid=29180)[0m                  'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                  'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                  'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                  'new_obs': np.ndarray((1001, 33), dtype=float32, min=-5.414, max=5.249, mean=-0.014),
+[2m[36m(pid=29180)[0m                  'obs': np.ndarray((1001, 33), dtype=float32, min=-5.414, max=5.249, mean=-0.014),
+[2m[36m(pid=29180)[0m                  'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.375, max=4.093, mean=0.023),
+[2m[36m(pid=29180)[0m                  'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                  'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                  'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.0, mean=-0.0),
+[2m[36m(pid=29180)[0m                  'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.007, max=0.013, mean=0.004)},
+[2m[36m(pid=29180)[0m        'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   10: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.006),
+[2m[36m(pid=29180)[0m                   'actions': np.ndarray((1001, 4), dtype=float32, min=-3.652, max=3.655, mean=-0.004),
+[2m[36m(pid=29180)[0m                   'advantages': np.ndarray((1001,), dtype=float32, min=-0.011, max=0.014, mean=-0.001),
+[2m[36m(pid=29180)[0m                   'agent_index': np.ndarray((1001,), dtype=int64, min=10.0, max=10.0, mean=10.0),
+[2m[36m(pid=29180)[0m                   'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.014, max=0.013, mean=0.0),
+[2m[36m(pid=29180)[0m                   'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                   'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                   'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                   'new_obs': np.ndarray((1001, 33), dtype=float32, min=-5.668, max=4.22, mean=0.051),
+[2m[36m(pid=29180)[0m                   'obs': np.ndarray((1001, 33), dtype=float32, min=-5.668, max=4.22, mean=0.051),
+[2m[36m(pid=29180)[0m                   'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.652, max=3.655, mean=-0.003),
+[2m[36m(pid=29180)[0m                   'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                   'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.014, max=0.011, mean=0.001)},
+[2m[36m(pid=29180)[0m         'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   11: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.006),
+[2m[36m(pid=29180)[0m                   'actions': np.ndarray((1001, 4), dtype=float32, min=-3.843, max=3.716, mean=0.02),
+[2m[36m(pid=29180)[0m                   'advantages': np.ndarray((1001,), dtype=float32, min=-0.01, max=0.015, mean=0.0),
+[2m[36m(pid=29180)[0m                   'agent_index': np.ndarray((1001,), dtype=int64, min=11.0, max=11.0, mean=11.0),
+[2m[36m(pid=29180)[0m                   'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.013, max=0.014, mean=-0.0),
+[2m[36m(pid=29180)[0m                   'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                   'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                   'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                   'new_obs': np.ndarray((1001, 33), dtype=float32, min=-5.694, max=5.237, mean=0.015),
+[2m[36m(pid=29180)[0m                   'obs': np.ndarray((1001, 33), dtype=float32, min=-5.694, max=5.237, mean=0.015),
+[2m[36m(pid=29180)[0m                   'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.843, max=3.716, mean=0.02),
+[2m[36m(pid=29180)[0m                   'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                   'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.0, mean=-0.0),
+[2m[36m(pid=29180)[0m                   'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.015, max=0.01, mean=-0.0)},
+[2m[36m(pid=29180)[0m         'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   12: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.006),
+[2m[36m(pid=29180)[0m                   'actions': np.ndarray((1001, 4), dtype=float32, min=-3.281, max=3.431, mean=0.001),
+[2m[36m(pid=29180)[0m                   'advantages': np.ndarray((1001,), dtype=float32, min=-0.012, max=0.428, mean=0.08),
+[2m[36m(pid=29180)[0m                   'agent_index': np.ndarray((1001,), dtype=int64, min=12.0, max=12.0, mean=12.0),
+[2m[36m(pid=29180)[0m                   'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.014, max=0.016, mean=0.0),
+[2m[36m(pid=29180)[0m                   'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                   'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                   'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                   'new_obs': np.ndarray((1001, 33), dtype=float32, min=-5.838, max=6.047, mean=-0.023),
+[2m[36m(pid=29180)[0m                   'obs': np.ndarray((1001, 33), dtype=float32, min=-5.838, max=6.047, mean=-0.023),
+[2m[36m(pid=29180)[0m                   'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.281, max=3.431, mean=0.001),
+[2m[36m(pid=29180)[0m                   'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m                   'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m                   't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                   'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.428, mean=0.082),
+[2m[36m(pid=29180)[0m                   'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.013, max=0.012, mean=0.002)},
+[2m[36m(pid=29180)[0m         'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   13: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.006),
+[2m[36m(pid=29180)[0m                   'actions': np.ndarray((1001, 4), dtype=float32, min=-3.677, max=3.899, mean=-0.018),
+[2m[36m(pid=29180)[0m                   'advantages': np.ndarray((1001,), dtype=float32, min=-0.012, max=0.242, mean=0.016),
+[2m[36m(pid=29180)[0m                   'agent_index': np.ndarray((1001,), dtype=int64, min=13.0, max=13.0, mean=13.0),
+[2m[36m(pid=29180)[0m                   'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.014, max=0.014, mean=0.0),
+[2m[36m(pid=29180)[0m                   'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                   'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                   'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                   'new_obs': np.ndarray((1001, 33), dtype=float32, min=-8.821, max=7.855, mean=-0.036),
+[2m[36m(pid=29180)[0m                   'obs': np.ndarray((1001, 33), dtype=float32, min=-8.821, max=7.855, mean=-0.036),
+[2m[36m(pid=29180)[0m                   'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.677, max=3.899, mean=-0.018),
+[2m[36m(pid=29180)[0m                   'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m                   'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m                   't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                   'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.246, mean=0.015),
+[2m[36m(pid=29180)[0m                   'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.014, max=0.012, mean=-0.001)},
+[2m[36m(pid=29180)[0m         'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   14: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.006),
+[2m[36m(pid=29180)[0m                   'actions': np.ndarray((1001, 4), dtype=float32, min=-3.534, max=3.278, mean=-0.017),
+[2m[36m(pid=29180)[0m                   'advantages': np.ndarray((1001,), dtype=float32, min=-0.011, max=0.015, mean=0.002),
+[2m[36m(pid=29180)[0m                   'agent_index': np.ndarray((1001,), dtype=int64, min=14.0, max=14.0, mean=14.0),
+[2m[36m(pid=29180)[0m                   'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.014, max=0.018, mean=-0.0),
+[2m[36m(pid=29180)[0m                   'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                   'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                   'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                   'new_obs': np.ndarray((1001, 33), dtype=float32, min=-4.349, max=6.175, mean=-0.049),
+[2m[36m(pid=29180)[0m                   'obs': np.ndarray((1001, 33), dtype=float32, min=-4.349, max=6.175, mean=-0.049),
+[2m[36m(pid=29180)[0m                   'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.534, max=3.278, mean=-0.017),
+[2m[36m(pid=29180)[0m                   'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                   'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.0, mean=-0.0),
+[2m[36m(pid=29180)[0m                   'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.015, max=0.011, mean=-0.002)},
+[2m[36m(pid=29180)[0m         'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   15: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.025, mean=0.006),
+[2m[36m(pid=29180)[0m                   'actions': np.ndarray((1001, 4), dtype=float32, min=-3.779, max=3.592, mean=0.006),
+[2m[36m(pid=29180)[0m                   'advantages': np.ndarray((1001,), dtype=float32, min=-0.01, max=0.015, mean=0.001),
+[2m[36m(pid=29180)[0m                   'agent_index': np.ndarray((1001,), dtype=int64, min=15.0, max=15.0, mean=15.0),
+[2m[36m(pid=29180)[0m                   'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.012, max=0.017, mean=0.0),
+[2m[36m(pid=29180)[0m                   'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                   'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                   'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                   'new_obs': np.ndarray((1001, 33), dtype=float32, min=-5.84, max=6.593, mean=-0.038),
+[2m[36m(pid=29180)[0m                   'obs': np.ndarray((1001, 33), dtype=float32, min=-5.84, max=6.593, mean=-0.038),
+[2m[36m(pid=29180)[0m                   'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.779, max=3.592, mean=0.005),
+[2m[36m(pid=29180)[0m                   'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                   'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.015, max=0.01, mean=-0.001)},
+[2m[36m(pid=29180)[0m         'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   16: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.006),
+[2m[36m(pid=29180)[0m                   'actions': np.ndarray((1001, 4), dtype=float32, min=-3.397, max=3.727, mean=0.014),
+[2m[36m(pid=29180)[0m                   'advantages': np.ndarray((1001,), dtype=float32, min=-0.01, max=0.011, mean=-0.0),
+[2m[36m(pid=29180)[0m                   'agent_index': np.ndarray((1001,), dtype=int64, min=16.0, max=16.0, mean=16.0),
+[2m[36m(pid=29180)[0m                   'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.016, max=0.017, mean=0.0),
+[2m[36m(pid=29180)[0m                   'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                   'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                   'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                   'new_obs': np.ndarray((1001, 33), dtype=float32, min=-6.003, max=6.863, mean=-0.059),
+[2m[36m(pid=29180)[0m                   'obs': np.ndarray((1001, 33), dtype=float32, min=-6.003, max=6.863, mean=-0.059),
+[2m[36m(pid=29180)[0m                   'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.397, max=3.727, mean=0.015),
+[2m[36m(pid=29180)[0m                   'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                   'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.011, max=0.01, mean=0.0)},
+[2m[36m(pid=29180)[0m         'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   17: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.025, mean=0.007),
+[2m[36m(pid=29180)[0m                   'actions': np.ndarray((1001, 4), dtype=float32, min=-3.398, max=3.22, mean=-0.021),
+[2m[36m(pid=29180)[0m                   'advantages': np.ndarray((1001,), dtype=float32, min=-0.013, max=0.009, mean=-0.003),
+[2m[36m(pid=29180)[0m                   'agent_index': np.ndarray((1001,), dtype=int64, min=17.0, max=17.0, mean=17.0),
+[2m[36m(pid=29180)[0m                   'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.012, max=0.014, mean=0.0),
+[2m[36m(pid=29180)[0m                   'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                   'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                   'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                   'new_obs': np.ndarray((1001, 33), dtype=float32, min=-6.93, max=9.107, mean=0.009),
+[2m[36m(pid=29180)[0m                   'obs': np.ndarray((1001, 33), dtype=float32, min=-6.93, max=9.107, mean=0.009),
+[2m[36m(pid=29180)[0m                   'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.398, max=3.22, mean=-0.021),
+[2m[36m(pid=29180)[0m                   'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                   'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.0, mean=-0.0),
+[2m[36m(pid=29180)[0m                   'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.009, max=0.013, mean=0.003)},
+[2m[36m(pid=29180)[0m         'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   18: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.023, mean=0.007),
+[2m[36m(pid=29180)[0m                   'actions': np.ndarray((1001, 4), dtype=float32, min=-3.688, max=3.553, mean=-0.009),
+[2m[36m(pid=29180)[0m                   'advantages': np.ndarray((1001,), dtype=float32, min=-0.009, max=0.352, mean=0.05),
+[2m[36m(pid=29180)[0m                   'agent_index': np.ndarray((1001,), dtype=int64, min=18.0, max=18.0, mean=18.0),
+[2m[36m(pid=29180)[0m                   'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.017, max=0.014, mean=0.0),
+[2m[36m(pid=29180)[0m                   'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                   'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                   'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                   'new_obs': np.ndarray((1001, 33), dtype=float32, min=-5.073, max=6.267, mean=0.075),
+[2m[36m(pid=29180)[0m                   'obs': np.ndarray((1001, 33), dtype=float32, min=-5.073, max=6.267, mean=0.075),
+[2m[36m(pid=29180)[0m                   'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.688, max=3.553, mean=-0.009),
+[2m[36m(pid=29180)[0m                   'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m                   'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m                   't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                   'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.343, mean=0.05),
+[2m[36m(pid=29180)[0m                   'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.013, max=0.009, mean=0.0)},
+[2m[36m(pid=29180)[0m         'type': 'SampleBatch'},
+[2m[36m(pid=29180)[0m   19: { 'data': { 'action_prob': np.ndarray((1001,), dtype=float32, min=0.0, max=0.024, mean=0.006),
+[2m[36m(pid=29180)[0m                   'actions': np.ndarray((1001, 4), dtype=float32, min=-3.431, max=3.383, mean=-0.033),
+[2m[36m(pid=29180)[0m                   'advantages': np.ndarray((1001,), dtype=float32, min=-0.006, max=0.386, mean=0.101),
+[2m[36m(pid=29180)[0m                   'agent_index': np.ndarray((1001,), dtype=int64, min=19.0, max=19.0, mean=19.0),
+[2m[36m(pid=29180)[0m                   'behaviour_logits': np.ndarray((1001, 8), dtype=float32, min=-0.014, max=0.017, mean=0.0),
+[2m[36m(pid=29180)[0m                   'dones': np.ndarray((1001,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m                   'eps_id': np.ndarray((1001,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m                   'infos': np.ndarray((1001,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m                   'new_obs': np.ndarray((1001, 33), dtype=float32, min=-11.435, max=6.931, mean=-0.032),
+[2m[36m(pid=29180)[0m                   'obs': np.ndarray((1001, 33), dtype=float32, min=-11.435, max=6.931, mean=-0.032),
+[2m[36m(pid=29180)[0m                   'prev_actions': np.ndarray((1001, 4), dtype=float32, min=-3.431, max=3.383, mean=-0.033),
+[2m[36m(pid=29180)[0m                   'prev_rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.001),
+[2m[36m(pid=29180)[0m                   'rewards': np.ndarray((1001,), dtype=float32, min=0.0, max=0.04, mean=0.001),
+[2m[36m(pid=29180)[0m                   't': np.ndarray((1001,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m                   'unroll_id': np.ndarray((1001,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m                   'value_targets': np.ndarray((1001,), dtype=float32, min=-0.0, max=0.381, mean=0.103),
+[2m[36m(pid=29180)[0m                   'vf_preds': np.ndarray((1001,), dtype=float32, min=-0.012, max=0.012, mean=0.002)},
+[2m[36m(pid=29180)[0m         'type': 'SampleBatch'}}
+[2m[36m(pid=29180)[0m 
+[2m[36m(pid=29134)[0m 2019-07-19 03:17:19,872	WARNING worker.py:343 -- WARNING: Falling back to serializing objects of type <class 'mlagents.envs.communicator_objects.custom_observation_pb2.CustomObservation'> by using pickle. This may be inefficient.
+[2m[36m(pid=29180)[0m 2019-07-19 03:17:20,156	INFO rollout_worker.py:462 -- Completed sample batch:
+[2m[36m(pid=29180)[0m 
+[2m[36m(pid=29180)[0m { 'data': { 'action_prob': np.ndarray((20020,), dtype=float32, min=0.0, max=0.025, mean=0.006),
+[2m[36m(pid=29180)[0m             'actions': np.ndarray((20020, 4), dtype=float32, min=-3.843, max=4.093, mean=-0.006),
+[2m[36m(pid=29180)[0m             'advantages': np.ndarray((20020,), dtype=float32, min=-0.013, max=0.428, mean=0.017),
+[2m[36m(pid=29180)[0m             'agent_index': np.ndarray((20020,), dtype=int64, min=0.0, max=19.0, mean=9.5),
+[2m[36m(pid=29180)[0m             'behaviour_logits': np.ndarray((20020, 8), dtype=float32, min=-0.019, max=0.018, mean=0.0),
+[2m[36m(pid=29180)[0m             'dones': np.ndarray((20020,), dtype=bool, min=0.0, max=1.0, mean=0.001),
+[2m[36m(pid=29180)[0m             'eps_id': np.ndarray((20020,), dtype=int64, min=859483424.0, max=859483424.0, mean=859483424.0),
+[2m[36m(pid=29180)[0m             'infos': np.ndarray((20020,), dtype=object, head={'text_observation': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''], 'brain_info': <mlagents.envs.brain.BrainInfo object at 0x131456b00>}),
+[2m[36m(pid=29180)[0m             'new_obs': np.ndarray((20020, 33), dtype=float32, min=-11.435, max=9.107, mean=-0.009),
+[2m[36m(pid=29180)[0m             'obs': np.ndarray((20020, 33), dtype=float32, min=-11.435, max=9.107, mean=-0.009),
+[2m[36m(pid=29180)[0m             'prev_actions': np.ndarray((20020, 4), dtype=float32, min=-3.843, max=4.093, mean=-0.006),
+[2m[36m(pid=29180)[0m             'prev_rewards': np.ndarray((20020,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m             'rewards': np.ndarray((20020,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29180)[0m             't': np.ndarray((20020,), dtype=int64, min=0.0, max=1000.0, mean=500.0),
+[2m[36m(pid=29180)[0m             'unroll_id': np.ndarray((20020,), dtype=int64, min=0.0, max=0.0, mean=0.0),
+[2m[36m(pid=29180)[0m             'value_targets': np.ndarray((20020,), dtype=float32, min=-0.0, max=0.428, mean=0.017),
+[2m[36m(pid=29180)[0m             'vf_preds': np.ndarray((20020,), dtype=float32, min=-0.017, max=0.014, mean=0.001)},
+[2m[36m(pid=29180)[0m   'type': 'SampleBatch'}
+[2m[36m(pid=29180)[0m 
+[2m[36m(pid=29136)[0m 2019-07-19 03:19:46,680	INFO multi_gpu_optimizer.py:136 -- Collected more training samples than expected (actual=80080, train_batch_size=25000). This may be because you have many workers or long episodes in 'complete_episodes' batch mode.
+[2m[36m(pid=29136)[0m 2019-07-19 03:19:46,760	INFO multi_gpu_impl.py:146 -- Training on concatenated sample batches:
+[2m[36m(pid=29136)[0m 
+[2m[36m(pid=29136)[0m { 'inputs': [ np.ndarray((80080, 4), dtype=float32, min=-4.455, max=4.391, mean=0.001),
+[2m[36m(pid=29136)[0m               np.ndarray((80080,), dtype=float32, min=0.0, max=0.04, mean=0.0),
+[2m[36m(pid=29136)[0m               np.ndarray((80080, 33), dtype=float32, min=-11.435, max=9.981, mean=-0.007),
+[2m[36m(pid=29136)[0m               np.ndarray((80080, 4), dtype=float32, min=-4.455, max=4.391, mean=0.001),
+[2m[36m(pid=29136)[0m               np.ndarray((80080,), dtype=float32, min=-0.593, max=8.856, mean=0.0),
+[2m[36m(pid=29136)[0m               np.ndarray((80080, 8), dtype=float32, min=-0.019, max=0.018, mean=0.0),
+[2m[36m(pid=29136)[0m               np.ndarray((80080,), dtype=float32, min=-0.0, max=0.504, mean=0.018),
+[2m[36m(pid=29136)[0m               np.ndarray((80080,), dtype=float32, min=-0.018, max=0.016, mean=0.001)],
+[2m[36m(pid=29136)[0m   'placeholders': [ <tf.Tensor 'default_policy/action:0' shape=(?, 4) dtype=float32>,
+[2m[36m(pid=29136)[0m                     <tf.Tensor 'default_policy/prev_reward:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=29136)[0m                     <tf.Tensor 'default_policy/observation:0' shape=(?, 33) dtype=float32>,
+[2m[36m(pid=29136)[0m                     <tf.Tensor 'default_policy/actions:0' shape=(?, 4) dtype=float32>,
+[2m[36m(pid=29136)[0m                     <tf.Tensor 'default_policy/advantages:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=29136)[0m                     <tf.Tensor 'default_policy/behaviour_logits:0' shape=(?, 8) dtype=float32>,
+[2m[36m(pid=29136)[0m                     <tf.Tensor 'default_policy/value_targets:0' shape=(?,) dtype=float32>,
+[2m[36m(pid=29136)[0m                     <tf.Tensor 'default_policy/vf_preds:0' shape=(?,) dtype=float32>],
+[2m[36m(pid=29136)[0m   'state_inputs': []}
+[2m[36m(pid=29136)[0m 
+[2m[36m(pid=29136)[0m 2019-07-19 03:19:46,760	INFO multi_gpu_impl.py:191 -- Divided 80080 rollout sequences, each of length 1, among 1 devices.

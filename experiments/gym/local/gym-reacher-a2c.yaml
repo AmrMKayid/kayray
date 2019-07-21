@@ -8,12 +8,14 @@ gym-reacher-a2c:
     checkpoint_at_end: True
     stop:     
         episode_reward_mean: 21
-        training_iteration: 500
+        timesteps_total: 10000000
     config:
+        env_config:
+            env_type: openai
         sample_batch_size: 20
         clip_rewards: False
         num_gpus: 0
-        num_workers: 3 
+        num_workers: 0
         lr_schedule: [
             [0, 0.0007],
             [20000000, 0.000000000001],
