@@ -19,8 +19,7 @@ gym-reacher-ppo:
     model:
       free_log_std: True
     num_gpus: 1 
-    num_workers:
-      grid_search: 11
+    num_workers: 11
     num_envs_per_worker:
       grid_search: [16, 8, 4]
     evaluation_interval: 5
