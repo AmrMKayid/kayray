@@ -5,10 +5,11 @@ gym-reacher-ppo:
   checkpoint_freq: 50
   checkpoint_at_end: True
   stop:
-      episode_reward_mean: 18
-      # timesteps_total: 5000000
-      training_iteration: 500
+    episode_reward_mean: 21
+    timesteps_total: 10000000
   config: 
+    env_config:
+      env_type: openai
     gamma: 0.995
     kl_coeff: 1.0
     num_sgd_iter: 20
@@ -19,8 +20,10 @@ gym-reacher-ppo:
       free_log_std: True
     num_gpus: 1 
     num_workers:
-      grid_search: [11, 7]
+      grid_search: 11
     num_envs_per_worker:
       grid_search: [16, 8, 4]
+    evaluation_interval: 5
+    evaluation_num_episodes: 10
     batch_mode: complete_episodes
     observation_filter: MeanStdFilter

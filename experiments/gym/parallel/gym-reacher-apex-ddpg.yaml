@@ -5,15 +5,16 @@ gym-reacher-apex-ddpg:
     checkpoint_freq: 50
     checkpoint_at_end: True
     stop:
-      episode_reward_mean: 18
-      # timesteps_total: 5000000
-      training_iteration: 500
+      episode_reward_mean: 21
+      timesteps_total: 10000000
     config:
+        env_config:
+          env_type: openai
         use_huber: True
         clip_rewards: False
         num_gpus: 1 
         num_workers:
-          grid_search: [11, 7]
+          grid_search: 11
         num_envs_per_worker:
           grid_search: [16, 8, 4]
         n_step: 3 # 1
