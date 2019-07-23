@@ -14,10 +14,11 @@ gym-reacher-apex-ddpg:
     clip_rewards: False
     num_gpus: 0
     num_workers: 2 # required > 1
-    lr: 0.01
+    lr: 0.1
     n_step: 1 # 3
     exploration_ou_noise_scale: .7
     target_network_update_freq: 50000
-    tau: 0.9
+    tau: 1.0
     evaluation_interval: 5
     evaluation_num_episodes: 10
+
