@@ -18,6 +18,6 @@ gym-reacher-apex-ddpg:
     n_step: 1 # 3
     exploration_ou_noise_scale: .7
     target_network_update_freq: 50000
-    tau: 1.0
+    tau: 0.9
     evaluation_interval: 5
     evaluation_num_episodes: 10
