@@ -13,11 +13,12 @@ gym-reacher-impala:
           env_type: openai
         sample_batch_size: 50
         train_batch_size: 500
+        lr: 0.00001
         num_gpus: 1
         num_workers: 11
-        num_envs_per_worker: 
-          grid_search: [16, 8, 4]
-        lr_schedule: [
-          [0, 0.0001],
-          [20000000, 0.000000000001],
-        ]
+        num_envs_per_worker: 16
+        #grid_search: [16, 8, 4]
+        #lr_schedule: [
+        # [0, 0.0001],
+        # [20000000, 0.000000000001],
+        #]
