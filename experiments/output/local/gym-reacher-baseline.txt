@@ -14788,3 +14788,1163 @@ Result for PPO_RoboschoolReacher-v1_0:
   timesteps_total: 6350400
   training_iteration: 252
   
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5613 s, 252 iter, 6350400 ts, 16.9 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-40-30
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 37.32207476417886
+  episode_reward_mean: 17.857959896783978
+  episode_reward_min: -3.3557284545738177
+  episodes_this_iter: 168
+  episodes_total: 42504
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4158.29
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3448572158813477
+        kl: 0.010205031372606754
+        policy_loss: -0.04162176698446274
+        total_loss: 0.04769008606672287
+        vf_explained_var: 0.9981716871261597
+        vf_loss: 0.06348036229610443
+    load_time_ms: 0.782
+    num_steps_sampled: 6375600
+    num_steps_trained: 6325000
+    sample_time_ms: 17824.921
+    update_time_ms: 0.002
+  iterations_since_restore: 253
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14153525312203555
+    mean_inference_ms: 0.4362205679782955
+    mean_processing_ms: 0.12503828521442498
+  time_since_restore: 5635.123501062393
+  time_this_iter_s: 21.643444538116455
+  time_total_s: 5635.123501062393
+  timestamp: 1563921630
+  timesteps_since_restore: 6375600
+  timesteps_this_iter: 25200
+  timesteps_total: 6375600
+  training_iteration: 253
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5635 s, 253 iter, 6375600 ts, 17.9 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-40-53
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 36.79934489909541
+  episode_reward_mean: 18.318564345686305
+  episode_reward_min: -3.9744757185756443
+  episodes_this_iter: 168
+  episodes_total: 42672
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4288.422
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3422473669052124
+        kl: 0.009470278397202492
+        policy_loss: -0.042094916105270386
+        total_loss: 0.05266588553786278
+        vf_explained_var: 0.9981281757354736
+        vf_loss: 0.0707891657948494
+    load_time_ms: 0.778
+    num_steps_sampled: 6400800
+    num_steps_trained: 6350000
+    sample_time_ms: 17829.815
+    update_time_ms: 0.002
+  iterations_since_restore: 254
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14153542981527178
+    mean_inference_ms: 0.4362234027868463
+    mean_processing_ms: 0.12504233349438026
+  time_since_restore: 5658.1852061748505
+  time_this_iter_s: 23.061705112457275
+  time_total_s: 5658.1852061748505
+  timestamp: 1563921653
+  timesteps_since_restore: 6400800
+  timesteps_this_iter: 25200
+  timesteps_total: 6400800
+  training_iteration: 254
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5658 s, 254 iter, 6400800 ts, 18.3 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-41-15
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 37.585507816640344
+  episode_reward_mean: 17.077320550807855
+  episode_reward_min: -2.534991931669919
+  episodes_this_iter: 168
+  episodes_total: 42840
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4234.756
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3384736776351929
+        kl: 0.009569189511239529
+        policy_loss: -0.040390852838754654
+        total_loss: 0.051819901913404465
+        vf_explained_var: 0.9979498982429504
+        vf_loss: 0.06798874586820602
+    load_time_ms: 0.782
+    num_steps_sampled: 6426000
+    num_steps_trained: 6375000
+    sample_time_ms: 17830.748
+    update_time_ms: 0.002
+  iterations_since_restore: 255
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14153149427648895
+    mean_inference_ms: 0.43622685437227526
+    mean_processing_ms: 0.12504382039720022
+  time_since_restore: 5679.886538267136
+  time_this_iter_s: 21.701332092285156
+  time_total_s: 5679.886538267136
+  timestamp: 1563921675
+  timesteps_since_restore: 6426000
+  timesteps_this_iter: 25200
+  timesteps_total: 6426000
+  training_iteration: 255
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5679 s, 255 iter, 6426000 ts, 17.1 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-41-37
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 37.332561735584605
+  episode_reward_mean: 17.28698750598468
+  episode_reward_min: -1.9595699137494291
+  episodes_this_iter: 168
+  episodes_total: 43008
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4209.091
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3362748622894287
+        kl: 0.009323503822088242
+        policy_loss: -0.0438251867890358
+        total_loss: 0.05376290902495384
+        vf_explained_var: 0.9976637959480286
+        vf_loss: 0.07398797571659088
+    load_time_ms: 0.773
+    num_steps_sampled: 6451200
+    num_steps_trained: 6400000
+    sample_time_ms: 17834.415
+    update_time_ms: 0.002
+  iterations_since_restore: 256
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152857631630186
+    mean_inference_ms: 0.4362314851656163
+    mean_processing_ms: 0.12504427307678243
+  time_since_restore: 5701.587105751038
+  time_this_iter_s: 21.700567483901978
+  time_total_s: 5701.587105751038
+  timestamp: 1563921697
+  timesteps_since_restore: 6451200
+  timesteps_this_iter: 25200
+  timesteps_total: 6451200
+  training_iteration: 256
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5701 s, 256 iter, 6451200 ts, 17.3 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-41-59
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 36.3610050676464
+  episode_reward_mean: 16.280205156613793
+  episode_reward_min: -5.599965134883566
+  episodes_this_iter: 168
+  episodes_total: 43176
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4179.172
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3341455459594727
+        kl: 0.00882331095635891
+        policy_loss: -0.04174387827515602
+        total_loss: 0.048028215765953064
+        vf_explained_var: 0.9977688789367676
+        vf_loss: 0.06743809580802917
+    load_time_ms: 0.767
+    num_steps_sampled: 6476400
+    num_steps_trained: 6425000
+    sample_time_ms: 17831.5
+    update_time_ms: 0.002
+  iterations_since_restore: 257
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152817815620616
+    mean_inference_ms: 0.43623570887903085
+    mean_processing_ms: 0.1250475967371549
+  time_since_restore: 5723.577000617981
+  time_this_iter_s: 21.98989486694336
+  time_total_s: 5723.577000617981
+  timestamp: 1563921719
+  timesteps_since_restore: 6476400
+  timesteps_this_iter: 25200
+  timesteps_total: 6476400
+  training_iteration: 257
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5723 s, 257 iter, 6476400 ts, 16.3 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-42-21
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 35.837804817333044
+  episode_reward_mean: 17.55026281152249
+  episode_reward_min: -2.0043028366791127
+  episodes_this_iter: 168
+  episodes_total: 43344
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4179.169
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3360079526901245
+        kl: 0.009460752829909325
+        policy_loss: -0.0385611429810524
+        total_loss: 0.04805738851428032
+        vf_explained_var: 0.9980668425559998
+        vf_loss: 0.06267099827528
+    load_time_ms: 0.777
+    num_steps_sampled: 6501600
+    num_steps_trained: 6450000
+    sample_time_ms: 17825.457
+    update_time_ms: 0.002
+  iterations_since_restore: 258
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152628559591166
+    mean_inference_ms: 0.4362397869045785
+    mean_processing_ms: 0.12504922805718732
+  time_since_restore: 5745.8315579891205
+  time_this_iter_s: 22.254557371139526
+  time_total_s: 5745.8315579891205
+  timestamp: 1563921741
+  timesteps_since_restore: 6501600
+  timesteps_this_iter: 25200
+  timesteps_total: 6501600
+  training_iteration: 258
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5745 s, 258 iter, 6501600 ts, 17.6 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-42-43
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 35.570531078283004
+  episode_reward_mean: 16.43544107649101
+  episode_reward_min: -5.283872237318536
+  episodes_this_iter: 168
+  episodes_total: 43512
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4203.235
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3329989910125732
+        kl: 0.008949240669608116
+        policy_loss: -0.03939308971166611
+        total_loss: 0.06561888754367828
+        vf_explained_var: 0.9971941113471985
+        vf_loss: 0.0823592096567154
+    load_time_ms: 0.775
+    num_steps_sampled: 6526800
+    num_steps_trained: 6475000
+    sample_time_ms: 17825.453
+    update_time_ms: 0.002
+  iterations_since_restore: 259
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152450401391278
+    mean_inference_ms: 0.43623915040086025
+    mean_processing_ms: 0.1250516003037348
+  time_since_restore: 5767.781166553497
+  time_this_iter_s: 21.94960856437683
+  time_total_s: 5767.781166553497
+  timestamp: 1563921763
+  timesteps_since_restore: 6526800
+  timesteps_this_iter: 25200
+  timesteps_total: 6526800
+  training_iteration: 259
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5767 s, 259 iter, 6526800 ts, 16.4 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-43-06
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 37.25221565578102
+  episode_reward_mean: 16.815927438193903
+  episode_reward_min: -2.3893953580652485
+  episodes_this_iter: 168
+  episodes_total: 43680
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4223.357
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3316251039505005
+        kl: 0.009268386289477348
+        policy_loss: -0.037377338856458664
+        total_loss: 0.056117042899131775
+        vf_explained_var: 0.9976610541343689
+        vf_loss: 0.07003377377986908
+    load_time_ms: 0.781
+    num_steps_sampled: 6552000
+    num_steps_trained: 6500000
+    sample_time_ms: 17827.299
+    update_time_ms: 0.002
+  iterations_since_restore: 260
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.1415216805011743
+    mean_inference_ms: 0.4362282355381225
+    mean_processing_ms: 0.12505247979708076
+  time_since_restore: 5790.66929101944
+  time_this_iter_s: 22.888124465942383
+  time_total_s: 5790.66929101944
+  timestamp: 1563921786
+  timesteps_since_restore: 6552000
+  timesteps_this_iter: 25200
+  timesteps_total: 6552000
+  training_iteration: 260
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5790 s, 260 iter, 6552000 ts, 16.8 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-43-28
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 36.54893845003046
+  episode_reward_mean: 16.485774119082905
+  episode_reward_min: -4.162159813021941
+  episodes_this_iter: 168
+  episodes_total: 43848
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4277.74
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3286528587341309
+        kl: 0.008763032965362072
+        policy_loss: -0.04077102988958359
+        total_loss: 0.05700017511844635
+        vf_explained_var: 0.9974693059921265
+        vf_loss: 0.07558977603912354
+    load_time_ms: 0.756
+    num_steps_sampled: 6577200
+    num_steps_trained: 6525000
+    sample_time_ms: 17835.924
+    update_time_ms: 0.002
+  iterations_since_restore: 261
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152448663669495
+    mean_inference_ms: 0.4362365416687671
+    mean_processing_ms: 0.12505814259892145
+  time_since_restore: 5813.021910429001
+  time_this_iter_s: 22.352619409561157
+  time_total_s: 5813.021910429001
+  timestamp: 1563921808
+  timesteps_since_restore: 6577200
+  timesteps_this_iter: 25200
+  timesteps_total: 6577200
+  training_iteration: 261
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5813 s, 261 iter, 6577200 ts, 16.5 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-43-50
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 38.06752563400749
+  episode_reward_mean: 16.034641276325793
+  episode_reward_min: -3.199360756404744
+  episodes_this_iter: 168
+  episodes_total: 44016
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4335.358
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.32741117477417
+        kl: 0.009693927131593227
+        policy_loss: -0.03924994543194771
+        total_loss: 0.0646529272198677
+        vf_explained_var: 0.9972541332244873
+        vf_loss: 0.07936511188745499
+    load_time_ms: 0.759
+    num_steps_sampled: 6602400
+    num_steps_trained: 6550000
+    sample_time_ms: 17851.677
+    update_time_ms: 0.002
+  iterations_since_restore: 262
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152304576327127
+    mean_inference_ms: 0.4362384784934913
+    mean_processing_ms: 0.12505940380546382
+  time_since_restore: 5835.438049793243
+  time_this_iter_s: 22.416139364242554
+  time_total_s: 5835.438049793243
+  timestamp: 1563921830
+  timesteps_since_restore: 6602400
+  timesteps_this_iter: 25200
+  timesteps_total: 6602400
+  training_iteration: 262
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5835 s, 262 iter, 6602400 ts, 16 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-44-13
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 37.82228242838458
+  episode_reward_mean: 16.143369387284242
+  episode_reward_min: -2.4104796309980214
+  episodes_this_iter: 168
+  episodes_total: 44184
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4464.774
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3233827352523804
+        kl: 0.008213868364691734
+        policy_loss: -0.03768453001976013
+        total_loss: 0.057626381516456604
+        vf_explained_var: 0.9973699450492859
+        vf_loss: 0.0745195522904396
+    load_time_ms: 0.77
+    num_steps_sampled: 6627600
+    num_steps_trained: 6575000
+    sample_time_ms: 17856.46
+    update_time_ms: 0.002
+  iterations_since_restore: 263
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152068772852178
+    mean_inference_ms: 0.43623536043820266
+    mean_processing_ms: 0.1250616056993494
+  time_since_restore: 5858.424307107925
+  time_this_iter_s: 22.986257314682007
+  time_total_s: 5858.424307107925
+  timestamp: 1563921853
+  timesteps_since_restore: 6627600
+  timesteps_this_iter: 25200
+  timesteps_total: 6627600
+  training_iteration: 263
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5858 s, 263 iter, 6627600 ts, 16.1 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-44-35
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 36.9491277853537
+  episode_reward_mean: 16.310998483190026
+  episode_reward_min: -4.800719880143017
+  episodes_this_iter: 168
+  episodes_total: 44352
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4358.094
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3219722509384155
+        kl: 0.00885905884206295
+        policy_loss: -0.04067056626081467
+        total_loss: 0.050276387482881546
+        vf_explained_var: 0.9977540373802185
+        vf_loss: 0.06852246075868607
+    load_time_ms: 0.773
+    num_steps_sampled: 6652800
+    num_steps_trained: 6600000
+    sample_time_ms: 17864.254
+    update_time_ms: 0.002
+  iterations_since_restore: 264
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152250429294072
+    mean_inference_ms: 0.4362463498575043
+    mean_processing_ms: 0.1250670172389118
+  time_since_restore: 5880.492723226547
+  time_this_iter_s: 22.068416118621826
+  time_total_s: 5880.492723226547
+  timestamp: 1563921875
+  timesteps_since_restore: 6652800
+  timesteps_this_iter: 25200
+  timesteps_total: 6652800
+  training_iteration: 264
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5880 s, 264 iter, 6652800 ts, 16.3 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-44-57
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 36.31090186514405
+  episode_reward_mean: 16.346188924728004
+  episode_reward_min: -1.839819335907574
+  episodes_this_iter: 168
+  episodes_total: 44520
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4359.272
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3225058317184448
+        kl: 0.009321963414549828
+        policy_loss: -0.043928928673267365
+        total_loss: 0.053878359496593475
+        vf_explained_var: 0.997408926486969
+        vf_loss: 0.07421106100082397
+    load_time_ms: 0.768
+    num_steps_sampled: 6678000
+    num_steps_trained: 6625000
+    sample_time_ms: 17855.082
+    update_time_ms: 0.002
+  iterations_since_restore: 265
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14151980200806816
+    mean_inference_ms: 0.4362339989266446
+    mean_processing_ms: 0.1250690732120177
+  time_since_restore: 5902.114040136337
+  time_this_iter_s: 21.62131690979004
+  time_total_s: 5902.114040136337
+  timestamp: 1563921897
+  timesteps_since_restore: 6678000
+  timesteps_this_iter: 25200
+  timesteps_total: 6678000
+  training_iteration: 265
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5902 s, 265 iter, 6678000 ts, 16.3 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-45-19
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 37.66500266296824
+  episode_reward_mean: 16.496417411931127
+  episode_reward_min: -13.111392060178435
+  episodes_this_iter: 168
+  episodes_total: 44688
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4350.752
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3205310106277466
+        kl: 0.009705925360321999
+        policy_loss: -0.04084520787000656
+        total_loss: 0.0482693612575531
+        vf_explained_var: 0.9979541897773743
+        vf_loss: 0.06454645097255707
+    load_time_ms: 0.776
+    num_steps_sampled: 6703200
+    num_steps_trained: 6650000
+    sample_time_ms: 17869.961
+    update_time_ms: 0.002
+  iterations_since_restore: 266
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152704301436136
+    mean_inference_ms: 0.43624031173383043
+    mean_processing_ms: 0.12507923397801593
+  time_since_restore: 5923.878434181213
+  time_this_iter_s: 21.7643940448761
+  time_total_s: 5923.878434181213
+  timestamp: 1563921919
+  timesteps_since_restore: 6703200
+  timesteps_this_iter: 25200
+  timesteps_total: 6703200
+  training_iteration: 266
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5923 s, 266 iter, 6703200 ts, 16.5 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-45-41
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 36.88990057280706
+  episode_reward_mean: 17.173930405641322
+  episode_reward_min: -2.269956789889245
+  episodes_this_iter: 168
+  episodes_total: 44856
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4380.229
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3185359239578247
+        kl: 0.009685972705483437
+        policy_loss: -0.04223395511507988
+        total_loss: 0.06049897149205208
+        vf_explained_var: 0.9975587725639343
+        vf_loss: 0.07821530103683472
+    load_time_ms: 0.774
+    num_steps_sampled: 6728400
+    num_steps_trained: 6675000
+    sample_time_ms: 17862.718
+    update_time_ms: 0.002
+  iterations_since_restore: 267
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152519642390043
+    mean_inference_ms: 0.4362355947783406
+    mean_processing_ms: 0.12508167367712011
+  time_since_restore: 5946.09085559845
+  time_this_iter_s: 22.212421417236328
+  time_total_s: 5946.09085559845
+  timestamp: 1563921941
+  timesteps_since_restore: 6728400
+  timesteps_this_iter: 25200
+  timesteps_total: 6728400
+  training_iteration: 267
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5946 s, 267 iter, 6728400 ts, 17.2 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-46-03
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 37.62393141472855
+  episode_reward_mean: 17.06312632257139
+  episode_reward_min: -2.5719319973569115
+  episodes_this_iter: 168
+  episodes_total: 45024
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4381.357
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.317131757736206
+        kl: 0.009406544268131256
+        policy_loss: -0.04010706767439842
+        total_loss: 0.0571850910782814
+        vf_explained_var: 0.9975525140762329
+        vf_loss: 0.07348184287548065
+    load_time_ms: 0.758
+    num_steps_sampled: 6753600
+    num_steps_trained: 6700000
+    sample_time_ms: 17858.21
+    update_time_ms: 0.002
+  iterations_since_restore: 268
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152316341383872
+    mean_inference_ms: 0.4362335514576009
+    mean_processing_ms: 0.12508277425820283
+  time_since_restore: 5968.311705589294
+  time_this_iter_s: 22.220849990844727
+  time_total_s: 5968.311705589294
+  timestamp: 1563921963
+  timesteps_since_restore: 6753600
+  timesteps_this_iter: 25200
+  timesteps_total: 6753600
+  training_iteration: 268
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5968 s, 268 iter, 6753600 ts, 17.1 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-46-26
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 37.081972007347616
+  episode_reward_mean: 17.420240393262976
+  episode_reward_min: -4.495274246203528
+  episodes_this_iter: 168
+  episodes_total: 45192
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4483.859
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3168513774871826
+        kl: 0.009331581182777882
+        policy_loss: -0.04317019507288933
+        total_loss: 0.03815457224845886
+        vf_explained_var: 0.9980610013008118
+        vf_loss: 0.057704199105501175
+    load_time_ms: 0.774
+    num_steps_sampled: 6778800
+    num_steps_trained: 6725000
+    sample_time_ms: 17856.551
+    update_time_ms: 0.002
+  iterations_since_restore: 269
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.1415187835618515
+    mean_inference_ms: 0.4362351744513115
+    mean_processing_ms: 0.12508287845126595
+  time_since_restore: 5991.270644187927
+  time_this_iter_s: 22.958938598632812
+  time_total_s: 5991.270644187927
+  timestamp: 1563921986
+  timesteps_since_restore: 6778800
+  timesteps_this_iter: 25200
+  timesteps_total: 6778800
+  training_iteration: 269
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 5991 s, 269 iter, 6778800 ts, 17.4 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-46-48
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 37.40571584354346
+  episode_reward_mean: 17.48273999144671
+  episode_reward_min: -2.553285155439537
+  episodes_this_iter: 168
+  episodes_total: 45360
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4361.061
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3144242763519287
+        kl: 0.009564513340592384
+        policy_loss: -0.04127204790711403
+        total_loss: 0.04184408485889435
+        vf_explained_var: 0.9981703758239746
+        vf_loss: 0.058905959129333496
+    load_time_ms: 0.769
+    num_steps_sampled: 6804000
+    num_steps_trained: 6750000
+    sample_time_ms: 17878.11
+    update_time_ms: 0.002
+  iterations_since_restore: 270
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152238526013838
+    mean_inference_ms: 0.43624382143300944
+    mean_processing_ms: 0.12508952618824387
+  time_since_restore: 6013.145310640335
+  time_this_iter_s: 21.874666452407837
+  time_total_s: 6013.145310640335
+  timestamp: 1563922008
+  timesteps_since_restore: 6804000
+  timesteps_this_iter: 25200
+  timesteps_total: 6804000
+  training_iteration: 270
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 6013 s, 270 iter, 6804000 ts, 17.5 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-47-10
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 37.951823322824566
+  episode_reward_mean: 17.264744100811303
+  episode_reward_min: -9.510444378447387
+  episodes_this_iter: 168
+  episodes_total: 45528
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4299.234
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.311273217201233
+        kl: 0.009197625331580639
+        policy_loss: -0.041548050940036774
+        total_loss: 0.058489929884672165
+        vf_explained_var: 0.997626781463623
+        vf_loss: 0.07675648480653763
+    load_time_ms: 0.768
+    num_steps_sampled: 6829200
+    num_steps_trained: 6775000
+    sample_time_ms: 17870.314
+    update_time_ms: 0.002
+  iterations_since_restore: 271
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152269826927902
+    mean_inference_ms: 0.436244887041874
+    mean_processing_ms: 0.12509281443838435
+  time_since_restore: 6034.801119804382
+  time_this_iter_s: 21.65580916404724
+  time_total_s: 6034.801119804382
+  timestamp: 1563922030
+  timesteps_since_restore: 6829200
+  timesteps_this_iter: 25200
+  timesteps_total: 6829200
+  training_iteration: 271
+  
+== Status ==
+Using FIFO scheduling algorithm.
+Resources requested: 1/12 CPUs, 0/1 GPUs
+Memory usage on this node: 3.2/16.7 GB
+Result logdir: /home/amr/kayray_results/local/gym-reacher-ppo-baseline
+Number of trials: 1 ({'RUNNING': 1})
+RUNNING trials:
+ - PPO_RoboschoolReacher-v1_0:	RUNNING, [1 CPUs, 0 GPUs], [pid=25531], 6034 s, 271 iter, 6829200 ts, 17.3 rew
+
+Result for PPO_RoboschoolReacher-v1_0:
+  custom_metrics: {}
+  date: 2019-07-24_00-47-33
+  done: false
+  episode_len_mean: 150.0
+  episode_reward_max: 37.256600117202645
+  episode_reward_mean: 17.670559904221818
+  episode_reward_min: -5.331492363660342
+  episodes_this_iter: 168
+  episodes_total: 45696
+  experiment_id: 550dc19223074d5a9ba0f2fe33d486b1
+  hostname: navel-notebook-1
+  info:
+    grad_time_ms: 4333.178
+    learner:
+      default_policy:
+        cur_kl_coeff: 2.53125
+        cur_lr: 0.0010000000474974513
+        entropy: 1.3138763904571533
+        kl: 0.008721848949790001
+        policy_loss: -0.03770892322063446
+        total_loss: 0.06383362412452698
+        vf_explained_var: 0.9976123571395874
+        vf_loss: 0.0794653668999672
+    load_time_ms: 0.767
+    num_steps_sampled: 6854400
+    num_steps_trained: 6800000
+    sample_time_ms: 17882.434
+    update_time_ms: 0.002
+  iterations_since_restore: 272
+  node_ip: 10.16.128.63
+  num_healthy_workers: 0
+  num_metric_batches_dropped: 0
+  off_policy_estimator: {}
+  pid: 25531
+  policy_reward_mean: {}
+  sampler_perf:
+    mean_env_wait_ms: 0.14152443394369257
+    mean_inference_ms: 0.43625842467519266
+    mean_processing_ms: 0.12509648923124025
+  time_since_restore: 6057.677940368652
+  time_this_iter_s: 22.87682056427002
+  time_total_s: 6057.677940368652
+  timestamp: 1563922053
+  timesteps_since_restore: 6854400
+  timesteps_this_iter: 25200
+  timesteps_total: 6854400
+  training_iteration: 272
+  
