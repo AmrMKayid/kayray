@@ -2,12 +2,14 @@ gym-reacher-ppo:
   env: RoboschoolReacher-v1
   run: PPO 
   local_dir: ~/kayray_results/distributed
-  checkpoint_freq: 100
+  checkpoint_freq: 50
   checkpoint_at_end: True
   stop:
-      episode_reward_mean: 21
-      training_iteration: 500
+    episode_reward_mean: 21
+    timesteps_total: 10000000
   config: 
+    env_config:
+      env_type: openai
     gamma: 0.995
     kl_coeff: 1.0
     num_sgd_iter: 20
@@ -17,8 +19,7 @@ gym-reacher-ppo:
     model:
       free_log_std: True
     num_gpus: 4
-    num_workers:
-      grid_search: [63, 31, 15]
+    num_workers: 63
     num_envs_per_worker:
       grid_search: [32, 16, 8] 
     batch_mode: complete_episodes
