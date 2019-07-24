@@ -19,8 +19,8 @@ unity-reacher-ppo:
     train_batch_size: 25000
     model:
       free_log_std: True
-    num_gpus: 0 #1 
-    num_workers: 3
+    num_gpus: 1
+    num_workers: 11
       # grid_search: [11, 7]
     # num_envs_per_worker:
       # grid_search: [16, 8, 4]

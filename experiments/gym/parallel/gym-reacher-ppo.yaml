@@ -22,7 +22,5 @@ gym-reacher-ppo:
     num_workers: 11
     num_envs_per_worker:
       grid_search: [16, 8, 4]
-    evaluation_interval: 5
-    evaluation_num_episodes: 10
     batch_mode: complete_episodes
     observation_filter: MeanStdFilter
