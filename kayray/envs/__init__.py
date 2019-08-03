@@ -1,7 +1,8 @@
-__all__ = ['openai', 'unity']
+__all__ = ['openai', 'unity', 'osim']
 
 from .openai import *
 from .unity import *
+from .osim import *
 
 def make_env(env_config, env_name, no_graphics=True):
     # print(env_config)
@@ -9,5 +10,7 @@ def make_env(env_config, env_name, no_graphics=True):
         return make_openai_env(env_config, env_name)
     elif env_config['env_type'] == 'unity':
         return make_unity_env(env_config, env_name, no_graphics=no_graphics)
+    elif env_config['env_type'] == 'osim':
+		return make_osim_env(env_config, visualize=False)
     else:
         raise NotImplementedError

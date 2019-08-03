@@ -1,0 +1,20 @@
+gym-reacher-apex-ddpg:
+    env: osim
+    run: APEX_DDPG
+    local_dir: ~/kayray_results/distributed
+    checkpoint_freq: 50
+    checkpoint_at_end: True
+    config:
+        env_config:
+          env_type: osim
+        use_huber: True
+        clip_rewards: False
+        num_gpus: 1 
+        num_workers: 11
+        num_envs_per_worker: 1
+        n_step: 3 # 1
+        exploration_ou_noise_scale: 1.0
+        target_network_update_freq: 50000
+        tau: 1.0
+        evaluation_interval: 5
+        evaluation_num_episodes: 10
