@@ -1,0 +1,265 @@
+{
+  "checkpoints": [
+    {
+      "trainable_name": "PPO",
+      "config": {
+        "env_config": {
+          "env_type": "unity"
+        },
+        "gamma": 0.995,
+        "kl_coeff": 1.0,
+        "num_sgd_iter": 20,
+        "lr": 0.0001,
+        "sgd_minibatch_size": 1000,
+        "train_batch_size": 25000,
+        "model": {
+          "free_log_std": true
+        },
+        "num_gpus": 1,
+        "num_workers": 11,
+        "batch_mode": "complete_episodes",
+        "observation_filter": "MeanStdFilter",
+        "env": "Reacher20"
+      },
+      "local_dir": "/home/amr/kayray_results/parallel/unity-reacher-ppo",
+      "experiment_tag": "0",
+      "resources": {
+        "cpu": 1,
+        "gpu": 1,
+        "extra_cpu": 11,
+        "extra_gpu": 0,
+        "custom_resources": {},
+        "extra_custom_resources": {}
+      },
+      "stopping_criterion": {
+        "training_iteration": 500
+      },
+      "upload_dir": "",
+      "loggers": "80049502000000000000004e2e",
+      "sync_function": "80049502000000000000004e2e",
+      "verbose": true,
+      "max_failures": 3,
+      "last_result": {
+        "episode_reward_max": 739.14998347871,
+        "episode_reward_min": 634.5599858164787,
+        "episode_reward_mean": 697.7808844033815,
+        "episode_len_mean": 1001.0,
+        "episodes_this_iter": 12,
+        "policy_reward_mean": {},
+        "custom_metrics": {},
+        "sampler_perf": {
+          "mean_env_wait_ms": 8.374035167668383,
+          "mean_processing_ms": 4.540603476892396,
+          "mean_inference_ms": 2.233175072889803
+        },
+        "off_policy_estimator": {},
+        "num_metric_batches_dropped": 0,
+        "info": {
+          "num_steps_trained": 36000000,
+          "num_steps_sampled": 36036000,
+          "sample_time_ms": 81454.83,
+          "load_time_ms": 10.47,
+          "grad_time_ms": 40059.022,
+          "update_time_ms": 3.388,
+          "learner": {
+            "default_policy": {
+              "cur_kl_coeff": 0.25,
+              "cur_lr": 9.999999747378752e-05,
+              "total_loss": 2.769496202468872,
+              "policy_loss": -0.022577842697501183,
+              "vf_loss": 2.787191152572632,
+              "vf_explained_var": 0.20845331251621246,
+              "kl": 0.019531583413481712,
+              "entropy": 3.8521728515625
+            }
+          }
+        },
+        "timesteps_this_iter": 240240,
+        "done": false,
+        "timesteps_total": 36036000,
+        "episodes_total": 1800,
+        "training_iteration": 150,
+        "experiment_id": "32a8779faa5a40a4a574c24a23cb3e98",
+        "date": "2019-07-24_09-05-33",
+        "timestamp": 1563951933,
+        "time_this_iter_s": 125.62179183959961,
+        "time_total_s": 18497.95588541031,
+        "pid": 3459,
+        "hostname": "navel-notebook-1",
+        "node_ip": "10.16.128.63",
+        "config": {
+          "monitor": false,
+          "log_level": "INFO",
+          "callbacks": {
+            "on_episode_start": null,
+            "on_episode_step": null,
+            "on_episode_end": null,
+            "on_sample_end": null,
+            "on_train_result": null,
+            "on_postprocess_traj": null
+          },
+          "ignore_worker_failures": false,
+          "use_eager": false,
+          "model": {
+            "conv_filters": null,
+            "conv_activation": "relu",
+            "fcnet_activation": "tanh",
+            "fcnet_hiddens": [
+              256,
+              256
+            ],
+            "free_log_std": true,
+            "squash_to_range": false,
+            "use_lstm": false,
+            "max_seq_len": 20,
+            "lstm_cell_size": 256,
+            "lstm_use_prev_action_reward": false,
+            "framestack": true,
+            "dim": 84,
+            "grayscale": false,
+            "zero_mean": true,
+            "custom_preprocessor": null,
+            "custom_model": null,
+            "custom_options": {}
+          },
+          "optimizer": {},
+          "gamma": 0.995,
+          "horizon": null,
+          "soft_horizon": false,
+          "env_config": {
+            "env_type": "unity"
+          },
+          "env": "Reacher20",
+          "clip_rewards": null,
+          "clip_actions": true,
+          "preprocessor_pref": "deepmind",
+          "lr": 0.0001,
+          "evaluation_interval": null,
+          "evaluation_num_episodes": 10,
+          "evaluation_config": {},
+          "num_workers": 11,
+          "num_gpus": 1,
+          "num_cpus_per_worker": 1,
+          "num_gpus_per_worker": 0,
+          "custom_resources_per_worker": {},
+          "num_cpus_for_driver": 1,
+          "num_envs_per_worker": 1,
+          "sample_batch_size": 200,
+          "train_batch_size": 25000,
+          "batch_mode": "complete_episodes",
+          "sample_async": false,
+          "observation_filter": "MeanStdFilter",
+          "synchronize_filters": true,
+          "tf_session_args": {
+            "intra_op_parallelism_threads": 2,
+            "inter_op_parallelism_threads": 2,
+            "gpu_options": {
+              "allow_growth": true
+            },
+            "log_device_placement": false,
+            "device_count": {
+              "CPU": 1
+            },
+            "allow_soft_placement": true
+          },
+          "local_tf_session_args": {
+            "intra_op_parallelism_threads": 8,
+            "inter_op_parallelism_threads": 8
+          },
+          "compress_observations": false,
+          "collect_metrics_timeout": 180,
+          "metrics_smoothing_episodes": 100,
+          "remote_worker_envs": false,
+          "remote_env_batch_wait_ms": 0,
+          "min_iter_time_s": 0,
+          "timesteps_per_iteration": 0,
+          "input": "sampler",
+          "input_evaluation": [
+            "is",
+            "wis"
+          ],
+          "postprocess_inputs": false,
+          "shuffle_buffer_size": 0,
+          "output": null,
+          "output_compress_columns": [
+            "obs",
+            "new_obs"
+          ],
+          "output_max_file_size": 67108864,
+          "multiagent": {
+            "policies": {},
+            "policy_mapping_fn": null,
+            "policies_to_train": null
+          },
+          "use_gae": true,
+          "lambda": 1.0,
+          "kl_coeff": 1.0,
+          "sgd_minibatch_size": 1000,
+          "num_sgd_iter": 20,
+          "lr_schedule": null,
+          "vf_share_layers": false,
+          "vf_loss_coeff": 1.0,
+          "entropy_coeff": 0.0,
+          "clip_param": 0.3,
+          "vf_clip_param": 10.0,
+          "grad_clip": null,
+          "kl_target": 0.01,
+          "simple_optimizer": false,
+          "straggler_mitigation": false
+        },
+        "time_since_restore": 18497.95588541031,
+        "timesteps_since_restore": 36036000,
+        "iterations_since_restore": 150,
+        "num_healthy_workers": 11
+      },
+      "last_update_time": 1563951933.995919,
+      "checkpoint_freq": 50,
+      "checkpoint_at_end": true,
+      "history": [],
+      "keep_checkpoints_num": null,
+      "_cmp_greater": true,
+      "best_checkpoint_attr_value": -Infinity,
+      "checkpoint_score_attr": "training_iteration",
+      "_checkpoint": "8004959b0d0000000000008c0e7261792e74756e652e747269616c948c0a436865636b706f696e749493942981947d94288c0773746f72616765948c046469736b948c0576616c7565948c7d2f686f6d652f616d722f6b61797261795f726573756c74732f706172616c6c656c2f756e6974792d726561636865722d70706f2f50504f5f5265616368657232305f305f323031392d30372d32345f30332d35372d30375f357a6f6b3174682f636865636b706f696e745f3135302f636865636b706f696e742d313530948c0b6c6173745f726573756c74947d94288c12657069736f64655f7265776172645f6d61789447408719332a89c0008c12657069736f64655f7265776172645f6d696e94474083d47ad9d800008c13657069736f64655f7265776172645f6d65616e94474085ce3f405273d78c10657069736f64655f6c656e5f6d65616e9447408f4800000000008c12657069736f6465735f746869735f69746572944b0c8c12706f6c6963795f7265776172645f6d65616e947d948c0e637573746f6d5f6d657472696373947d948c0c73616d706c65725f70657266947d94288c106d65616e5f656e765f776169745f6d7394474020bf81899961118c126d65616e5f70726f63657373696e675f6d73944740122993f5356d4b8c116d65616e5f696e666572656e63655f6d7394474001dd8ae4826ed7758c146f66665f706f6c6963795f657374696d61746f72947d948c1a6e756d5f6d65747269635f626174636865735f64726f70706564944b008c04696e666f947d94288c116e756d5f73746570735f747261696e6564944a005125028c116e756d5f73746570735f73616d706c6564944aa0dd25028c0e73616d706c655f74696d655f6d73944740f3e2ed47ae147b8c0c6c6f61645f74696d655f6d7394474024f0a3d70a3d718c0c677261645f74696d655f6d73944740e38f60b43958108c0e7570646174655f74696d655f6d739447400b1a9fbe76c8b48c076c6561726e6572947d948c0e64656661756c745f706f6c696379947d94288c0c6375725f6b6c5f636f65666694473fd00000000000008c066375725f6c7294473f1a36e2e00000008c0a746f74616c5f6c6f73739447400627eda00000008c0b706f6c6963795f6c6f73739447bf971ea5600000008c0776665f6c6f7373944740064c2ae00000008c1076665f6578706c61696e65645f76617294473fcaae99200000008c026b6c94473f940016600000008c07656e74726f70799447400ed140000000007573758c1374696d6573746570735f746869735f69746572944a70aa03008c04646f6e6594898c0f74696d6573746570735f746f74616c944aa0dd25028c0e657069736f6465735f746f74616c944d08078c12747261696e696e675f697465726174696f6e944b968c0d6578706572696d656e745f6964948c203332613837373966616135613430613461353734633234613233636233653938948c0464617465948c13323031392d30372d32345f30392d30352d3333948c0974696d657374616d70944a3d03385d8c1074696d655f746869735f697465725f739447405f67cb700000008c0c74696d655f746f74616c5f73944740d2107d2d3a00008c03706964944d830d8c08686f73746e616d65948c106e6176656c2d6e6f7465626f6f6b2d31948c076e6f64655f6970948c0c31302e31362e3132382e3633948c06636f6e666967947d94288c076d6f6e69746f7294898c096c6f675f6c6576656c948c04494e464f948c0963616c6c6261636b73947d94288c106f6e5f657069736f64655f7374617274944e8c0f6f6e5f657069736f64655f73746570944e8c0e6f6e5f657069736f64655f656e64944e8c0d6f6e5f73616d706c655f656e64944e8c0f6f6e5f747261696e5f726573756c74944e8c136f6e5f706f737470726f636573735f7472616a944e758c1669676e6f72655f776f726b65725f6661696c7572657394898c097573655f656167657294898c056d6f64656c947d94288c0c636f6e765f66696c74657273944e8c0f636f6e765f61637469766174696f6e948c0472656c75948c1066636e65745f61637469766174696f6e948c0474616e68948c0d66636e65745f68696464656e73945d94284d00014d0001658c0c667265655f6c6f675f73746494888c0f7371756173685f746f5f72616e676594898c087573655f6c73746d94898c0b6d61785f7365715f6c656e944b148c0e6c73746d5f63656c6c5f73697a65944d00018c1b6c73746d5f7573655f707265765f616374696f6e5f72657761726494898c0a6672616d65737461636b94888c0364696d944b548c09677261797363616c6594898c097a65726f5f6d65616e94888c13637573746f6d5f70726570726f636573736f72944e8c0c637573746f6d5f6d6f64656c944e8c0e637573746f6d5f6f7074696f6e73947d94758c096f7074696d697a6572947d948c0567616d6d6194473fefd70a3d70a3d78c07686f72697a6f6e944e8c0c736f66745f686f72697a6f6e94898c0a656e765f636f6e666967947d948c08656e765f74797065948c05756e69747994738c03656e76948c09526561636865723230948c0c636c69705f72657761726473944e8c0c636c69705f616374696f6e7394888c1170726570726f636573736f725f70726566948c08646565706d696e64948c026c7294473f1a36e2eb1c432d8c136576616c756174696f6e5f696e74657276616c944e8c176576616c756174696f6e5f6e756d5f657069736f646573944b0a8c116576616c756174696f6e5f636f6e666967947d948c0b6e756d5f776f726b657273944b0b8c086e756d5f67707573944b018c136e756d5f637075735f7065725f776f726b6572944b018c136e756d5f677075735f7065725f776f726b6572944b008c1b637573746f6d5f7265736f75726365735f7065725f776f726b6572947d948c136e756d5f637075735f666f725f647269766572944b018c136e756d5f656e76735f7065725f776f726b6572944b018c1173616d706c655f62617463685f73697a65944bc88c10747261696e5f62617463685f73697a65944da8618c0a62617463685f6d6f6465948c11636f6d706c6574655f657069736f646573948c0c73616d706c655f6173796e6394898c126f62736572766174696f6e5f66696c746572948c0d4d65616e53746446696c746572948c1373796e6368726f6e697a655f66696c7465727394888c0f74665f73657373696f6e5f61726773947d94288c1c696e7472615f6f705f706172616c6c656c69736d5f74687265616473944b028c1c696e7465725f6f705f706172616c6c656c69736d5f74687265616473944b028c0b6770755f6f7074696f6e73947d948c0c616c6c6f775f67726f7774689488738c146c6f675f6465766963655f706c6163656d656e7494898c0c6465766963655f636f756e74947d948c03435055944b01738c14616c6c6f775f736f66745f706c6163656d656e749488758c156c6f63616c5f74665f73657373696f6e5f61726773947d94288c1c696e7472615f6f705f706172616c6c656c69736d5f74687265616473944b088c1c696e7465725f6f705f706172616c6c656c69736d5f74687265616473944b08758c15636f6d70726573735f6f62736572766174696f6e7394898c17636f6c6c6563745f6d6574726963735f74696d656f7574944bb48c1a6d6574726963735f736d6f6f7468696e675f657069736f646573944b648c1272656d6f74655f776f726b65725f656e767394898c1872656d6f74655f656e765f62617463685f776169745f6d73944b008c0f6d696e5f697465725f74696d655f73944b008c1774696d6573746570735f7065725f697465726174696f6e944b008c05696e707574948c0773616d706c6572948c10696e7075745f6576616c756174696f6e945d94288c026973948c0377697394658c12706f737470726f636573735f696e7075747394898c1373687566666c655f6275666665725f73697a65944b008c066f7574707574944e8c176f75747075745f636f6d70726573735f636f6c756d6e73945d94288c036f6273948c076e65775f6f627394658c146f75747075745f6d61785f66696c655f73697a65944a000000048c0a6d756c74696167656e74947d94288c08706f6c6963696573947d948c11706f6c6963795f6d617070696e675f666e944e8c11706f6c69636965735f746f5f747261696e944e758c077573655f67616594888c066c616d62646194473ff00000000000008c086b6c5f636f65666694473ff00000000000008c127367645f6d696e6962617463685f73697a65944de8038c0c6e756d5f7367645f69746572944b148c0b6c725f7363686564756c65944e8c0f76665f73686172655f6c617965727394898c0d76665f6c6f73735f636f65666694473ff00000000000008c0d656e74726f70795f636f656666944700000000000000008c0a636c69705f706172616d94473fd33333333333338c0d76665f636c69705f706172616d944740240000000000008c09677261645f636c6970944e8c096b6c5f74617267657494473f847ae147ae147b8c1073696d706c655f6f7074696d697a657294898c147374726167676c65725f6d697469676174696f6e9489758c1274696d655f73696e63655f726573746f7265944740d2107d2d3a00008c1774696d6573746570735f73696e63655f726573746f7265944aa0dd25028c18697465726174696f6e735f73696e63655f726573746f7265944b968c136e756d5f6865616c7468795f776f726b657273944b0b7575622e",
+      "export_formats": [],
+      "status": "RUNNING",
+      "logdir": "/home/amr/kayray_results/parallel/unity-reacher-ppo/PPO_Reacher20_0_2019-07-24_03-57-07_5zok1th",
+      "runner": null,
+      "result_logger": null,
+      "last_debug": 1563951933.9959116,
+      "trial_id": "57621082",
+      "error_file": null,
+      "num_failures": 0,
+      "custom_trial_name": null,
+      "results": "80049502000000000000004e2e",
+      "best_result": "80049502000000000000004e2e",
+      "param_config": "80049502000000000000004e2e",
+      "extra_arg": "80049502000000000000004e2e",
+      "_nonjson_fields": [
+        "_checkpoint",
+        "loggers",
+        "sync_function",
+        "results",
+        "best_result",
+        "param_config",
+        "extra_arg"
+      ],
+      "__logger_started__": true
+    }
+  ],
+  "runner_data": {
+    "_global_time_limit": Infinity,
+    "_total_time": 23448.18046283722,
+    "_iteration": 190,
+    "_verbose": true,
+    "_server_port": 4321,
+    "_metadata_checkpoint_dir": "/home/amr/kayray_results/parallel/unity-reacher-ppo",
+    "_start_time": 1563933427.3167324,
+    "_session_str": "2019-07-24_03-57-07",
+    "launch_web_server": false
+  },
+  "stats": {
+    "start_time": 1563933427.3167324,
+    "timestamp": 1563956884.7032526
+  }
+}

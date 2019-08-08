@@ -1,0 +1,92 @@
+{
+  "checkpoints": [
+    {
+      "trainable_name": "APEX_DDPG",
+      "config": {
+        "env_config": {
+          "env_type": "openai"
+        },
+        "use_huber": true,
+        "clip_rewards": false,
+        "num_gpus": 0,
+        "num_workers": 2,
+        "lr": 0.1,
+        "n_step": 1,
+        "exploration_ou_noise_scale": 0.7,
+        "target_network_update_freq": 5000,
+        "tau": 1.0,
+        "evaluation_interval": 5,
+        "evaluation_num_episodes": 10,
+        "env": "RoboschoolReacher-v1"
+      },
+      "local_dir": "/home/amr/kayray_results/local/gym-reacher-apex-ddpg",
+      "experiment_tag": "0",
+      "resources": {
+        "cpu": 1,
+        "gpu": 0,
+        "extra_cpu": 2,
+        "extra_gpu": 0,
+        "custom_resources": {},
+        "extra_custom_resources": {}
+      },
+      "stopping_criterion": {
+        "episode_reward_mean": 21,
+        "timesteps_total": 10000000
+      },
+      "upload_dir": "",
+      "loggers": "80049502000000000000004e2e",
+      "sync_function": "80049502000000000000004e2e",
+      "verbose": true,
+      "max_failures": 3,
+      "last_result": {},
+      "last_update_time": -Infinity,
+      "checkpoint_freq": 100,
+      "checkpoint_at_end": true,
+      "history": [],
+      "keep_checkpoints_num": null,
+      "_cmp_greater": true,
+      "best_checkpoint_attr_value": -Infinity,
+      "checkpoint_score_attr": "training_iteration",
+      "_checkpoint": "80049553000000000000008c0e7261792e74756e652e747269616c948c0a436865636b706f696e749493942981947d94288c0773746f72616765948c046469736b948c0576616c7565944e8c0b6c6173745f726573756c74947d9475622e",
+      "export_formats": [],
+      "status": "RUNNING",
+      "logdir": "/home/amr/kayray_results/local/gym-reacher-apex-ddpg/APEX_DDPG_RoboschoolReacher-v1_0_2019-07-23_21-39-39cfyvtj5c",
+      "runner": null,
+      "result_logger": null,
+      "last_debug": 0,
+      "trial_id": "9c7f6a82",
+      "error_file": null,
+      "num_failures": 0,
+      "custom_trial_name": null,
+      "results": "80049502000000000000004e2e",
+      "best_result": "80049502000000000000004e2e",
+      "param_config": "80049502000000000000004e2e",
+      "extra_arg": "80049502000000000000004e2e",
+      "_nonjson_fields": [
+        "_checkpoint",
+        "loggers",
+        "sync_function",
+        "results",
+        "best_result",
+        "param_config",
+        "extra_arg"
+      ],
+      "__logger_started__": true
+    }
+  ],
+  "runner_data": {
+    "_global_time_limit": Infinity,
+    "_total_time": 605.005567073822,
+    "_iteration": 20,
+    "_verbose": true,
+    "_server_port": 4321,
+    "_metadata_checkpoint_dir": "/home/amr/kayray_results/local/gym-reacher-apex-ddpg",
+    "_start_time": 1563910779.937367,
+    "_session_str": "2019-07-23_21-39-39",
+    "launch_web_server": false
+  },
+  "stats": {
+    "start_time": 1563910779.937367,
+    "timestamp": 1563911396.7662163
+  }
+}

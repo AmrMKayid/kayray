@@ -1,0 +1,17 @@
+{
+  "clip_rewards": false,
+  "env": "RoboschoolReacher-v1",
+  "env_config": {
+    "env_type": "openai"
+  },
+  "evaluation_interval": 5,
+  "evaluation_num_episodes": 10,
+  "exploration_ou_noise_scale": 0.7,
+  "lr": 0.1,
+  "n_step": 1,
+  "num_gpus": 0,
+  "num_workers": 2,
+  "target_network_update_freq": 5000,
+  "tau": 1.0,
+  "use_huber": true
+}

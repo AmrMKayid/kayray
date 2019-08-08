@@ -1,0 +1,19 @@
+{
+  "batch_mode": "complete_episodes",
+  "env": "RoboschoolReacher-v1",
+  "env_config": {
+    "env_type": "openai"
+  },
+  "gamma": 0.995,
+  "kl_coeff": 1.0,
+  "lr": 0.01,
+  "model": {
+    "free_log_std": true
+  },
+  "num_gpus": 0,
+  "num_sgd_iter": 20,
+  "num_workers": 0,
+  "observation_filter": "MeanStdFilter",
+  "sgd_minibatch_size": 1000,
+  "train_batch_size": 25000
+}

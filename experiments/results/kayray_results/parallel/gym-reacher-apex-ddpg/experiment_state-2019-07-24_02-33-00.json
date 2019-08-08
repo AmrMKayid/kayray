@@ -1,0 +1,931 @@
+{
+  "checkpoints": [
+    {
+      "trainable_name": "APEX_DDPG",
+      "config": {
+        "env_config": {
+          "env_type": "openai"
+        },
+        "use_huber": true,
+        "clip_rewards": false,
+        "num_gpus": 1,
+        "num_workers": 11,
+        "num_envs_per_worker": 16,
+        "n_step": 3,
+        "exploration_ou_noise_scale": 1.0,
+        "target_network_update_freq": 50000,
+        "tau": 1.0,
+        "evaluation_interval": 5,
+        "evaluation_num_episodes": 10,
+        "env": "RoboschoolReacher-v1"
+      },
+      "local_dir": "/home/amr/kayray_results/parallel/gym-reacher-apex-ddpg",
+      "experiment_tag": "0_num_envs_per_worker=16",
+      "resources": {
+        "cpu": 1,
+        "gpu": 1,
+        "extra_cpu": 11,
+        "extra_gpu": 0,
+        "custom_resources": {},
+        "extra_custom_resources": {}
+      },
+      "stopping_criterion": {
+        "episode_reward_mean": 21,
+        "timesteps_total": 10000000
+      },
+      "upload_dir": "",
+      "loggers": "80049502000000000000004e2e",
+      "sync_function": "80049502000000000000004e2e",
+      "verbose": true,
+      "max_failures": 3,
+      "last_result": {
+        "episode_reward_max": 39.477019611484856,
+        "episode_reward_min": -3.4712231496433317,
+        "episode_reward_mean": 18.749704967053674,
+        "episode_len_mean": 150.0,
+        "episodes_this_iter": 960,
+        "policy_reward_mean": {},
+        "custom_metrics": {},
+        "sampler_perf": {
+          "mean_env_wait_ms": 5.961906240163904,
+          "mean_processing_ms": 4.459286470282686,
+          "mean_inference_ms": 2.746716165078093
+        },
+        "off_policy_estimator": {},
+        "num_metric_batches_dropped": 0,
+        "info": {
+          "min_exploration": 0.0,
+          "max_exploration": 0.4,
+          "num_target_updates": 107,
+          "num_steps_trained": 5398016,
+          "num_steps_sampled": 10373600,
+          "sample_throughput": 0.0,
+          "train_throughput": 0.0,
+          "num_weight_syncs": 12967,
+          "num_samples_dropped": 11,
+          "learner_queue": {
+            "size_count": 11626,
+            "size_mean": 0.22,
+            "size_std": 0.4142463035441596,
+            "size_quantiles": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ]
+          },
+          "replay_shard_0": {
+            "add_batch_time_ms": 50.27,
+            "replay_time_ms": 39.733,
+            "update_priorities_time_ms": 110.008,
+            "policy_default_policy": {
+              "added_count": 2567200,
+              "sampled_count": 1373696,
+              "est_size_bytes": 170500000,
+              "num_entries": 500000
+            }
+          },
+          "learner": {
+            "default_policy": {
+              "mean_q": 4.810225486755371,
+              "max_q": 37.0822868347168,
+              "min_q": -0.13969048857688904
+            }
+          }
+        },
+        "timesteps_this_iter": 398400,
+        "done": true,
+        "timesteps_total": 10373600,
+        "episodes_total": 25168,
+        "training_iteration": 26,
+        "experiment_id": "50b9abe80ebd4847b5c9daa3f3748c89",
+        "date": "2019-07-24_02-46-44",
+        "timestamp": 1563929204,
+        "time_this_iter_s": 31.045987844467163,
+        "time_total_s": 804.7192833423615,
+        "pid": 31643,
+        "hostname": "navel-notebook-1",
+        "node_ip": "10.16.128.63",
+        "config": {
+          "monitor": false,
+          "log_level": "INFO",
+          "callbacks": {
+            "on_episode_start": null,
+            "on_episode_step": null,
+            "on_episode_end": null,
+            "on_sample_end": null,
+            "on_train_result": null,
+            "on_postprocess_traj": null
+          },
+          "ignore_worker_failures": false,
+          "use_eager": false,
+          "model": {
+            "conv_filters": null,
+            "conv_activation": "relu",
+            "fcnet_activation": "tanh",
+            "fcnet_hiddens": [
+              256,
+              256
+            ],
+            "free_log_std": false,
+            "squash_to_range": false,
+            "use_lstm": false,
+            "max_seq_len": 20,
+            "lstm_cell_size": 256,
+            "lstm_use_prev_action_reward": false,
+            "framestack": true,
+            "dim": 84,
+            "grayscale": false,
+            "zero_mean": true,
+            "custom_preprocessor": null,
+            "custom_model": null,
+            "custom_options": {}
+          },
+          "optimizer": {
+            "max_weight_sync_delay": 400,
+            "num_replay_buffer_shards": 4,
+            "debug": false
+          },
+          "gamma": 0.99,
+          "horizon": null,
+          "soft_horizon": false,
+          "env_config": {
+            "env_type": "openai"
+          },
+          "env": "RoboschoolReacher-v1",
+          "clip_rewards": false,
+          "clip_actions": true,
+          "preprocessor_pref": "deepmind",
+          "lr": 0.0001,
+          "evaluation_interval": 5,
+          "evaluation_num_episodes": 10,
+          "evaluation_config": {
+            "exploration_fraction": 0,
+            "exploration_final_eps": 0
+          },
+          "num_workers": 11,
+          "num_gpus": 1,
+          "num_cpus_per_worker": 1,
+          "num_gpus_per_worker": 0,
+          "custom_resources_per_worker": {},
+          "num_cpus_for_driver": 1,
+          "num_envs_per_worker": 16,
+          "sample_batch_size": 50,
+          "train_batch_size": 512,
+          "batch_mode": "truncate_episodes",
+          "sample_async": false,
+          "observation_filter": "NoFilter",
+          "synchronize_filters": true,
+          "tf_session_args": {
+            "intra_op_parallelism_threads": 2,
+            "inter_op_parallelism_threads": 2,
+            "gpu_options": {
+              "allow_growth": true
+            },
+            "log_device_placement": false,
+            "device_count": {
+              "CPU": 1
+            },
+            "allow_soft_placement": true
+          },
+          "local_tf_session_args": {
+            "intra_op_parallelism_threads": 8,
+            "inter_op_parallelism_threads": 8
+          },
+          "compress_observations": false,
+          "collect_metrics_timeout": 180,
+          "metrics_smoothing_episodes": 100,
+          "remote_worker_envs": false,
+          "remote_env_batch_wait_ms": 0,
+          "min_iter_time_s": 30,
+          "timesteps_per_iteration": 25000,
+          "input": "sampler",
+          "input_evaluation": [
+            "is",
+            "wis"
+          ],
+          "postprocess_inputs": false,
+          "shuffle_buffer_size": 0,
+          "output": null,
+          "output_compress_columns": [
+            "obs",
+            "new_obs"
+          ],
+          "output_max_file_size": 67108864,
+          "multiagent": {
+            "policies": {},
+            "policy_mapping_fn": null,
+            "policies_to_train": null
+          },
+          "twin_q": false,
+          "policy_delay": 1,
+          "smooth_target_policy": false,
+          "target_noise": 0.2,
+          "target_noise_clip": 0.5,
+          "use_state_preprocessor": false,
+          "actor_hiddens": [
+            400,
+            300
+          ],
+          "actor_hidden_activation": "relu",
+          "critic_hiddens": [
+            400,
+            300
+          ],
+          "critic_hidden_activation": "relu",
+          "n_step": 3,
+          "exploration_should_anneal": false,
+          "schedule_max_timesteps": 100000,
+          "exploration_fraction": 0.1,
+          "exploration_final_scale": 0.02,
+          "exploration_noise_type": "ou",
+          "exploration_ou_noise_scale": 1.0,
+          "exploration_ou_theta": 0.15,
+          "exploration_ou_sigma": 0.2,
+          "exploration_gaussian_sigma": 0.1,
+          "parameter_noise": false,
+          "pure_exploration_steps": 1000,
+          "buffer_size": 2000000,
+          "prioritized_replay": true,
+          "prioritized_replay_alpha": 0.6,
+          "prioritized_replay_beta": 0.4,
+          "beta_annealing_fraction": 0.2,
+          "final_prioritized_replay_beta": 0.4,
+          "prioritized_replay_eps": 1e-06,
+          "critic_lr": 0.001,
+          "actor_lr": 0.001,
+          "target_network_update_freq": 50000,
+          "tau": 1.0,
+          "use_huber": true,
+          "huber_threshold": 1.0,
+          "l2_reg": 1e-06,
+          "grad_norm_clipping": null,
+          "learning_starts": 50000,
+          "per_worker_exploration": true,
+          "worker_side_prioritization": true
+        },
+        "time_since_restore": 804.7192833423615,
+        "timesteps_since_restore": 10373600,
+        "iterations_since_restore": 26,
+        "num_healthy_workers": 11
+      },
+      "last_update_time": 1563929204.8540618,
+      "checkpoint_freq": 50,
+      "checkpoint_at_end": true,
+      "history": [],
+      "keep_checkpoints_num": null,
+      "_cmp_greater": true,
+      "best_checkpoint_attr_value": -Infinity,
+      "checkpoint_score_attr": "training_iteration",
+      "_checkpoint": "80049595120000000000008c0e7261792e74756e652e747269616c948c0a436865636b706f696e749493942981947d94288c0773746f72616765948c046469736b948c0576616c7565948ca72f686f6d652f616d722f6b61797261795f726573756c74732f706172616c6c656c2f67796d2d726561636865722d617065782d646470672f415045585f444450475f526f626f7363686f6f6c526561636865722d76315f305f6e756d5f656e76735f7065725f776f726b65723d31365f323031392d30372d32345f30322d33332d303033637a797a65786c2f636865636b706f696e745f32362f636865636b706f696e742d3236948c0b6c6173745f726573756c74947d94288c12657069736f64655f7265776172645f6d617894474043bd0efa8770658c12657069736f64655f7265776172645f6d696e9447c00bc510a486b0968c13657069736f64655f7265776172645f6d65616e94474032bfecaa2b24f08c10657069736f64655f6c656e5f6d65616e94474062c000000000008c12657069736f6465735f746869735f69746572944dc0038c12706f6c6963795f7265776172645f6d65616e947d948c0e637573746f6d5f6d657472696373947d948c0c73616d706c65725f70657266947d94288c106d65616e5f656e765f776169745f6d7394474017d8fdf30d4a068c126d65616e5f70726f63657373696e675f6d7394474011d64f3145700a8c116d65616e5f696e666572656e63655f6d7394474005f94653233d55758c146f66665f706f6c6963795f657374696d61746f72947d948c1a6e756d5f6d65747269635f626174636865735f64726f70706564944b008c04696e666f947d94288c0f6d696e5f6578706c6f726174696f6e944700000000000000008c0f6d61785f6578706c6f726174696f6e94473fd999999999999a8c126e756d5f7461726765745f75706461746573944b6b8c116e756d5f73746570735f747261696e6564944a005e52008c116e756d5f73746570735f73616d706c6564944ae0499e008c1173616d706c655f7468726f756768707574944700000000000000008c10747261696e5f7468726f756768707574944700000000000000008c106e756d5f7765696768745f73796e6373944da7328c136e756d5f73616d706c65735f64726f70706564944b0b8c0d6c6561726e65725f7175657565947d94288c0a73697a655f636f756e74944d6a2d8c0973697a655f6d65616e94473fcc28f5c28f5c298c0873697a655f73746494473fda8302ed8d81ea8c0e73697a655f7175616e74696c6573945d9428470000000000000000470000000000000000470000000000000000473ff0000000000000473ff000000000000065758c0e7265706c61795f73686172645f30947d94288c116164645f62617463685f74696d655f6d7394474049228f5c28f5c38c0e7265706c61795f74696d655f6d7394474043ddd2f1a9fbe78c197570646174655f7072696f7269746965735f74696d655f6d739447405b8083126e978d8c15706f6c6963795f64656661756c745f706f6c696379947d94288c0b61646465645f636f756e74944a202c27008c0d73616d706c65645f636f756e74944a00f614008c0e6573745f73697a655f6279746573944aa09f290a8c0b6e756d5f656e7472696573944a20a1070075758c076c6561726e6572947d948c0e64656661756c745f706f6c696379947d94288c066d65616e5f71944740133dabc00000008c056d61785f71944740428a88600000008c056d696e5f719447bfc1e160c00000007573758c1374696d6573746570735f746869735f69746572944a401406008c04646f6e6594888c0f74696d6573746570735f746f74616c944ae0499e008c0e657069736f6465735f746f74616c944d50628c12747261696e696e675f697465726174696f6e944b1a8c0d6578706572696d656e745f6964948c203530623961626538306562643438343762356339646161336633373438633839948c0464617465948c13323031392d30372d32345f30322d34362d3434948c0974696d657374616d70944a74aa375d8c1074696d655f746869735f697465725f739447403f0bc5dc0000008c0c74696d655f746f74616c5f739447408925c117a000008c03706964944d9b7b8c08686f73746e616d65948c106e6176656c2d6e6f7465626f6f6b2d31948c076e6f64655f6970948c0c31302e31362e3132382e3633948c06636f6e666967947d94288c076d6f6e69746f7294898c096c6f675f6c6576656c948c04494e464f948c0963616c6c6261636b73947d94288c106f6e5f657069736f64655f7374617274944e8c0f6f6e5f657069736f64655f73746570944e8c0e6f6e5f657069736f64655f656e64944e8c0d6f6e5f73616d706c655f656e64944e8c0f6f6e5f747261696e5f726573756c74944e8c136f6e5f706f737470726f636573735f7472616a944e758c1669676e6f72655f776f726b65725f6661696c7572657394898c097573655f656167657294898c056d6f64656c947d94288c0c636f6e765f66696c74657273944e8c0f636f6e765f61637469766174696f6e948c0472656c75948c1066636e65745f61637469766174696f6e948c0474616e68948c0d66636e65745f68696464656e73945d94284d00014d0001658c0c667265655f6c6f675f73746494898c0f7371756173685f746f5f72616e676594898c087573655f6c73746d94898c0b6d61785f7365715f6c656e944b148c0e6c73746d5f63656c6c5f73697a65944d00018c1b6c73746d5f7573655f707265765f616374696f6e5f72657761726494898c0a6672616d65737461636b94888c0364696d944b548c09677261797363616c6594898c097a65726f5f6d65616e94888c13637573746f6d5f70726570726f636573736f72944e8c0c637573746f6d5f6d6f64656c944e8c0e637573746f6d5f6f7074696f6e73947d94758c096f7074696d697a6572947d94288c156d61785f7765696768745f73796e635f64656c6179944d90018c186e756d5f7265706c61795f6275666665725f736861726473944b048c0564656275679489758c0567616d6d6194473fefae147ae147ae8c07686f72697a6f6e944e8c0c736f66745f686f72697a6f6e94898c0a656e765f636f6e666967947d948c08656e765f74797065948c066f70656e616994738c03656e76948c14526f626f7363686f6f6c526561636865722d7631948c0c636c69705f7265776172647394898c0c636c69705f616374696f6e7394888c1170726570726f636573736f725f70726566948c08646565706d696e64948c026c7294473f1a36e2eb1c432d8c136576616c756174696f6e5f696e74657276616c944b058c176576616c756174696f6e5f6e756d5f657069736f646573944b0a8c116576616c756174696f6e5f636f6e666967947d94288c146578706c6f726174696f6e5f6672616374696f6e944b008c156578706c6f726174696f6e5f66696e616c5f657073944b00758c0b6e756d5f776f726b657273944b0b8c086e756d5f67707573944b018c136e756d5f637075735f7065725f776f726b6572944b018c136e756d5f677075735f7065725f776f726b6572944b008c1b637573746f6d5f7265736f75726365735f7065725f776f726b6572947d948c136e756d5f637075735f666f725f647269766572944b018c136e756d5f656e76735f7065725f776f726b6572944b108c1173616d706c655f62617463685f73697a65944b328c10747261696e5f62617463685f73697a65944d00028c0a62617463685f6d6f6465948c117472756e636174655f657069736f646573948c0c73616d706c655f6173796e6394898c126f62736572766174696f6e5f66696c746572948c084e6f46696c746572948c1373796e6368726f6e697a655f66696c7465727394888c0f74665f73657373696f6e5f61726773947d94288c1c696e7472615f6f705f706172616c6c656c69736d5f74687265616473944b028c1c696e7465725f6f705f706172616c6c656c69736d5f74687265616473944b028c0b6770755f6f7074696f6e73947d948c0c616c6c6f775f67726f7774689488738c146c6f675f6465766963655f706c6163656d656e7494898c0c6465766963655f636f756e74947d948c03435055944b01738c14616c6c6f775f736f66745f706c6163656d656e749488758c156c6f63616c5f74665f73657373696f6e5f61726773947d94288c1c696e7472615f6f705f706172616c6c656c69736d5f74687265616473944b088c1c696e7465725f6f705f706172616c6c656c69736d5f74687265616473944b08758c15636f6d70726573735f6f62736572766174696f6e7394898c17636f6c6c6563745f6d6574726963735f74696d656f7574944bb48c1a6d6574726963735f736d6f6f7468696e675f657069736f646573944b648c1272656d6f74655f776f726b65725f656e767394898c1872656d6f74655f656e765f62617463685f776169745f6d73944b008c0f6d696e5f697465725f74696d655f73944b1e8c1774696d6573746570735f7065725f697465726174696f6e944da8618c05696e707574948c0773616d706c6572948c10696e7075745f6576616c756174696f6e945d94288c026973948c0377697394658c12706f737470726f636573735f696e7075747394898c1373687566666c655f6275666665725f73697a65944b008c066f7574707574944e8c176f75747075745f636f6d70726573735f636f6c756d6e73945d94288c036f6273948c076e65775f6f627394658c146f75747075745f6d61785f66696c655f73697a65944a000000048c0a6d756c74696167656e74947d94288c08706f6c6963696573947d948c11706f6c6963795f6d617070696e675f666e944e8c11706f6c69636965735f746f5f747261696e944e758c067477696e5f7194898c0c706f6c6963795f64656c6179944b018c14736d6f6f74685f7461726765745f706f6c69637994898c0c7461726765745f6e6f69736594473fc999999999999a8c117461726765745f6e6f6973655f636c697094473fe00000000000008c167573655f73746174655f70726570726f636573736f7294898c0d6163746f725f68696464656e73945d94284d90014d2c01658c176163746f725f68696464656e5f61637469766174696f6e948c0472656c75948c0e6372697469635f68696464656e73945d94284d90014d2c01658c186372697469635f68696464656e5f61637469766174696f6e948c0472656c75948c066e5f73746570944b038c196578706c6f726174696f6e5f73686f756c645f616e6e65616c94898c167363686564756c655f6d61785f74696d657374657073944aa08601008c146578706c6f726174696f6e5f6672616374696f6e94473fb999999999999a8c176578706c6f726174696f6e5f66696e616c5f7363616c6594473f947ae147ae147b8c166578706c6f726174696f6e5f6e6f6973655f74797065948c026f75948c1a6578706c6f726174696f6e5f6f755f6e6f6973655f7363616c6594473ff00000000000008c146578706c6f726174696f6e5f6f755f746865746194473fc33333333333338c146578706c6f726174696f6e5f6f755f7369676d6194473fc999999999999a8c1a6578706c6f726174696f6e5f676175737369616e5f7369676d6194473fb999999999999a8c0f706172616d657465725f6e6f69736594898c16707572655f6578706c6f726174696f6e5f7374657073944de8038c0b6275666665725f73697a65944a80841e008c127072696f726974697a65645f7265706c617994888c187072696f726974697a65645f7265706c61795f616c70686194473fe33333333333338c177072696f726974697a65645f7265706c61795f6265746194473fd999999999999a8c17626574615f616e6e65616c696e675f6672616374696f6e94473fc999999999999a8c1d66696e616c5f7072696f726974697a65645f7265706c61795f6265746194473fd999999999999a8c167072696f726974697a65645f7265706c61795f65707394473eb0c6f7a0b5ed8d8c096372697469635f6c7294473f50624dd2f1a9fc8c086163746f725f6c7294473f50624dd2f1a9fc8c1a7461726765745f6e6574776f726b5f7570646174655f66726571944d50c38c0374617594473ff00000000000008c097573655f687562657294888c0f68756265725f7468726573686f6c6494473ff00000000000008c066c325f72656794473eb0c6f7a0b5ed8d8c12677261645f6e6f726d5f636c697070696e67944e8c0f6c6561726e696e675f737461727473944d50c38c167065725f776f726b65725f6578706c6f726174696f6e94888c1a776f726b65725f736964655f7072696f726974697a6174696f6e9488758c1274696d655f73696e63655f726573746f72659447408925c117a000008c1774696d6573746570735f73696e63655f726573746f7265944ae0499e008c18697465726174696f6e735f73696e63655f726573746f7265944b1a8c136e756d5f6865616c7468795f776f726b657273944b0b7575622e",
+      "export_formats": [],
+      "status": "TERMINATED",
+      "logdir": "/home/amr/kayray_results/parallel/gym-reacher-apex-ddpg/APEX_DDPG_RoboschoolReacher-v1_0_num_envs_per_worker=16_2019-07-24_02-33-003czyzexl",
+      "runner": null,
+      "result_logger": null,
+      "last_debug": 1563929204.8540545,
+      "trial_id": "96facee8",
+      "error_file": null,
+      "num_failures": 0,
+      "custom_trial_name": null,
+      "results": "80049502000000000000004e2e",
+      "best_result": "80049502000000000000004e2e",
+      "param_config": "80049502000000000000004e2e",
+      "extra_arg": "80049502000000000000004e2e",
+      "_nonjson_fields": [
+        "_checkpoint",
+        "loggers",
+        "sync_function",
+        "results",
+        "best_result",
+        "param_config",
+        "extra_arg"
+      ],
+      "__logger_started__": false
+    },
+    {
+      "trainable_name": "APEX_DDPG",
+      "config": {
+        "env_config": {
+          "env_type": "openai"
+        },
+        "use_huber": true,
+        "clip_rewards": false,
+        "num_gpus": 1,
+        "num_workers": 11,
+        "num_envs_per_worker": 8,
+        "n_step": 3,
+        "exploration_ou_noise_scale": 1.0,
+        "target_network_update_freq": 50000,
+        "tau": 1.0,
+        "evaluation_interval": 5,
+        "evaluation_num_episodes": 10,
+        "env": "RoboschoolReacher-v1"
+      },
+      "local_dir": "/home/amr/kayray_results/parallel/gym-reacher-apex-ddpg",
+      "experiment_tag": "1_num_envs_per_worker=8",
+      "resources": {
+        "cpu": 1,
+        "gpu": 1,
+        "extra_cpu": 11,
+        "extra_gpu": 0,
+        "custom_resources": {},
+        "extra_custom_resources": {}
+      },
+      "stopping_criterion": {
+        "episode_reward_mean": 21,
+        "timesteps_total": 10000000
+      },
+      "upload_dir": "",
+      "loggers": "80049502000000000000004e2e",
+      "sync_function": "80049502000000000000004e2e",
+      "verbose": true,
+      "max_failures": 3,
+      "last_result": {
+        "episode_reward_max": 38.41642982547979,
+        "episode_reward_min": -6.237923726214236,
+        "episode_reward_mean": 17.995450811342543,
+        "episode_len_mean": 150.0,
+        "episodes_this_iter": 768,
+        "policy_reward_mean": {},
+        "custom_metrics": {},
+        "sampler_perf": {
+          "mean_env_wait_ms": 3.027359550401265,
+          "mean_processing_ms": 2.2571376332709607,
+          "mean_inference_ms": 2.8021479724466007
+        },
+        "off_policy_estimator": {},
+        "num_metric_batches_dropped": 0,
+        "info": {
+          "min_exploration": 0.0,
+          "max_exploration": 0.4,
+          "num_target_updates": 138,
+          "num_steps_trained": 6936576,
+          "num_steps_sampled": 10120800,
+          "sample_throughput": 0.0,
+          "train_throughput": 0.0,
+          "num_weight_syncs": 25302,
+          "num_samples_dropped": 16,
+          "learner_queue": {
+            "size_count": 15206,
+            "size_mean": 0.38,
+            "size_std": 1.0176443386566842,
+            "size_quantiles": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              5.0
+            ]
+          },
+          "replay_shard_0": {
+            "add_batch_time_ms": 45.358,
+            "replay_time_ms": 41.88,
+            "update_priorities_time_ms": 115.196,
+            "policy_default_policy": {
+              "added_count": 2540800,
+              "sampled_count": 1689088,
+              "est_size_bytes": 170500000,
+              "num_entries": 500000
+            }
+          },
+          "learner": {
+            "default_policy": {
+              "mean_q": 4.410200119018555,
+              "max_q": 34.98657989501953,
+              "min_q": 0.059821635484695435
+            }
+          }
+        },
+        "timesteps_this_iter": 316000,
+        "done": true,
+        "timesteps_total": 10120800,
+        "episodes_total": 24608,
+        "training_iteration": 32,
+        "experiment_id": "3f59094c6326489792423c24350469d0",
+        "date": "2019-07-24_03-03-23",
+        "timestamp": 1563930203,
+        "time_this_iter_s": 30.646012544631958,
+        "time_total_s": 982.1825325489044,
+        "pid": 31967,
+        "hostname": "navel-notebook-1",
+        "node_ip": "10.16.128.63",
+        "config": {
+          "monitor": false,
+          "log_level": "INFO",
+          "callbacks": {
+            "on_episode_start": null,
+            "on_episode_step": null,
+            "on_episode_end": null,
+            "on_sample_end": null,
+            "on_train_result": null,
+            "on_postprocess_traj": null
+          },
+          "ignore_worker_failures": false,
+          "use_eager": false,
+          "model": {
+            "conv_filters": null,
+            "conv_activation": "relu",
+            "fcnet_activation": "tanh",
+            "fcnet_hiddens": [
+              256,
+              256
+            ],
+            "free_log_std": false,
+            "squash_to_range": false,
+            "use_lstm": false,
+            "max_seq_len": 20,
+            "lstm_cell_size": 256,
+            "lstm_use_prev_action_reward": false,
+            "framestack": true,
+            "dim": 84,
+            "grayscale": false,
+            "zero_mean": true,
+            "custom_preprocessor": null,
+            "custom_model": null,
+            "custom_options": {}
+          },
+          "optimizer": {
+            "max_weight_sync_delay": 400,
+            "num_replay_buffer_shards": 4,
+            "debug": false
+          },
+          "gamma": 0.99,
+          "horizon": null,
+          "soft_horizon": false,
+          "env_config": {
+            "env_type": "openai"
+          },
+          "env": "RoboschoolReacher-v1",
+          "clip_rewards": false,
+          "clip_actions": true,
+          "preprocessor_pref": "deepmind",
+          "lr": 0.0001,
+          "evaluation_interval": 5,
+          "evaluation_num_episodes": 10,
+          "evaluation_config": {
+            "exploration_fraction": 0,
+            "exploration_final_eps": 0
+          },
+          "num_workers": 11,
+          "num_gpus": 1,
+          "num_cpus_per_worker": 1,
+          "num_gpus_per_worker": 0,
+          "custom_resources_per_worker": {},
+          "num_cpus_for_driver": 1,
+          "num_envs_per_worker": 8,
+          "sample_batch_size": 50,
+          "train_batch_size": 512,
+          "batch_mode": "truncate_episodes",
+          "sample_async": false,
+          "observation_filter": "NoFilter",
+          "synchronize_filters": true,
+          "tf_session_args": {
+            "intra_op_parallelism_threads": 2,
+            "inter_op_parallelism_threads": 2,
+            "gpu_options": {
+              "allow_growth": true
+            },
+            "log_device_placement": false,
+            "device_count": {
+              "CPU": 1
+            },
+            "allow_soft_placement": true
+          },
+          "local_tf_session_args": {
+            "intra_op_parallelism_threads": 8,
+            "inter_op_parallelism_threads": 8
+          },
+          "compress_observations": false,
+          "collect_metrics_timeout": 180,
+          "metrics_smoothing_episodes": 100,
+          "remote_worker_envs": false,
+          "remote_env_batch_wait_ms": 0,
+          "min_iter_time_s": 30,
+          "timesteps_per_iteration": 25000,
+          "input": "sampler",
+          "input_evaluation": [
+            "is",
+            "wis"
+          ],
+          "postprocess_inputs": false,
+          "shuffle_buffer_size": 0,
+          "output": null,
+          "output_compress_columns": [
+            "obs",
+            "new_obs"
+          ],
+          "output_max_file_size": 67108864,
+          "multiagent": {
+            "policies": {},
+            "policy_mapping_fn": null,
+            "policies_to_train": null
+          },
+          "twin_q": false,
+          "policy_delay": 1,
+          "smooth_target_policy": false,
+          "target_noise": 0.2,
+          "target_noise_clip": 0.5,
+          "use_state_preprocessor": false,
+          "actor_hiddens": [
+            400,
+            300
+          ],
+          "actor_hidden_activation": "relu",
+          "critic_hiddens": [
+            400,
+            300
+          ],
+          "critic_hidden_activation": "relu",
+          "n_step": 3,
+          "exploration_should_anneal": false,
+          "schedule_max_timesteps": 100000,
+          "exploration_fraction": 0.1,
+          "exploration_final_scale": 0.02,
+          "exploration_noise_type": "ou",
+          "exploration_ou_noise_scale": 1.0,
+          "exploration_ou_theta": 0.15,
+          "exploration_ou_sigma": 0.2,
+          "exploration_gaussian_sigma": 0.1,
+          "parameter_noise": false,
+          "pure_exploration_steps": 1000,
+          "buffer_size": 2000000,
+          "prioritized_replay": true,
+          "prioritized_replay_alpha": 0.6,
+          "prioritized_replay_beta": 0.4,
+          "beta_annealing_fraction": 0.2,
+          "final_prioritized_replay_beta": 0.4,
+          "prioritized_replay_eps": 1e-06,
+          "critic_lr": 0.001,
+          "actor_lr": 0.001,
+          "target_network_update_freq": 50000,
+          "tau": 1.0,
+          "use_huber": true,
+          "huber_threshold": 1.0,
+          "l2_reg": 1e-06,
+          "grad_norm_clipping": null,
+          "learning_starts": 50000,
+          "per_worker_exploration": true,
+          "worker_side_prioritization": true
+        },
+        "time_since_restore": 982.1825325489044,
+        "timesteps_since_restore": 10120800,
+        "iterations_since_restore": 32,
+        "num_healthy_workers": 11
+      },
+      "last_update_time": 1563930203.258216,
+      "checkpoint_freq": 50,
+      "checkpoint_at_end": true,
+      "history": [],
+      "keep_checkpoints_num": null,
+      "_cmp_greater": true,
+      "best_checkpoint_attr_value": -Infinity,
+      "checkpoint_score_attr": "training_iteration",
+      "_checkpoint": "80049594120000000000008c0e7261792e74756e652e747269616c948c0a436865636b706f696e749493942981947d94288c0773746f72616765948c046469736b948c0576616c7565948ca62f686f6d652f616d722f6b61797261795f726573756c74732f706172616c6c656c2f67796d2d726561636865722d617065782d646470672f415045585f444450475f526f626f7363686f6f6c526561636865722d76315f315f6e756d5f656e76735f7065725f776f726b65723d385f323031392d30372d32345f30322d34362d3434367a656d6b7637762f636865636b706f696e745f33322f636865636b706f696e742d3332948c0b6c6173745f726573756c74947d94288c12657069736f64655f7265776172645f6d617894474043354d9290c1e18c12657069736f64655f7265776172645f6d696e9447c018f3a246fc21628c13657069736f64655f7265776172645f6d65616e94474031fed5dd477e2e8c10657069736f64655f6c656e5f6d65616e94474062c000000000008c12657069736f6465735f746869735f69746572944d00038c12706f6c6963795f7265776172645f6d65616e947d948c0e637573746f6d5f6d657472696373947d948c0c73616d706c65725f70657266947d94288c106d65616e5f656e765f776169745f6d7394474008380848b1a7518c126d65616e5f70726f63657373696e675f6d73944740020e9e2cebc1c78c116d65616e5f696e666572656e63655f6d73944740066acc8e61afd7758c146f66665f706f6c6963795f657374696d61746f72947d948c1a6e756d5f6d65747269635f626174636865735f64726f70706564944b008c04696e666f947d94288c0f6d696e5f6578706c6f726174696f6e944700000000000000008c0f6d61785f6578706c6f726174696f6e94473fd999999999999a8c126e756d5f7461726765745f75706461746573944b8a8c116e756d5f73746570735f747261696e6564944a00d869008c116e756d5f73746570735f73616d706c6564944a606e9a008c1173616d706c655f7468726f756768707574944700000000000000008c10747261696e5f7468726f756768707574944700000000000000008c106e756d5f7765696768745f73796e6373944dd6628c136e756d5f73616d706c65735f64726f70706564944b108c0d6c6561726e65725f7175657565947d94288c0a73697a655f636f756e74944d663b8c0973697a655f6d65616e94473fd851eb851eb8528c0873697a655f73746494473ff048456e17d7128c0e73697a655f7175616e74696c6573945d9428470000000000000000470000000000000000470000000000000000473ff000000000000047401400000000000065758c0e7265706c61795f73686172645f30947d94288c116164645f62617463685f74696d655f6d7394474046add2f1a9fbe78c0e7265706c61795f74696d655f6d7394474044f0a3d70a3d718c197570646174655f7072696f7269746965735f74696d655f6d739447405ccc8b439581068c15706f6c6963795f64656661756c745f706f6c696379947d94288c0b61646465645f636f756e74944a00c526008c0d73616d706c65645f636f756e74944a00c619008c0e6573745f73697a655f6279746573944aa09f290a8c0b6e756d5f656e7472696573944a20a1070075758c076c6561726e6572947d948c0e64656661756c745f706f6c696379947d94288c066d65616e5f7194474011a40b800000008c056d61785f71944740417e48400000008c056d696e5f7194473faea0f1000000007573758c1374696d6573746570735f746869735f69746572944a60d204008c04646f6e6594888c0f74696d6573746570735f746f74616c944a606e9a008c0e657069736f6465735f746f74616c944d20608c12747261696e696e675f697465726174696f6e944b208c0d6578706572696d656e745f6964948c203366353930393463363332363438393739323432336332343335303436396430948c0464617465948c13323031392d30372d32345f30332d30332d3233948c0974696d657374616d70944a5bae375d8c1074696d655f746869735f697465725f739447403ea561140000008c0c74696d655f746f74616c5f739447408eb175d3a000008c03706964944ddf7c8c08686f73746e616d65948c106e6176656c2d6e6f7465626f6f6b2d31948c076e6f64655f6970948c0c31302e31362e3132382e3633948c06636f6e666967947d94288c076d6f6e69746f7294898c096c6f675f6c6576656c948c04494e464f948c0963616c6c6261636b73947d94288c106f6e5f657069736f64655f7374617274944e8c0f6f6e5f657069736f64655f73746570944e8c0e6f6e5f657069736f64655f656e64944e8c0d6f6e5f73616d706c655f656e64944e8c0f6f6e5f747261696e5f726573756c74944e8c136f6e5f706f737470726f636573735f7472616a944e758c1669676e6f72655f776f726b65725f6661696c7572657394898c097573655f656167657294898c056d6f64656c947d94288c0c636f6e765f66696c74657273944e8c0f636f6e765f61637469766174696f6e948c0472656c75948c1066636e65745f61637469766174696f6e948c0474616e68948c0d66636e65745f68696464656e73945d94284d00014d0001658c0c667265655f6c6f675f73746494898c0f7371756173685f746f5f72616e676594898c087573655f6c73746d94898c0b6d61785f7365715f6c656e944b148c0e6c73746d5f63656c6c5f73697a65944d00018c1b6c73746d5f7573655f707265765f616374696f6e5f72657761726494898c0a6672616d65737461636b94888c0364696d944b548c09677261797363616c6594898c097a65726f5f6d65616e94888c13637573746f6d5f70726570726f636573736f72944e8c0c637573746f6d5f6d6f64656c944e8c0e637573746f6d5f6f7074696f6e73947d94758c096f7074696d697a6572947d94288c156d61785f7765696768745f73796e635f64656c6179944d90018c186e756d5f7265706c61795f6275666665725f736861726473944b048c0564656275679489758c0567616d6d6194473fefae147ae147ae8c07686f72697a6f6e944e8c0c736f66745f686f72697a6f6e94898c0a656e765f636f6e666967947d948c08656e765f74797065948c066f70656e616994738c03656e76948c14526f626f7363686f6f6c526561636865722d7631948c0c636c69705f7265776172647394898c0c636c69705f616374696f6e7394888c1170726570726f636573736f725f70726566948c08646565706d696e64948c026c7294473f1a36e2eb1c432d8c136576616c756174696f6e5f696e74657276616c944b058c176576616c756174696f6e5f6e756d5f657069736f646573944b0a8c116576616c756174696f6e5f636f6e666967947d94288c146578706c6f726174696f6e5f6672616374696f6e944b008c156578706c6f726174696f6e5f66696e616c5f657073944b00758c0b6e756d5f776f726b657273944b0b8c086e756d5f67707573944b018c136e756d5f637075735f7065725f776f726b6572944b018c136e756d5f677075735f7065725f776f726b6572944b008c1b637573746f6d5f7265736f75726365735f7065725f776f726b6572947d948c136e756d5f637075735f666f725f647269766572944b018c136e756d5f656e76735f7065725f776f726b6572944b088c1173616d706c655f62617463685f73697a65944b328c10747261696e5f62617463685f73697a65944d00028c0a62617463685f6d6f6465948c117472756e636174655f657069736f646573948c0c73616d706c655f6173796e6394898c126f62736572766174696f6e5f66696c746572948c084e6f46696c746572948c1373796e6368726f6e697a655f66696c7465727394888c0f74665f73657373696f6e5f61726773947d94288c1c696e7472615f6f705f706172616c6c656c69736d5f74687265616473944b028c1c696e7465725f6f705f706172616c6c656c69736d5f74687265616473944b028c0b6770755f6f7074696f6e73947d948c0c616c6c6f775f67726f7774689488738c146c6f675f6465766963655f706c6163656d656e7494898c0c6465766963655f636f756e74947d948c03435055944b01738c14616c6c6f775f736f66745f706c6163656d656e749488758c156c6f63616c5f74665f73657373696f6e5f61726773947d94288c1c696e7472615f6f705f706172616c6c656c69736d5f74687265616473944b088c1c696e7465725f6f705f706172616c6c656c69736d5f74687265616473944b08758c15636f6d70726573735f6f62736572766174696f6e7394898c17636f6c6c6563745f6d6574726963735f74696d656f7574944bb48c1a6d6574726963735f736d6f6f7468696e675f657069736f646573944b648c1272656d6f74655f776f726b65725f656e767394898c1872656d6f74655f656e765f62617463685f776169745f6d73944b008c0f6d696e5f697465725f74696d655f73944b1e8c1774696d6573746570735f7065725f697465726174696f6e944da8618c05696e707574948c0773616d706c6572948c10696e7075745f6576616c756174696f6e945d94288c026973948c0377697394658c12706f737470726f636573735f696e7075747394898c1373687566666c655f6275666665725f73697a65944b008c066f7574707574944e8c176f75747075745f636f6d70726573735f636f6c756d6e73945d94288c036f6273948c076e65775f6f627394658c146f75747075745f6d61785f66696c655f73697a65944a000000048c0a6d756c74696167656e74947d94288c08706f6c6963696573947d948c11706f6c6963795f6d617070696e675f666e944e8c11706f6c69636965735f746f5f747261696e944e758c067477696e5f7194898c0c706f6c6963795f64656c6179944b018c14736d6f6f74685f7461726765745f706f6c69637994898c0c7461726765745f6e6f69736594473fc999999999999a8c117461726765745f6e6f6973655f636c697094473fe00000000000008c167573655f73746174655f70726570726f636573736f7294898c0d6163746f725f68696464656e73945d94284d90014d2c01658c176163746f725f68696464656e5f61637469766174696f6e948c0472656c75948c0e6372697469635f68696464656e73945d94284d90014d2c01658c186372697469635f68696464656e5f61637469766174696f6e948c0472656c75948c066e5f73746570944b038c196578706c6f726174696f6e5f73686f756c645f616e6e65616c94898c167363686564756c655f6d61785f74696d657374657073944aa08601008c146578706c6f726174696f6e5f6672616374696f6e94473fb999999999999a8c176578706c6f726174696f6e5f66696e616c5f7363616c6594473f947ae147ae147b8c166578706c6f726174696f6e5f6e6f6973655f74797065948c026f75948c1a6578706c6f726174696f6e5f6f755f6e6f6973655f7363616c6594473ff00000000000008c146578706c6f726174696f6e5f6f755f746865746194473fc33333333333338c146578706c6f726174696f6e5f6f755f7369676d6194473fc999999999999a8c1a6578706c6f726174696f6e5f676175737369616e5f7369676d6194473fb999999999999a8c0f706172616d657465725f6e6f69736594898c16707572655f6578706c6f726174696f6e5f7374657073944de8038c0b6275666665725f73697a65944a80841e008c127072696f726974697a65645f7265706c617994888c187072696f726974697a65645f7265706c61795f616c70686194473fe33333333333338c177072696f726974697a65645f7265706c61795f6265746194473fd999999999999a8c17626574615f616e6e65616c696e675f6672616374696f6e94473fc999999999999a8c1d66696e616c5f7072696f726974697a65645f7265706c61795f6265746194473fd999999999999a8c167072696f726974697a65645f7265706c61795f65707394473eb0c6f7a0b5ed8d8c096372697469635f6c7294473f50624dd2f1a9fc8c086163746f725f6c7294473f50624dd2f1a9fc8c1a7461726765745f6e6574776f726b5f7570646174655f66726571944d50c38c0374617594473ff00000000000008c097573655f687562657294888c0f68756265725f7468726573686f6c6494473ff00000000000008c066c325f72656794473eb0c6f7a0b5ed8d8c12677261645f6e6f726d5f636c697070696e67944e8c0f6c6561726e696e675f737461727473944d50c38c167065725f776f726b65725f6578706c6f726174696f6e94888c1a776f726b65725f736964655f7072696f726974697a6174696f6e9488758c1274696d655f73696e63655f726573746f72659447408eb175d3a000008c1774696d6573746570735f73696e63655f726573746f7265944a606e9a008c18697465726174696f6e735f73696e63655f726573746f7265944b208c136e756d5f6865616c7468795f776f726b657273944b0b7575622e",
+      "export_formats": [],
+      "status": "TERMINATED",
+      "logdir": "/home/amr/kayray_results/parallel/gym-reacher-apex-ddpg/APEX_DDPG_RoboschoolReacher-v1_1_num_envs_per_worker=8_2019-07-24_02-46-446zemkv7v",
+      "runner": null,
+      "result_logger": null,
+      "last_debug": 1563930203.258202,
+      "trial_id": "96facee9",
+      "error_file": null,
+      "num_failures": 0,
+      "custom_trial_name": null,
+      "results": "80049502000000000000004e2e",
+      "best_result": "80049502000000000000004e2e",
+      "param_config": "80049502000000000000004e2e",
+      "extra_arg": "80049502000000000000004e2e",
+      "_nonjson_fields": [
+        "_checkpoint",
+        "loggers",
+        "sync_function",
+        "results",
+        "best_result",
+        "param_config",
+        "extra_arg"
+      ],
+      "__logger_started__": false
+    },
+    {
+      "trainable_name": "APEX_DDPG",
+      "config": {
+        "env_config": {
+          "env_type": "openai"
+        },
+        "use_huber": true,
+        "clip_rewards": false,
+        "num_gpus": 1,
+        "num_workers": 11,
+        "num_envs_per_worker": 4,
+        "n_step": 3,
+        "exploration_ou_noise_scale": 1.0,
+        "target_network_update_freq": 50000,
+        "tau": 1.0,
+        "evaluation_interval": 5,
+        "evaluation_num_episodes": 10,
+        "env": "RoboschoolReacher-v1"
+      },
+      "local_dir": "/home/amr/kayray_results/parallel/gym-reacher-apex-ddpg",
+      "experiment_tag": "2_num_envs_per_worker=4",
+      "resources": {
+        "cpu": 1,
+        "gpu": 1,
+        "extra_cpu": 11,
+        "extra_gpu": 0,
+        "custom_resources": {},
+        "extra_custom_resources": {}
+      },
+      "stopping_criterion": {
+        "episode_reward_mean": 21,
+        "timesteps_total": 10000000
+      },
+      "upload_dir": "",
+      "loggers": "80049502000000000000004e2e",
+      "sync_function": "80049502000000000000004e2e",
+      "verbose": true,
+      "max_failures": 3,
+      "last_result": {
+        "episode_reward_max": 39.023729370213736,
+        "episode_reward_min": -5.30790579545751,
+        "episode_reward_mean": 19.698224500568795,
+        "episode_len_mean": 150.0,
+        "episodes_this_iter": 620,
+        "policy_reward_mean": {},
+        "custom_metrics": {},
+        "sampler_perf": {
+          "mean_env_wait_ms": 1.547802406925541,
+          "mean_processing_ms": 1.1685933614191468,
+          "mean_inference_ms": 2.1705401778371787
+        },
+        "off_policy_estimator": {},
+        "num_metric_batches_dropped": 0,
+        "info": {
+          "min_exploration": 0.0,
+          "max_exploration": 0.4,
+          "num_target_updates": 181,
+          "num_steps_trained": 9105408,
+          "num_steps_sampled": 10063400,
+          "sample_throughput": 0.0,
+          "train_throughput": 0.0,
+          "num_weight_syncs": 25157,
+          "num_samples_dropped": 55,
+          "learner_queue": {
+            "size_count": 19837,
+            "size_mean": 1.18,
+            "size_std": 2.075475849052453,
+            "size_quantiles": [
+              0.0,
+              0.0,
+              0.0,
+              5.0,
+              7.0
+            ]
+          },
+          "replay_shard_0": {
+            "add_batch_time_ms": 14.096,
+            "replay_time_ms": 35.026,
+            "update_priorities_time_ms": 94.5,
+            "policy_default_policy": {
+              "added_count": 2481600,
+              "sampled_count": 2272768,
+              "est_size_bytes": 170500000,
+              "num_entries": 500000
+            }
+          },
+          "learner": {
+            "default_policy": {
+              "mean_q": 3.1024181842803955,
+              "max_q": 31.414316177368164,
+              "min_q": -0.2740628123283386
+            }
+          }
+        },
+        "timesteps_this_iter": 256200,
+        "done": true,
+        "timesteps_total": 10063400,
+        "episodes_total": 24392,
+        "training_iteration": 39,
+        "experiment_id": "551d10f630db4ab0a22be0a16a50447a",
+        "date": "2019-07-24_03-23-28",
+        "timestamp": 1563931408,
+        "time_this_iter_s": 30.498246669769287,
+        "time_total_s": 1190.3168189525604,
+        "pid": 32336,
+        "hostname": "navel-notebook-1",
+        "node_ip": "10.16.128.63",
+        "config": {
+          "monitor": false,
+          "log_level": "INFO",
+          "callbacks": {
+            "on_episode_start": null,
+            "on_episode_step": null,
+            "on_episode_end": null,
+            "on_sample_end": null,
+            "on_train_result": null,
+            "on_postprocess_traj": null
+          },
+          "ignore_worker_failures": false,
+          "use_eager": false,
+          "model": {
+            "conv_filters": null,
+            "conv_activation": "relu",
+            "fcnet_activation": "tanh",
+            "fcnet_hiddens": [
+              256,
+              256
+            ],
+            "free_log_std": false,
+            "squash_to_range": false,
+            "use_lstm": false,
+            "max_seq_len": 20,
+            "lstm_cell_size": 256,
+            "lstm_use_prev_action_reward": false,
+            "framestack": true,
+            "dim": 84,
+            "grayscale": false,
+            "zero_mean": true,
+            "custom_preprocessor": null,
+            "custom_model": null,
+            "custom_options": {}
+          },
+          "optimizer": {
+            "max_weight_sync_delay": 400,
+            "num_replay_buffer_shards": 4,
+            "debug": false
+          },
+          "gamma": 0.99,
+          "horizon": null,
+          "soft_horizon": false,
+          "env_config": {
+            "env_type": "openai"
+          },
+          "env": "RoboschoolReacher-v1",
+          "clip_rewards": false,
+          "clip_actions": true,
+          "preprocessor_pref": "deepmind",
+          "lr": 0.0001,
+          "evaluation_interval": 5,
+          "evaluation_num_episodes": 10,
+          "evaluation_config": {
+            "exploration_fraction": 0,
+            "exploration_final_eps": 0
+          },
+          "num_workers": 11,
+          "num_gpus": 1,
+          "num_cpus_per_worker": 1,
+          "num_gpus_per_worker": 0,
+          "custom_resources_per_worker": {},
+          "num_cpus_for_driver": 1,
+          "num_envs_per_worker": 4,
+          "sample_batch_size": 50,
+          "train_batch_size": 512,
+          "batch_mode": "truncate_episodes",
+          "sample_async": false,
+          "observation_filter": "NoFilter",
+          "synchronize_filters": true,
+          "tf_session_args": {
+            "intra_op_parallelism_threads": 2,
+            "inter_op_parallelism_threads": 2,
+            "gpu_options": {
+              "allow_growth": true
+            },
+            "log_device_placement": false,
+            "device_count": {
+              "CPU": 1
+            },
+            "allow_soft_placement": true
+          },
+          "local_tf_session_args": {
+            "intra_op_parallelism_threads": 8,
+            "inter_op_parallelism_threads": 8
+          },
+          "compress_observations": false,
+          "collect_metrics_timeout": 180,
+          "metrics_smoothing_episodes": 100,
+          "remote_worker_envs": false,
+          "remote_env_batch_wait_ms": 0,
+          "min_iter_time_s": 30,
+          "timesteps_per_iteration": 25000,
+          "input": "sampler",
+          "input_evaluation": [
+            "is",
+            "wis"
+          ],
+          "postprocess_inputs": false,
+          "shuffle_buffer_size": 0,
+          "output": null,
+          "output_compress_columns": [
+            "obs",
+            "new_obs"
+          ],
+          "output_max_file_size": 67108864,
+          "multiagent": {
+            "policies": {},
+            "policy_mapping_fn": null,
+            "policies_to_train": null
+          },
+          "twin_q": false,
+          "policy_delay": 1,
+          "smooth_target_policy": false,
+          "target_noise": 0.2,
+          "target_noise_clip": 0.5,
+          "use_state_preprocessor": false,
+          "actor_hiddens": [
+            400,
+            300
+          ],
+          "actor_hidden_activation": "relu",
+          "critic_hiddens": [
+            400,
+            300
+          ],
+          "critic_hidden_activation": "relu",
+          "n_step": 3,
+          "exploration_should_anneal": false,
+          "schedule_max_timesteps": 100000,
+          "exploration_fraction": 0.1,
+          "exploration_final_scale": 0.02,
+          "exploration_noise_type": "ou",
+          "exploration_ou_noise_scale": 1.0,
+          "exploration_ou_theta": 0.15,
+          "exploration_ou_sigma": 0.2,
+          "exploration_gaussian_sigma": 0.1,
+          "parameter_noise": false,
+          "pure_exploration_steps": 1000,
+          "buffer_size": 2000000,
+          "prioritized_replay": true,
+          "prioritized_replay_alpha": 0.6,
+          "prioritized_replay_beta": 0.4,
+          "beta_annealing_fraction": 0.2,
+          "final_prioritized_replay_beta": 0.4,
+          "prioritized_replay_eps": 1e-06,
+          "critic_lr": 0.001,
+          "actor_lr": 0.001,
+          "target_network_update_freq": 50000,
+          "tau": 1.0,
+          "use_huber": true,
+          "huber_threshold": 1.0,
+          "l2_reg": 1e-06,
+          "grad_norm_clipping": null,
+          "learning_starts": 50000,
+          "per_worker_exploration": true,
+          "worker_side_prioritization": true
+        },
+        "time_since_restore": 1190.3168189525604,
+        "timesteps_since_restore": 10063400,
+        "iterations_since_restore": 39,
+        "num_healthy_workers": 11
+      },
+      "last_update_time": 1563931408.4936059,
+      "checkpoint_freq": 50,
+      "checkpoint_at_end": true,
+      "history": [],
+      "keep_checkpoints_num": null,
+      "_cmp_greater": true,
+      "best_checkpoint_attr_value": -Infinity,
+      "checkpoint_score_attr": "training_iteration",
+      "_checkpoint": "80049594120000000000008c0e7261792e74756e652e747269616c948c0a436865636b706f696e749493942981947d94288c0773746f72616765948c046469736b948c0576616c7565948ca62f686f6d652f616d722f6b61797261795f726573756c74732f706172616c6c656c2f67796d2d726561636865722d617065782d646470672f415045585f444450475f526f626f7363686f6f6c526561636865722d76315f325f6e756d5f656e76735f7065725f776f726b65723d345f323031392d30372d32345f30332d30332d32337973626d615f32732f636865636b706f696e745f33392f636865636b706f696e742d3339948c0b6c6173745f726573756c74947d94288c12657069736f64655f7265776172645f6d6178944740438309906282e78c12657069736f64655f7265776172645f6d696e9447c0153b4ba826f49b8c13657069736f64655f7265776172645f6d65616e94474033b2bed743357b8c10657069736f64655f6c656e5f6d65616e94474062c000000000008c12657069736f6465735f746869735f69746572944d6c028c12706f6c6963795f7265776172645f6d65616e947d948c0e637573746f6d5f6d657472696373947d948c0c73616d706c65725f70657266947d94288c106d65616e5f656e765f776169745f6d7394473ff8c3cc74e6a4ff8c126d65616e5f70726f63657373696e675f6d7394473ff2b28ef3d9e3198c116d65616e5f696e666572656e63655f6d73944740015d442b33b7b8758c146f66665f706f6c6963795f657374696d61746f72947d948c1a6e756d5f6d65747269635f626174636865735f64726f70706564944b008c04696e666f947d94288c0f6d696e5f6578706c6f726174696f6e944700000000000000008c0f6d61785f6578706c6f726174696f6e94473fd999999999999a8c126e756d5f7461726765745f75706461746573944bb58c116e756d5f73746570735f747261696e6564944a00f08a008c116e756d5f73746570735f73616d706c6564944a288e99008c1173616d706c655f7468726f756768707574944700000000000000008c10747261696e5f7468726f756768707574944700000000000000008c106e756d5f7765696768745f73796e6373944d45628c136e756d5f73616d706c65735f64726f70706564944b378c0d6c6561726e65725f7175657565947d94288c0a73697a655f636f756e74944d7d4d8c0973697a655f6d65616e94473ff2e147ae147ae18c0873697a655f737464944740009a9314fa8b828c0e73697a655f7175616e74696c6573945d942847000000000000000047000000000000000047000000000000000047401400000000000047401c00000000000065758c0e7265706c61795f73686172645f30947d94288c116164645f62617463685f74696d655f6d739447402c3126e978d4fe8c0e7265706c61795f74696d655f6d73944740418353f7ced9178c197570646174655f7072696f7269746965735f74696d655f6d7394474057a000000000008c15706f6c6963795f64656661756c745f706f6c696379947d94288c0b61646465645f636f756e74944ac0dd25008c0d73616d706c65645f636f756e74944a00ae22008c0e6573745f73697a655f6279746573944aa09f290a8c0b6e756d5f656e7472696573944a20a1070075758c076c6561726e6572947d948c0e64656661756c745f706f6c696379947d94288c066d65616e5f7194474008d1c0a00000008c056d61785f719447403f6a10a00000008c056d696e5f719447bfd18a3ec00000007573758c1374696d6573746570735f746869735f69746572944ac8e803008c04646f6e6594888c0f74696d6573746570735f746f74616c944a288e99008c0e657069736f6465735f746f74616c944d485f8c12747261696e696e675f697465726174696f6e944b278c0d6578706572696d656e745f6964948c203535316431306636333064623461623061323262653061313661353034343761948c0464617465948c13323031392d30372d32345f30332d32332d3238948c0974696d657374616d70944a10b3375d8c1074696d655f746869735f697465725f739447403e7f8d180000008c0c74696d655f746f74616c5f739447409299446c3000008c03706964944d507e8c08686f73746e616d65948c106e6176656c2d6e6f7465626f6f6b2d31948c076e6f64655f6970948c0c31302e31362e3132382e3633948c06636f6e666967947d94288c076d6f6e69746f7294898c096c6f675f6c6576656c948c04494e464f948c0963616c6c6261636b73947d94288c106f6e5f657069736f64655f7374617274944e8c0f6f6e5f657069736f64655f73746570944e8c0e6f6e5f657069736f64655f656e64944e8c0d6f6e5f73616d706c655f656e64944e8c0f6f6e5f747261696e5f726573756c74944e8c136f6e5f706f737470726f636573735f7472616a944e758c1669676e6f72655f776f726b65725f6661696c7572657394898c097573655f656167657294898c056d6f64656c947d94288c0c636f6e765f66696c74657273944e8c0f636f6e765f61637469766174696f6e948c0472656c75948c1066636e65745f61637469766174696f6e948c0474616e68948c0d66636e65745f68696464656e73945d94284d00014d0001658c0c667265655f6c6f675f73746494898c0f7371756173685f746f5f72616e676594898c087573655f6c73746d94898c0b6d61785f7365715f6c656e944b148c0e6c73746d5f63656c6c5f73697a65944d00018c1b6c73746d5f7573655f707265765f616374696f6e5f72657761726494898c0a6672616d65737461636b94888c0364696d944b548c09677261797363616c6594898c097a65726f5f6d65616e94888c13637573746f6d5f70726570726f636573736f72944e8c0c637573746f6d5f6d6f64656c944e8c0e637573746f6d5f6f7074696f6e73947d94758c096f7074696d697a6572947d94288c156d61785f7765696768745f73796e635f64656c6179944d90018c186e756d5f7265706c61795f6275666665725f736861726473944b048c0564656275679489758c0567616d6d6194473fefae147ae147ae8c07686f72697a6f6e944e8c0c736f66745f686f72697a6f6e94898c0a656e765f636f6e666967947d948c08656e765f74797065948c066f70656e616994738c03656e76948c14526f626f7363686f6f6c526561636865722d7631948c0c636c69705f7265776172647394898c0c636c69705f616374696f6e7394888c1170726570726f636573736f725f70726566948c08646565706d696e64948c026c7294473f1a36e2eb1c432d8c136576616c756174696f6e5f696e74657276616c944b058c176576616c756174696f6e5f6e756d5f657069736f646573944b0a8c116576616c756174696f6e5f636f6e666967947d94288c146578706c6f726174696f6e5f6672616374696f6e944b008c156578706c6f726174696f6e5f66696e616c5f657073944b00758c0b6e756d5f776f726b657273944b0b8c086e756d5f67707573944b018c136e756d5f637075735f7065725f776f726b6572944b018c136e756d5f677075735f7065725f776f726b6572944b008c1b637573746f6d5f7265736f75726365735f7065725f776f726b6572947d948c136e756d5f637075735f666f725f647269766572944b018c136e756d5f656e76735f7065725f776f726b6572944b048c1173616d706c655f62617463685f73697a65944b328c10747261696e5f62617463685f73697a65944d00028c0a62617463685f6d6f6465948c117472756e636174655f657069736f646573948c0c73616d706c655f6173796e6394898c126f62736572766174696f6e5f66696c746572948c084e6f46696c746572948c1373796e6368726f6e697a655f66696c7465727394888c0f74665f73657373696f6e5f61726773947d94288c1c696e7472615f6f705f706172616c6c656c69736d5f74687265616473944b028c1c696e7465725f6f705f706172616c6c656c69736d5f74687265616473944b028c0b6770755f6f7074696f6e73947d948c0c616c6c6f775f67726f7774689488738c146c6f675f6465766963655f706c6163656d656e7494898c0c6465766963655f636f756e74947d948c03435055944b01738c14616c6c6f775f736f66745f706c6163656d656e749488758c156c6f63616c5f74665f73657373696f6e5f61726773947d94288c1c696e7472615f6f705f706172616c6c656c69736d5f74687265616473944b088c1c696e7465725f6f705f706172616c6c656c69736d5f74687265616473944b08758c15636f6d70726573735f6f62736572766174696f6e7394898c17636f6c6c6563745f6d6574726963735f74696d656f7574944bb48c1a6d6574726963735f736d6f6f7468696e675f657069736f646573944b648c1272656d6f74655f776f726b65725f656e767394898c1872656d6f74655f656e765f62617463685f776169745f6d73944b008c0f6d696e5f697465725f74696d655f73944b1e8c1774696d6573746570735f7065725f697465726174696f6e944da8618c05696e707574948c0773616d706c6572948c10696e7075745f6576616c756174696f6e945d94288c026973948c0377697394658c12706f737470726f636573735f696e7075747394898c1373687566666c655f6275666665725f73697a65944b008c066f7574707574944e8c176f75747075745f636f6d70726573735f636f6c756d6e73945d94288c036f6273948c076e65775f6f627394658c146f75747075745f6d61785f66696c655f73697a65944a000000048c0a6d756c74696167656e74947d94288c08706f6c6963696573947d948c11706f6c6963795f6d617070696e675f666e944e8c11706f6c69636965735f746f5f747261696e944e758c067477696e5f7194898c0c706f6c6963795f64656c6179944b018c14736d6f6f74685f7461726765745f706f6c69637994898c0c7461726765745f6e6f69736594473fc999999999999a8c117461726765745f6e6f6973655f636c697094473fe00000000000008c167573655f73746174655f70726570726f636573736f7294898c0d6163746f725f68696464656e73945d94284d90014d2c01658c176163746f725f68696464656e5f61637469766174696f6e948c0472656c75948c0e6372697469635f68696464656e73945d94284d90014d2c01658c186372697469635f68696464656e5f61637469766174696f6e948c0472656c75948c066e5f73746570944b038c196578706c6f726174696f6e5f73686f756c645f616e6e65616c94898c167363686564756c655f6d61785f74696d657374657073944aa08601008c146578706c6f726174696f6e5f6672616374696f6e94473fb999999999999a8c176578706c6f726174696f6e5f66696e616c5f7363616c6594473f947ae147ae147b8c166578706c6f726174696f6e5f6e6f6973655f74797065948c026f75948c1a6578706c6f726174696f6e5f6f755f6e6f6973655f7363616c6594473ff00000000000008c146578706c6f726174696f6e5f6f755f746865746194473fc33333333333338c146578706c6f726174696f6e5f6f755f7369676d6194473fc999999999999a8c1a6578706c6f726174696f6e5f676175737369616e5f7369676d6194473fb999999999999a8c0f706172616d657465725f6e6f69736594898c16707572655f6578706c6f726174696f6e5f7374657073944de8038c0b6275666665725f73697a65944a80841e008c127072696f726974697a65645f7265706c617994888c187072696f726974697a65645f7265706c61795f616c70686194473fe33333333333338c177072696f726974697a65645f7265706c61795f6265746194473fd999999999999a8c17626574615f616e6e65616c696e675f6672616374696f6e94473fc999999999999a8c1d66696e616c5f7072696f726974697a65645f7265706c61795f6265746194473fd999999999999a8c167072696f726974697a65645f7265706c61795f65707394473eb0c6f7a0b5ed8d8c096372697469635f6c7294473f50624dd2f1a9fc8c086163746f725f6c7294473f50624dd2f1a9fc8c1a7461726765745f6e6574776f726b5f7570646174655f66726571944d50c38c0374617594473ff00000000000008c097573655f687562657294888c0f68756265725f7468726573686f6c6494473ff00000000000008c066c325f72656794473eb0c6f7a0b5ed8d8c12677261645f6e6f726d5f636c697070696e67944e8c0f6c6561726e696e675f737461727473944d50c38c167065725f776f726b65725f6578706c6f726174696f6e94888c1a776f726b65725f736964655f7072696f726974697a6174696f6e9488758c1274696d655f73696e63655f726573746f72659447409299446c3000008c1774696d6573746570735f73696e63655f726573746f7265944a288e99008c18697465726174696f6e735f73696e63655f726573746f7265944b278c136e756d5f6865616c7468795f776f726b657273944b0b7575622e",
+      "export_formats": [],
+      "status": "TERMINATED",
+      "logdir": "/home/amr/kayray_results/parallel/gym-reacher-apex-ddpg/APEX_DDPG_RoboschoolReacher-v1_2_num_envs_per_worker=4_2019-07-24_03-03-23ysbma_2s",
+      "runner": null,
+      "result_logger": null,
+      "last_debug": 1563931408.4935975,
+      "trial_id": "96faceea",
+      "error_file": null,
+      "num_failures": 0,
+      "custom_trial_name": null,
+      "results": "80049502000000000000004e2e",
+      "best_result": "80049502000000000000004e2e",
+      "param_config": "80049502000000000000004e2e",
+      "extra_arg": "80049502000000000000004e2e",
+      "_nonjson_fields": [
+        "_checkpoint",
+        "loggers",
+        "sync_function",
+        "results",
+        "best_result",
+        "param_config",
+        "extra_arg"
+      ],
+      "__logger_started__": false
+    }
+  ],
+  "runner_data": {
+    "_global_time_limit": Infinity,
+    "_total_time": 2977.2186348438263,
+    "_iteration": 99,
+    "_verbose": true,
+    "_server_port": 4321,
+    "_metadata_checkpoint_dir": "/home/amr/kayray_results/parallel/gym-reacher-apex-ddpg",
+    "_start_time": 1563928380.0520904,
+    "_session_str": "2019-07-24_02-33-00",
+    "launch_web_server": false
+  },
+  "stats": {
+    "start_time": 1563928380.0520904,
+    "timestamp": 1563931408.5032663
+  }
+}
